@@ -1,5 +1,5 @@
 export const routes = {
-	home: '/home',
+	home: '/',
 	projects: '/projetos',
 	accountability: '/transparência',
 	contribute: '/contribua',
