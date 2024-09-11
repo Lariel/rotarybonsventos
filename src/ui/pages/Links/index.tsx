@@ -1,4 +1,4 @@
-export function Links() {
+export default function Links() {
 	return (
 		<div>Social Links</div>
 	)

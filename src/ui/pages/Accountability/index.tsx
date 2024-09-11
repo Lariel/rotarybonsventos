@@ -1,4 +1,4 @@
-export function Accountability() {
+export default function Accountability() {
 	return (
 		<div>
 			Transparência

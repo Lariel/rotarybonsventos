@@ -1,4 +1,4 @@
-export function Projects() {
+export default function Projects() {
 	return (
 		<div>Projetos</div>
 	)
