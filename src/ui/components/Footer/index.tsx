@@ -1,5 +1,11 @@
+import { FooterContainerStyled, FooterContentStyled } from './styles';
+
 export function Footer() {
 	return (
-		<div>Rodapé</div>
+		<FooterContainerStyled>
+			<FooterContentStyled className='content-desktop'>
+				rodapé
+			</FooterContentStyled>
+		</FooterContainerStyled>
 	);
 }

@@ -1,7 +1,9 @@
+import { ContentStyled } from '@ui/styles/GlobalStyles';
+
 export default function Accountability() {
 	return (
-		<div>
-			Transparência
-		</div>
+		<ContentStyled className='content-desktop'>
+			Conteúdo prestação de contas
+		</ContentStyled>
 	);
 }

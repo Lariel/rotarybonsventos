@@ -1,5 +1,9 @@
+import { ContentStyled } from '@ui/styles/GlobalStyles';
+
 export default function Links() {
 	return (
-		<div>Social Links</div>
+		<ContentStyled className='content-desktop'>
+			Página de links
+		</ContentStyled>
 	)
 }

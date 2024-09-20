@@ -1,5 +1,9 @@
+import { ContentStyled } from '@ui/styles/GlobalStyles'
+
 export default function Contribute() {
 	return (
-		<div>Contribua</div>
+		<ContentStyled className='content-desktop'>
+			Conteúdo contribua
+		</ContentStyled>
 	)
 }

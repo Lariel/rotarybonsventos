@@ -1,5 +1,9 @@
+import { ContentStyled } from '@ui/styles/GlobalStyles';
+
 export default function Projects() {
 	return (
-		<div>Projetos</div>
+		<ContentStyled className='content-desktop'>
+			Projetos do clube
+		</ContentStyled>
 	)
 }

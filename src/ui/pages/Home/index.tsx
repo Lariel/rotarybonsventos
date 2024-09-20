@@ -1,5 +1,9 @@
+import { ContentStyled } from '@ui/styles/GlobalStyles';
+
 export default function Home() {
 	return (
-		<div>Home</div>
+		<ContentStyled className='content-desktop'>
+			Home
+		</ContentStyled>
 	)
 }
