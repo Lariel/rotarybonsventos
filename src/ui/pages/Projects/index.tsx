@@ -1,9 +1,11 @@
-import { ContentStyled } from '@ui/styles/GlobalStyles';
+import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 
 export default function Projects() {
 	return (
-		<ContentStyled className='content-desktop'>
-			Projetos do clube
-		</ContentStyled>
+		<ContainerStyled className='container-desktop'>
+			<ContentStyled className='content-desktop'>
+				Projetos do clube
+			</ContentStyled>
+		</ContainerStyled>
 	)
 }

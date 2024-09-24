@@ -1,9 +1,11 @@
-import { ContentStyled } from '@ui/styles/GlobalStyles'
+import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles'
 
 export default function Contribute() {
 	return (
-		<ContentStyled className='content-desktop'>
-			Conteúdo contribua
-		</ContentStyled>
+		<ContainerStyled className='container-desktop'>
+			<ContentStyled className='content-desktop'>
+				Conteúdo da página Contribua
+			</ContentStyled>
+		</ContainerStyled>
 	)
 }

@@ -9,20 +9,31 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 	body {
-		.content-desktop {
-			margin: 0 250px 0 250px;
+		.container-desktop {
+			display: flex;
+			justify-content: center;
 
-			@media screen and (max-width: 1300px) {
-				margin: 0 100px 0 100px;
-			}
-			@media screen and (max-width: 1000px) {
-				display: none;
-			}
+			.content-desktop {
+				width: 100%;
+				max-width: 1216px;
+				display: flex;
+
+				/* @media screen and (max-width: 1300px) {
+					margin: 0 100px 0 100px;
+				}
+				@media screen and (max-width: 1000px) {
+					display: none;
+				} */
 		}
 
+		}
 	}
 `;
 
 export const ContentStyled = styled.div`
 	height: calc(100vh - 362px);
+`;
+
+export const ContainerStyled = styled.div`
+
 `;

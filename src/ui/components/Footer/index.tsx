@@ -2,7 +2,7 @@ import { FooterContainerStyled, FooterContentStyled } from './styles';
 
 export function Footer() {
 	return (
-		<FooterContainerStyled>
+		<FooterContainerStyled className='container-desktop'>
 			<FooterContentStyled className='content-desktop'>
 				rodapé
 			</FooterContentStyled>
