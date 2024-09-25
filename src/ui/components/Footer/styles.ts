@@ -39,7 +39,7 @@ export const FooterContentStyled = styled.div`
 
 		.footer-contact-us {
 			grid-area: footer-contact-us;
-			padding: 15px 0 15px 0;
+			padding: 15px 0 15px 130px;
 			font-size: 20px;
 			font-weight: bolder;
 			color: ${colors.white};
@@ -47,6 +47,7 @@ export const FooterContentStyled = styled.div`
 
 		.footer-contact-icons {
 			grid-area: footer-contact-icons;
+			padding: 0 0 0 130px;
 
 			.footer-instagram-icon {
 				margin: 0 20px 10px 0;
