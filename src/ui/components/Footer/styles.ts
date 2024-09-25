@@ -29,7 +29,7 @@ export const FooterContentStyled = styled.div`
 
 	.footer-inferior {
 		display: grid;
-		grid-template: 50px / 1fr 3fr;
+		grid-template: 50px / 2fr 3fr;
 		grid-template-areas: 	"footer-contact-us footer-contact-us footer-logo"
 													"footer-contact-icons footer-contact-icons footer-logo";
 		align-items: center;
@@ -47,14 +47,20 @@ export const FooterContentStyled = styled.div`
 
 		.footer-contact-icons {
 			grid-area: footer-contact-icons;
-			img {
+
+			.footer-instagram-icon {
+				margin: 0 20px 10px 0;
+				margin-right: 20px;
+			}
+
+			.footer-linkedin-icon {
+				margin: 0 0 10px 0;
 				height: 20px;
-				&:first-of-type {
-					margin-right: 20px;
-				}
-				&:last-of-type {
-					margin-left: 20px;
-				}
+			}
+
+			.footer-email-icon {
+				margin: 0 0 10px 20px;
+				height: 25px;
 			}
 		}
 

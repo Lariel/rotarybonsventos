@@ -19,15 +19,18 @@ export function Footer() {
 					</div>
 					<div className='footer-contact-icons'>
 						<a href='https://www.instagram.com/rotarybonsventos' target='_blank'>
-							<img src={icon_instagram} alt='Acesse nosso Instagram' />
+							<img
+								className='footer-instagram-icon'
+								src={icon_instagram}
+								alt='Acesse nosso Instagram' />
 						</a>
 
 						<a href='https://www.linkedin.com/company/rotary-club-de-osorio-bons-ventos' target='_blank'>
-							<img src={icon_linkedin} alt='Acesse nosso LinkedIn' />
+							<img className='footer-linkedin-icon' src={icon_linkedin} alt='Acesse nosso LinkedIn' />
 						</a>
 
 						<a href='mailto:lariel.negreiros@gmail.com'>
-							<img src={icon_mail} alt='Envie um e-mail' />
+							<img className='footer-email-icon' src={icon_mail} alt='Envie um e-mail' />
 						</a>
 
 					</div>
