@@ -5,7 +5,7 @@ export function Header() {
 	return (
 			<HeaderContainerStyled className='container-desktop'>
 				<HeaderContentStyled className='content-desktop'>
-					<img src={logo_regular} alt='Logo' />
+					<img src={logo_regular} alt='Logo Rotary Bons Ventos Header' />
 				</HeaderContentStyled>
 			</HeaderContainerStyled>
 	);

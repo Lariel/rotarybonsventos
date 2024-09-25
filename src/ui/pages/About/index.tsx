@@ -1,9 +1,11 @@
-import { ContentStyled } from '@ui/styles/GlobalStyles';
+import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 
 export default function About() {
 	return (
-		<ContentStyled className='content-desktop'>
-			Conteúdo sobre o clube
-		</ContentStyled>
+		<ContainerStyled className='container-desktop'>
+			<ContentStyled className='content-desktop'>
+				Quem somos nós
+			</ContentStyled>
+	</ContainerStyled>
 	)
 }
