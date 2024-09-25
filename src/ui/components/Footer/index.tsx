@@ -14,15 +14,16 @@ export function Footer() {
 					<img src={icon_link} alt='Link site Rotary.org' />
 				</div>
 				<div className='footer-inferior'>
-					<div className='footer-contact'>
-						<div className='footer-contact-us'>
-							Fale conosco
-						</div>
-						<div className='footer-contact-icons'>
-							<img src={icon_instagram} alt='Acesse nosso Instagram' />
-							<img src={icon_linkedin} alt='Acesse nosso LinkedIn' />
-							<img src={icon_mail} alt='Envie um e-mail' />
-						</div>
+					<div className='footer-contact-us'>
+						Fale conosco
+					</div>
+					<div className='footer-contact-icons'>
+						<img src={icon_instagram} alt='Acesse nosso Instagram' />
+						<img src={icon_linkedin} alt='Acesse nosso LinkedIn' />
+						<img src={icon_mail} alt='Envie um e-mail' />
+					</div>
+					<div className='footer-logo'>
+						<img src={logo_white} alt='Logo Rotary Bons Ventos Footer' />
 					</div>
 				</div>
 			</FooterContentStyled>
