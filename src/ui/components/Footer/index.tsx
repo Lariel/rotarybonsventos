@@ -1,9 +1,9 @@
 import { FooterContainerStyled, FooterContentStyled } from './styles';
-import icon_link from '../../../assets/icon_link.svg';
-import icon_instagram from '../../../assets/icon_instagram.svg';
-import icon_linkedin from '../../../assets/icon_linkedin.svg';
-import icon_mail from '../../../assets/icon_mail.svg';
-import logo_white from '../../../assets/logo_white.png';
+import icon_link from '@assets/icon_link.svg';
+import icon_instagram from '@assets/icon_instagram.svg';
+import icon_linkedin from '@assets/icon_linkedin.svg';
+import icon_mail from '@assets/icon_mail.svg';
+import logo_white from '@assets/logo_white.png';
 
 export function Footer() {
 	return (
