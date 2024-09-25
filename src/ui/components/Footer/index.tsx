@@ -18,9 +18,18 @@ export function Footer() {
 						Fale conosco
 					</div>
 					<div className='footer-contact-icons'>
-						<img src={icon_instagram} alt='Acesse nosso Instagram' />
-						<img src={icon_linkedin} alt='Acesse nosso LinkedIn' />
-						<img src={icon_mail} alt='Envie um e-mail' />
+						<a href='https://www.instagram.com/rotarybonsventos' target='_blank'>
+							<img src={icon_instagram} alt='Acesse nosso Instagram' />
+						</a>
+
+						<a href='https://www.linkedin.com/company/rotary-club-de-osorio-bons-ventos' target='_blank'>
+							<img src={icon_linkedin} alt='Acesse nosso LinkedIn' />
+						</a>
+
+						<a href='mailto:lariel.negreiros@gmail.com'>
+							<img src={icon_mail} alt='Envie um e-mail' />
+						</a>
+
 					</div>
 					<div className='footer-logo'>
 						<img src={logo_white} alt='Logo Rotary Bons Ventos Footer' />
