@@ -10,6 +10,7 @@ const Contribute = lazy(() => import('@ui/pages/Contribute'));
 const Contact = lazy(() => import('@ui/pages/Contact'));
 const About = lazy(() => import('@ui/pages/About'));
 const Links = lazy(() => import('@ui/pages/Links'));
+const NotFound = lazy(() => import('@ui/pages/NotFound'));
 
 export function Router() {
 	return (
@@ -22,6 +23,7 @@ export function Router() {
 				<Route path={routes.contact} element={<Contact />} />
 				<Route path={routes.about} element={<About />} />
 				<Route path={routes.links} element={<Links />} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</Suspense>
 	);
