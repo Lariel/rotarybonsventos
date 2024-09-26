@@ -1,9 +1,7 @@
 import { HeaderContainerStyled, HeaderContentStyled } from './styles';
 import logo_regular from '@assets/logo_regular.png';
 
-const pageDescription = 'Projetos do clube';
-
-export function Header() {
+export function Header(props: any) {
 	return (
 			<HeaderContainerStyled className='container-desktop'>
 				<HeaderContentStyled className='content-desktop'>
@@ -11,7 +9,7 @@ export function Header() {
 						<img src={logo_regular} alt='Logo Rotary Bons Ventos Header' />
 					</div>
 					<div className='page-description'>
-						{pageDescription}
+						{props.pageDescription}
 					</div>
 				</HeaderContentStyled>
 			</HeaderContainerStyled>
