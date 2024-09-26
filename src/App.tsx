@@ -4,7 +4,7 @@ import { GlobalStyles } from '@ui/styles/GlobalStyles'
 import { Menu } from '@ui/components/Menu'
 import { useState, createContext } from 'react';
 
-export const PageDescriptionContext = createContext({});
+export const PageDescriptionContext = createContext<{}>({});
 
 export function App() {
 

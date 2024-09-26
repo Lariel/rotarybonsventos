@@ -17,15 +17,11 @@ export const GlobalStyles = createGlobalStyle`
 				width: 100%;
 				max-width: 1216px;
 				display: flex;
+			}
 
-				/* @media screen and (max-width: 1300px) {
-					margin: 0 100px 0 100px;
-				}
-				@media screen and (max-width: 1000px) {
-					display: none;
-				} */
-		}
-
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
 		}
 	}
 `;

@@ -23,8 +23,13 @@ export const HeaderContentStyled = styled.div`
 	.page-description {
 		padding-left: 20px;
 		font-size: 70px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		max-width: 800px;
 		color: ${colors.azure};
+		@media screen and (max-width: 1100px) {
+			font-size: 60px;
+		}
 	}
-
-
 `;
