@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 import { routes } from './routes';
+import { Loader } from '@ui/components/Loader';
 
 const Home = lazy(() => import('@ui/pages/Home'));
 const Projects = lazy(() => import('@ui/pages/Projects'));
@@ -14,7 +15,7 @@ const NotFound = lazy(() => import('@ui/pages/NotFound'));
 
 export function Router() {
 	return (
-		<Suspense fallback={<div>Carregando</div>}>
+		<Suspense fallback={<Loader />}>
 			<Routes>
 				<Route path={routes.home} element={<Home />} />
 				<Route path={routes.projects} element={<Projects />} />
