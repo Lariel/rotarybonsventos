@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 	body {
-		.container-desktop {
+		.container {
 			display: flex;
 			justify-content: center;
 
@@ -17,10 +17,17 @@ export const GlobalStyles = createGlobalStyle`
 				width: 100%;
 				max-width: 1216px;
 				display: flex;
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
 			}
 
-			@media screen and (max-width: 768px) {
-				display: none;
+			.content-mobile {
+				width: 100%;
+				display: flex;
+				@media screen and (min-width: 768px) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -28,6 +35,9 @@ export const GlobalStyles = createGlobalStyle`
 
 export const ContentStyled = styled.div`
 	height: calc(100vh - 362px);
+	@media screen and (max-width: 768px) {
+		height: calc(100dvh - 205px);
+	}
 `;
 
 export const ContainerStyled = styled.div`

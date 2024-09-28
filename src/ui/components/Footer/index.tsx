@@ -7,7 +7,7 @@ import logo_white from '@assets/logo_white.png';
 
 export function Footer() {
 	return (
-		<FooterContainerStyled className='container-desktop'>
+		<FooterContainerStyled className='container'>
 			<FooterContentStyled className='content-desktop'>
 				<div className='footer-superior'>
 					<a href='https://www.rotary.org/pt' target='_blank'>rotary.org</a>
