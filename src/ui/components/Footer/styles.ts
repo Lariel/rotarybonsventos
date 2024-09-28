@@ -4,6 +4,10 @@ import styled from 'styled-components';
 export const FooterContainerStyled = styled.div`
 	background-color: ${colors.azure};
 	height: 183px;
+
+	@media screen and (max-width: 768px) {
+		height: 5px;
+	}
 `;
 
 export const FooterContentStyled = styled.div`
@@ -51,7 +55,7 @@ export const FooterContentStyled = styled.div`
 
 			.footer-instagram-icon {
 				margin: 0 20px 10px 0;
-				margin-right: 20px;
+				height: 20px;
 			}
 
 			.footer-linkedin-icon {

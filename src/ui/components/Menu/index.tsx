@@ -7,7 +7,7 @@ export function Menu() {
 	return (
 		<>
 			<BrowserRouter>
-				<MenuContainerStyled className='container-desktop'>
+				<MenuContainerStyled className='container'>
 					<MenuStyled className='content-desktop'>
 						<Link to={routes.home}>Início</Link>
 						<Link to={routes.projects}>Projetos</Link>

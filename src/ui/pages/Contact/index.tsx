@@ -16,7 +16,7 @@ export default function Contact() {
 		}
 	}, []);
 	return (
-		<ContainerStyled className='container-desktop'>
+		<ContainerStyled className='container'>
 			<ContentStyled className='content-desktop'>
 				Informações de contado do clube
 			</ContentStyled>

@@ -6,6 +6,10 @@ export const MenuContainerStyled = styled.div`
 	height: 59px;
 	background-color: ${colors.azure};
 	display: flex;
+
+	@media screen and (max-width: 768px) {
+		height: 0px;
+	}
 `;
 
 export const MenuStyled = styled.div`

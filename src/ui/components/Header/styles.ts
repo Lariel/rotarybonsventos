@@ -15,7 +15,7 @@ export const HeaderContentStyled = styled.div`
 
 	}
 
-	.logo-header {
+	.logo-header-desktop {
 		padding-right: 20px;
 		border-right: 3px solid ${colors.skyBlue};
 	}
@@ -32,4 +32,22 @@ export const HeaderContentStyled = styled.div`
 			font-size: 60px;
 		}
 	}
+`;
+
+export const HeaderContentMobileStyled = styled.header`
+	display: flex;
+	height: 200px;
+	background-color: ${colors.azure};
+	align-items: center;
+	justify-content: center;
+	img {
+		height: 170px;
+	}
+
+	@media screen and (max-width: 400px) {
+		img {
+			height: 110px;
+		}
+	}
+
 `;

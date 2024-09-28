@@ -17,7 +17,7 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container-desktop'>
+		<ContainerStyled className='container'>
 			<ContentStyled className='content-desktop'>
 				Projetos do clube
 			</ContentStyled>

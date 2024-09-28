@@ -3,7 +3,7 @@ import { CustomLoader } from './styles';
 
 export function Loader() {
 	return (
-		<ContainerStyled className='container-desktop'>
+		<ContainerStyled className='container'>
 			<ContentStyled className='content-desktop'>
 				<CustomLoader/>
 			</ContentStyled>

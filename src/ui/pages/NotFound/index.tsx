@@ -16,7 +16,7 @@ export default function NotFound() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container-desktop'>
+		<ContainerStyled className='container'>
 			<ContentStyled className='content-desktop'>
 				Página não encontrada!!
 			</ContentStyled>
