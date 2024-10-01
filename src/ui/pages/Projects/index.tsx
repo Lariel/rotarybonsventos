@@ -1,15 +1,18 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
-import { PageDescriptionContext } from '../../../App';
 
 export default function Projects() {
-
-	const { onchangeDescription } = useContext(PageDescriptionContext);
 
 	useEffect(() => {
 		console.log('Start Projects');
 
-		onchangeDescription('Nossos projetos')
+		const event = new CustomEvent('changePageDescription',{
+			detail: {
+				text: 'Nossos projetos'
+			}
+		});
+
+		document.dispatchEvent(event);
 
 		return () => {
 			console.log('Exit Projects');

@@ -1,15 +1,18 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
-import { PageDescriptionContext } from '../../../App';
 
 export default function Home() {
-
-	const { onchangeDescription } = useContext(PageDescriptionContext);
 
 	useEffect(() => {
 		console.log('Start Home');
 
-		onchangeDescription('Sobre nós')
+		const event = new CustomEvent('changePageDescription',{
+			detail: {
+				text: 'Sobre nós'
+			}
+		});
+
+		document.dispatchEvent(event);
 
 		return () => {
 			console.log('Exit Home');

@@ -1,14 +1,18 @@
+import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
-import { PageDescriptionContext } from '../../../App';
-import { useContext, useEffect } from 'react';
 
 export default function NotFound() {
-	const { onchangeDescription } = useContext(PageDescriptionContext);
 
 	useEffect(() => {
 		console.log('Start NotFound');
 
-		onchangeDescription('Página não encontrada')
+		const event = new CustomEvent('changePageDescription',{
+			detail: {
+				text: 'Página não encontrada'
+			}
+		});
+
+		document.dispatchEvent(event);
 
 		return () => {
 			console.log('Exit NotFound');

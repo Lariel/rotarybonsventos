@@ -1,15 +1,18 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles'
-import { PageDescriptionContext } from '../../../App';
 
 export default function Contribute() {
-
-	const { onchangeDescription } = useContext(PageDescriptionContext);
 
 	useEffect(() => {
 		console.log('Start Contribute');
 
-		onchangeDescription('Contribua')
+		const event = new CustomEvent('changePageDescription',{
+			detail: {
+				text: 'Contribua'
+			}
+		});
+
+		document.dispatchEvent(event);
 
 		return () => {
 			console.log('Exit Contribute');
