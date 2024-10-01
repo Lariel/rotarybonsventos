@@ -18,7 +18,7 @@ export default function Contribute() {
 
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='content-responsive'>
 				Conteúdo da página Contribua
 			</ContentStyled>
 		</ContainerStyled>

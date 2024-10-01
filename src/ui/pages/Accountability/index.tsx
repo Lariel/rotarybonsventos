@@ -18,7 +18,7 @@ export default function Accountability() {
 
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='content-responsive'>
 				Conteúdo da página de prestação de contas
 			</ContentStyled>
 		</ContainerStyled>

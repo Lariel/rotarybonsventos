@@ -17,7 +17,7 @@ export default function NotFound() {
 
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='content-responsive'>
 				Página não encontrada!!
 			</ContentStyled>
 		</ContainerStyled>

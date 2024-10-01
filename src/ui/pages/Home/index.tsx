@@ -18,7 +18,7 @@ export default function Home() {
 
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='content-responsive'>
 				Home
 			</ContentStyled>
 		</ContainerStyled>

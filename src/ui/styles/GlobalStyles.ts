@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 			display: flex;
 			justify-content: center;
 
-			.content-desktop {
+			.structure-desktop {
 				width: 100%;
 				max-width: 1216px;
 				display: flex;
@@ -22,12 +22,19 @@ export const GlobalStyles = createGlobalStyle`
 				}
 			}
 
-			.content-mobile {
+			.structure-mobile {
 				width: 100%;
 				display: flex;
 				@media screen and (min-width: 768px) {
 					display: none;
 				}
+			}
+
+			.content-responsive {
+				width: 100%;
+				max-width: 1216px;
+				display: flex;
+				justify-content: center;
 			}
 		}
 	}

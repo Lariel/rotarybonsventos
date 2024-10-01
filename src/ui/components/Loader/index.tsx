@@ -4,7 +4,7 @@ import { CustomLoader } from './styles';
 export function Loader() {
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='structure-desktop'>
 				<CustomLoader/>
 			</ContentStyled>
 		</ContainerStyled>

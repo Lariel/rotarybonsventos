@@ -18,7 +18,7 @@ export default function Projects() {
 
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
+			<ContentStyled className='content-responsive'>
 				Projetos do clube
 			</ContentStyled>
 		</ContainerStyled>

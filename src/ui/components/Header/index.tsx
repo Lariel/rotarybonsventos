@@ -5,7 +5,7 @@ import logo_white from '@assets/logo_white.png';
 export function Header(props: any) {
 	return (
 			<HeaderContainerStyled className='container'>
-				<HeaderContentStyled className='content-desktop'>
+				<HeaderContentStyled className='structure-desktop'>
 					<div className='logo-header-desktop'>
 						<img src={logo_regular} alt='Logo Rotary Bons Ventos Header' />
 					</div>
@@ -13,7 +13,7 @@ export function Header(props: any) {
 						{props.pageDescription}
 					</div>
 				</HeaderContentStyled>
-				<HeaderContentMobileStyled className='content-mobile'>
+				<HeaderContentMobileStyled className='structure-mobile'>
 					<img src={logo_white} alt='Logo Rotary Bons Ventos Header' />
 				</HeaderContentMobileStyled>
 			</HeaderContainerStyled>

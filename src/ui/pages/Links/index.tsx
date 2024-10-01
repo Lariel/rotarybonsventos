@@ -9,19 +9,12 @@ import icon_mail from '@assets/icon_mail.svg';
 export default function Links() {
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-desktop'>
-				<VerticalLinksStyled>
-				<Link className='vertical-link' to={routes.contribute}>Contribua</Link>
-				<Link className='vertical-link' to={routes.projects}>Projetos</Link>
-				<Link className='vertical-link' to={routes.accountability}>Transparência</Link>
-				</VerticalLinksStyled>
-			</ContentStyled>
-			<ContentStyled className='content-mobile'>
+			<ContentStyled className='content-responsive'>
 				<VerticalLinksStyled>
 					<Link className='vertical-link' to={routes.contribute}>Contribua</Link>
 					<Link className='vertical-link' to={routes.projects}>Projetos</Link>
 					<Link className='vertical-link' to={routes.accountability}>Transparência</Link>
-					<div className='social-links'>
+					<div className='social-links structure-mobile'>
 						<a href='https://www.instagram.com/rotarybonsventos' target='_blank'>
 							<img
 								className='instagram-icon'
