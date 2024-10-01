@@ -6,7 +6,7 @@ export default function NotFound() {
 	useEffect(() => {
 		console.log('Start NotFound');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Página não encontrada'
 			}

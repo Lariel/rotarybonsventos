@@ -6,7 +6,7 @@ export default function Accountability() {
 	useEffect(() => {
 		console.log('Start Accountability');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Prestação de contas'
 			}

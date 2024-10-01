@@ -6,7 +6,7 @@ export default function Contact() {
 	useEffect(() => {
 		console.log('Start Contact');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Nossos contatos'
 			}

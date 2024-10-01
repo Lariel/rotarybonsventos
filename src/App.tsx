@@ -11,11 +11,14 @@ export function App() {
 	useEffect(() => {
 		console.log('Start App');
 
-		document.addEventListener('changePageDescription', (event: any) => {
+		function handleChangePage(event: any) {
 			updatePageDescription(event.detail.text);
-		});
+		}
+
+		document.addEventListener('changePage', handleChangePage);
 
 		return () => {
+			document.removeEventListener('changePage', handleChangePage);
 			console.log('Exit App');
 		}
 	}, []);

@@ -6,7 +6,7 @@ export default function Home() {
 	useEffect(() => {
 		console.log('Start Home');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Sobre nós'
 			}

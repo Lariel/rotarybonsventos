@@ -6,7 +6,7 @@ export default function Projects() {
 	useEffect(() => {
 		console.log('Start Projects');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Nossos projetos'
 			}

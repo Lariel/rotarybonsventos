@@ -6,7 +6,7 @@ export default function Contribute() {
 	useEffect(() => {
 		console.log('Start Contribute');
 
-		const event = new CustomEvent('changePageDescription',{
+		const event = new CustomEvent('changePage',{
 			detail: {
 				text: 'Contribua'
 			}
