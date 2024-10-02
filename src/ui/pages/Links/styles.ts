@@ -26,7 +26,6 @@ export const VerticalLinksStyled = styled.div`
 		display: flex;
 		justify-content: center;
     align-items: center;
-		border-top: 2px solid ${colors.azure};
 		width: 75%;
 		.instagram-icon {
 			margin: 0 20px 10px 0;
