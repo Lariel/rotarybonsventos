@@ -1,11 +1,12 @@
 import colors from '@ui/styles/colors';
+import { breakpointDesktop } from '@ui/styles/GlobalStyles';
 import styled from 'styled-components';
 
 export const FooterContainerStyled = styled.div`
 	background-color: ${colors.azure};
 	height: 183px;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: ${breakpointDesktop}) {
 		height: 5px;
 	}
 `;

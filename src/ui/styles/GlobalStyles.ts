@@ -1,5 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+export const maxWidthStructureDesktop = '1360px';
+export const maxWidthContentResponsive = '1440px';
+export const breakpointDesktop = '768px';
+
 export const GlobalStyles = createGlobalStyle`
 	* {
     margin: 0;
@@ -15,9 +19,9 @@ export const GlobalStyles = createGlobalStyle`
 
 			.structure-desktop {
 				width: 100%;
-				max-width: 1216px;
+				max-width: ${maxWidthStructureDesktop};
 				display: flex;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: ${breakpointDesktop}) {
 					display: none;
 				}
 			}
@@ -25,16 +29,17 @@ export const GlobalStyles = createGlobalStyle`
 			.structure-mobile {
 				width: 100%;
 				display: flex;
-				@media screen and (min-width: 768px) {
+				@media screen and (min-width: ${breakpointDesktop}) {
 					display: none;
 				}
 			}
 
 			.content-responsive {
 				width: 100%;
-				max-width: 1216px;
+				max-width: ${maxWidthContentResponsive};
 				display: flex;
 				justify-content: center;
+				background-color: antiquewhite;
 			}
 		}
 	}
@@ -42,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const ContentStyled = styled.div`
 	height: calc(100vh - 362px);
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: ${breakpointDesktop}) {
 		height: calc(100dvh - 205px);
 	}
 `;
