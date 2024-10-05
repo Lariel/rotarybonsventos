@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 export const maxWidthStructureDesktop = '1360px';
 export const maxWidthContentResponsive = '1440px';
@@ -28,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 
 			.structure-mobile {
 				width: 100%;
+				padding: 0 10px 0 10px;
 				display: flex;
 				@media screen and (min-width: ${breakpointDesktop}) {
 					display: none;
@@ -38,17 +40,20 @@ export const GlobalStyles = createGlobalStyle`
 				width: 100%;
 				max-width: ${maxWidthContentResponsive};
 				display: flex;
+				flex-wrap: wrap;
+    		flex-direction: row;
 				justify-content: center;
-				background-color: antiquewhite;
+				background-color: ${colors.siteBG};
+				//background-color: ${colors.cloud};
 			}
 		}
 	}
 `;
 
 export const ContentStyled = styled.div`
-	height: calc(100vh - 362px);
+	min-height: calc(100vh - 362px);
 	@media screen and (max-width: ${breakpointDesktop}) {
-		height: calc(100dvh - 205px);
+		min-height: calc(100vh - 383px);
 	}
 `;
 
