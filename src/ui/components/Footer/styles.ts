@@ -7,7 +7,7 @@ export const FooterContainerStyled = styled.div`
 	height: 183px;
 
 	@media screen and (max-width: ${breakpointDesktop}) {
-		height: 5px;
+		//height: 5px;
 	}
 `;
 

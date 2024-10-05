@@ -4,6 +4,7 @@ import colors from '@ui/styles/colors';
 
 export const VerticalLinksStyled = styled.div`
 	width: 100%;
+	height: calc(100dvh - 200px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

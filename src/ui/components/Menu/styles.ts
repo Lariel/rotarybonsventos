@@ -29,7 +29,7 @@ export const MenuStyled = styled.div`
 		&:hover, &:focus {
 			color: ${colors.rotaryGold};
 			font-weight: bolder;
-			transition: all .6s ease;
+			transition: all .3s ease;
 		}
 	}
 `;
