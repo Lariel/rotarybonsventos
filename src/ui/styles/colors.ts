@@ -24,5 +24,7 @@ export default {
 	storm: '#7a6e66',
 	ash: '#968b83',
 	platinum: '#bfb7b0',
-	cloud: '#d6d1ca'
+	cloud: '#d6d1ca',
+
+	siteBG: '#f8f9fa'
 }
