@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Open Sans, sans-serif;
+		color: ${colors.siteFontColor};
   }
 
 	body {
@@ -47,8 +48,8 @@ export const GlobalStyles = createGlobalStyle`
 				flex-wrap: wrap;
     		flex-direction: row;
 				justify-content: center;
-				//background-color: ${colors.siteBG};
-				background-color: ${colors.cloud};
+				background-color: ${colors.contentBG};
+				//background-color: ${colors.cloud};
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
+import PageIntro from '@app/components/PageIntro';
 
 export default function Home() {
 
@@ -22,7 +23,9 @@ export default function Home() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				Home
+			<PageIntro
+					intro='Página inicial do site'
+				 	info='Colocar mais informações sobre o clube, etc'/>
 			</ContentStyled>
 		</ContainerStyled>
 	)

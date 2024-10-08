@@ -26,5 +26,8 @@ export default {
 	platinum: '#bfb7b0',
 	cloud: '#d6d1ca',
 
-	siteBG: '#f8f9fa'
+	/* Cores não oficiais */
+	//siteBG: '#f8f9fa',
+	contentBG: '#6b6b6b2e',
+	siteFontColor: '#39424a'
 }

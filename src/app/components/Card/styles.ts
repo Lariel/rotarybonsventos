@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const cardWidth = '300px';
 const cardWidthMobile = '400px';
-const cardHeight = '400px';
+const cardHeight = '350px';
 const cardPadding = '5px';
 const cardMargin = '10px';
 
@@ -20,7 +20,6 @@ export const CardStyled = styled.div`
 	background-color: ${colors.white};
 	transform: translateZ(0);
 	transition: all .3s ease;
-	color: #39424a;
 	&:hover {
 		box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 		transform: translateY(-4px);
@@ -47,6 +46,8 @@ export const CardTitleStyled = styled.div`
 	flex-wrap: wrap;
 	align-items: center;
 	text-transform: capitalize;
+	justify-content: center;
+	margin-bottom: 5px;
 `;
 
 export const CardDescriptionStyled = styled.div.attrs<{ image: string}>(props => ({
