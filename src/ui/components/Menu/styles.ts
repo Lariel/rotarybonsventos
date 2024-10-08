@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
-import { breakpointDesktop, maxWidthStructureDesktop } from '@ui/styles/GlobalStyles';
+import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 
 export const MenuContainerStyled = styled.div`
 	width: 100%;
@@ -18,7 +18,7 @@ export const MenuStyled = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	@media screen and (max-width: ${maxWidthStructureDesktop}) {
+	@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
 		justify-content: space-around;
 	}
 	a {

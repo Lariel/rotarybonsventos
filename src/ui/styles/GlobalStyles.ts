@@ -1,7 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import colors from './colors';
 
-export const maxWidthStructureDesktop = '1360px';
+export const maxWidthStructureDesktopLarge = '1360px';
+export const maxWidthStructureDesktopMedium = '1200px';
 export const maxWidthContentResponsive = '1440px';
 export const breakpointDesktop = '768px';
 
@@ -20,8 +21,11 @@ export const GlobalStyles = createGlobalStyle`
 
 			.structure-desktop {
 				width: 100%;
-				max-width: ${maxWidthStructureDesktop};
+				max-width: ${maxWidthStructureDesktopLarge};
 				display: flex;
+				@media screen and (max-width: 1366px) {
+					max-width: ${maxWidthStructureDesktopMedium};
+				}
 				@media screen and (max-width: ${breakpointDesktop}) {
 					display: none;
 				}
@@ -43,8 +47,8 @@ export const GlobalStyles = createGlobalStyle`
 				flex-wrap: wrap;
     		flex-direction: row;
 				justify-content: center;
-				background-color: ${colors.siteBG};
-				//background-color: ${colors.cloud};
+				//background-color: ${colors.siteBG};
+				background-color: ${colors.cloud};
 			}
 		}
 	}
