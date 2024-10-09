@@ -29,7 +29,7 @@ export default function Links() {
 								alt='Acesse nosso LinkedIn' />
 						</a>
 
-						<a href='mailto:lariel.negreiros@gmail.com'>
+						<a href='mailto:rotarybonsventos@gmail.com'>
 							<img
 								className='email-icon'
 								src={icon_mail} alt='Envie um e-mail' />
