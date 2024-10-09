@@ -28,6 +28,6 @@ export default {
 
 	/* Cores não oficiais */
 	//siteBG: '#f8f9fa',
-	contentBG: '#6b6b6b2e',
+	contentBG: '#0067c829',
 	siteFontColor: '#39424a'
 }
