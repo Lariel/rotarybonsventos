@@ -48,11 +48,17 @@ export const FooterContentStyled = styled.div`
 			font-size: 20px;
 			font-weight: bolder;
 			color: ${colors.white};
+			@media screen and (max-width: ${breakpointDesktop}) {
+				padding: 0 0 0 90px;
+			}
 		}
 
 		.footer-contact-icons {
 			grid-area: footer-contact-icons;
-			padding: 0 0 0 130px;
+			padding: 0 0 0 140px;
+			@media screen and (max-width: ${breakpointDesktop}) {
+				padding: 0 0 0 100px;
+			}
 
 			.footer-instagram-icon {
 				margin: 0 20px 10px 0;
@@ -74,6 +80,11 @@ export const FooterContentStyled = styled.div`
 			grid-area: footer-logo;
 			img {
 					height: 60px;
+			}
+			@media screen and (max-width: ${breakpointDesktop}) {
+				img {
+					height: 40px;
+				}
 			}
 		}
 	}

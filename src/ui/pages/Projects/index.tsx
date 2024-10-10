@@ -72,7 +72,7 @@ export default function Projects() {
 			image: `${health}`,
 			title: 'título projeto8',
 			description: 'Breve descrição do oitavo projeto a ser mostrado na página',
-			tags: [tag2, tag5]
+			tags: []
 		},
 		{
 			id: 9,
@@ -110,9 +110,12 @@ export default function Projects() {
 				{projects.map(project => (
 					<Card
 						key={project.id}
+						id={project.id}
 						image={project.image}
 						title={project.title}
-						description={project.description} >
+						description={project.description}
+						tags={project.tags}
+						knowMore={true} >
 					</Card>
 				))}
 			</ContentStyled>

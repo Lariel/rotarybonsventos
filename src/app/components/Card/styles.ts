@@ -15,17 +15,32 @@ export const CardStyled = styled.div`
 	height: ${cardHeight};
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	align-items: center;
 	background-color: ${colors.white};
 	transform: translateZ(0);
 	transition: all .3s ease;
+	a {
+		align-self: end;
+		font-weight: 600;
+		cursor: pointer;
+		margin: 0 5px 0 0;
+		@media screen and (max-width: ${breakpointDesktop}) {
+			text-decoration: underline dotted;
+		}
+		&:hover, &:focus {
+			color: ${colors.rotaryGold};
+			font-weight: bolder;
+			transition: all .3s ease;
+		}
+	}
 	&:hover {
 		box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 		transform: translateY(-4px);
 	}
 	@media screen and (max-width: ${breakpointDesktop}) {
 		width: ${cardWidthMobile};
+		box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 	}
 `;
 
@@ -55,7 +70,7 @@ export const CardDescriptionStyled = styled.div.attrs<{ image: string}>(props =>
 }))`
 	display: flex;
 	width: 100%;
-	height: ${({image}) => image ? '90px' : '250px'};
+	height: ${({image}) => image ? '80px' : '250px'};
 	flex-wrap: wrap;
 	align-items: flex-start;
 	font-size: 1rem;

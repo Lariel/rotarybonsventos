@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 
 import { routes } from './routes';
 import { Loader } from '@ui/components/Loader';
+import ProjectDetails from '@ui/pages/Projects/ProjectDetails';
 
 const Home = lazy(() => import('@ui/pages/Home'));
 const Projects = lazy(() => import('@ui/pages/Projects'));
@@ -19,6 +20,7 @@ export function Router() {
 			<Routes>
 				<Route path={routes.home} element={<Home />} />
 				<Route path={routes.projects} element={<Projects />} />
+				<Route path={routes.projectDetails} element={<ProjectDetails />} />
 				<Route path={routes.accountability} element={<Accountability />} />
 				<Route path={routes.contribute} element={<Contribute />} />
 				<Route path={routes.contact} element={<Contact />} />

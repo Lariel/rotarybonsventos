@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CardDescriptionStyled, CardImageStyled, CardStyled, CardTitleStyled } from './styles';
 import Tags from '../Tags';
+import { routes } from '@app/Router/routes';
 
 export default function Card(props: any) {
 	useEffect(() => {
@@ -10,6 +12,12 @@ export default function Card(props: any) {
 			console.log('Exit Card');
 		}
 	}, []);
+
+	const navigate = useNavigate();
+
+	function handleClick() {
+		navigate(routes.projects+'/'+props.id);
+	}
 
 	return (
 		<CardStyled>
@@ -23,6 +31,7 @@ export default function Card(props: any) {
 				{props.description}
 			</CardDescriptionStyled>
 			{props.tags && <Tags tags={props.tags}/>}
+			{props.knowMore && <a onClick={ handleClick }>Saiba mais</a>}
 		</CardStyled>
 	);
 }

@@ -7,6 +7,7 @@ export const TagStyled = styled.div`
 	padding: 8px;
 	height: 25px;
 	font-size: 0.75rem;
+	font-weight: 600;
 	background-color: ${colors.powderBlue};
 	border-radius: 55px;
 	display: flex;
