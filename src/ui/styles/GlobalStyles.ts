@@ -1,10 +1,19 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import colors from './colors';
 
 export const maxWidthStructureDesktopLarge = '1360px';
 export const maxWidthStructureDesktopMedium = '1200px';
 export const maxWidthContentResponsive = '1440px';
 export const breakpointDesktop = '768px';
+
+const fadeIn = keyframes`
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+`;
 
 export const GlobalStyles = createGlobalStyle`
 	* {
@@ -48,6 +57,7 @@ export const GlobalStyles = createGlobalStyle`
 				flex-wrap: wrap;
     		flex-direction: row;
 				justify-content: center;
+				animation: ${fadeIn} 0.3s forwards;
 				background-color: ${colors.contentBG};
 				//background-color: ${colors.cloud};
 			}
@@ -58,7 +68,7 @@ export const GlobalStyles = createGlobalStyle`
 export const ContentStyled = styled.div`
 	min-height: calc(100vh - 362px);
 	@media screen and (max-width: ${breakpointDesktop}) {
-		min-height: calc(100vh - 383px);
+		min-height: calc(100vh - 440px);
 	}
 `;
 

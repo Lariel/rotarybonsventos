@@ -36,7 +36,8 @@ export const CardStyled = styled.div`
 	}
 	&:hover {
 		box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
-		transform: translateY(-4px);
+		//transform: translateY(-4px);
+		transform: scale(1.02);
 	}
 	@media screen and (max-width: ${breakpointDesktop}) {
 		width: ${cardWidthMobile};

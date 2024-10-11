@@ -21,7 +21,7 @@ export const MenuStyled = styled.div`
 	@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
 		justify-content: space-around;
 	}
-	a {
+	.default {
 		font-size: 20px;
 		font-weight: bold;
 		text-decoration: none;
@@ -31,5 +31,13 @@ export const MenuStyled = styled.div`
 			font-weight: bolder;
 			transition: all .3s ease;
 		}
+	}
+
+	.active {
+		color: ${colors.rotaryGold};
+		font-size: 20px;
+		font-weight: bolder;
+		text-decoration: none;
+		transition: all .3s ease;
 	}
 `;

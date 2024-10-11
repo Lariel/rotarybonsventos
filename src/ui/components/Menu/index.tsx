@@ -9,11 +9,11 @@ export function Menu() {
 			<BrowserRouter>
 				<MenuContainerStyled className='container'>
 					<MenuStyled className='structure-desktop'>
-						<Link to={routes.home}>Início</Link>
-						<Link to={routes.projects}>Projetos</Link>
-						<Link to={routes.accountability}>Transparência</Link>
-						<Link to={routes.contribute}>Contribua</Link>
-						<Link to={routes.contact}>Contato</Link>
+						<Link className={false ? 'active': 'default'} to={routes.home}>Início</Link>
+						<Link className={false ? 'active': 'default'} to={routes.projects}>Projetos</Link>
+						<Link className={false ? 'active': 'default'} to={routes.accountability}>Transparência</Link>
+						<Link className={false ? 'active': 'default'} to={routes.contribute}>Contribua</Link>
+						<Link className={false ? 'active': 'default'} to={routes.contact}>Contato</Link>
 					</MenuStyled>
 				</MenuContainerStyled>
 				<Router />
