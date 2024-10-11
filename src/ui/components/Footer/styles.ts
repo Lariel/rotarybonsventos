@@ -5,9 +5,8 @@ import styled from 'styled-components';
 export const FooterContainerStyled = styled.div`
 	background-color: ${colors.azure};
 	height: 183px;
-
 	@media screen and (max-width: ${breakpointDesktop}) {
-		//height: 5px;
+		height: 150px;
 	}
 `;
 
@@ -19,6 +18,9 @@ export const FooterContentStyled = styled.div`
 		display: flex;
 		width: 100%;
 		height: 50%;
+		@media screen and (max-width: ${breakpointDesktop}) {
+			height: 30%;
+		}
 		align-items: center;
 		a {
 			font-size: 20px;

@@ -1,6 +1,6 @@
-import colors from '@ui/styles/colors';
-import { breakpointDesktop } from '@ui/styles/GlobalStyles';
 import styled from 'styled-components';
+import colors from '@ui/styles/colors';
+import { breakpointDesktop, fadeInScale } from '@ui/styles/GlobalStyles';
 
 const cardWidth = '300px';
 const cardWidthMobile = '400px';
@@ -9,6 +9,7 @@ const cardPadding = '5px';
 const cardMargin = '10px';
 
 export const CardStyled = styled.div`
+	animation: ${fadeInScale} 0.3s forwards;
 	margin: ${cardMargin};
 	padding: ${cardPadding};
 	width: ${cardWidth};

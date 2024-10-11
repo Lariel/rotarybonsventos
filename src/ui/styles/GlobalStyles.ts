@@ -6,12 +6,21 @@ export const maxWidthStructureDesktopMedium = '1200px';
 export const maxWidthContentResponsive = '1440px';
 export const breakpointDesktop = '768px';
 
-const fadeIn = keyframes`
+export const fadeInOpacity = keyframes`
 	from {
 		opacity: 0;
 	}
 	to {
 		opacity: 1;
+	}
+`;
+
+export const fadeInScale = keyframes`
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
 	}
 `;
 
@@ -57,9 +66,10 @@ export const GlobalStyles = createGlobalStyle`
 				flex-wrap: wrap;
     		flex-direction: row;
 				justify-content: center;
-				animation: ${fadeIn} 0.3s forwards;
+				align-content: flex-start;
+				animation: ${fadeInOpacity} 0.3s forwards;
 				background-color: ${colors.contentBG};
-				//background-color: ${colors.cloud};
+				box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 			}
 		}
 	}
@@ -68,7 +78,7 @@ export const GlobalStyles = createGlobalStyle`
 export const ContentStyled = styled.div`
 	min-height: calc(100vh - 362px);
 	@media screen and (max-width: ${breakpointDesktop}) {
-		min-height: calc(100vh - 440px);
+		min-height: calc(100vh - 400px);
 	}
 `;
 
