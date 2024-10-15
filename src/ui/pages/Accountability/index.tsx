@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import PageIntro from '@app/components/PageIntro';
+import P from '@app/components/Paragraph';
 
 export default function Accountability() {
 
@@ -23,11 +24,9 @@ export default function Accountability() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				<PageIntro
-					intro='Aqui você encontra a prestação de contas do clube'
-				 	info='Colocar aqui mais informações sobre o conteúdo desta página.
-								Aqui a ideia é ter um texto maior, explicando de uma forma mais geral o conteúdo que ficará disponível na página.
-								Talvez também possamos colocar aqui alguma explicação sobre como navegar na página ou algo nesse sentido.'/>
+				<PageIntro intro='Aqui você encontra a prestação de contas do clube'/>
+				<P text='Acreditamos que a transparência é fundamental para fortalecer a confiança e o compromisso entre nossos membros, apoiadores e a comunidade.'/>
+				<P text='Nesta página, disponibilizamos todas as informações financeiras do clube de maneira clara e acessível.'/>
 			</ContentStyled>
 		</ContainerStyled>
 	);
