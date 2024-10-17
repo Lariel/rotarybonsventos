@@ -25,7 +25,7 @@ export default function Card(props: any) {
 				<img src={props.image} alt={props.title}/>
 			</CardImageStyled>}
 			<CardTitleStyled>
-				<h1>{props.title}</h1>
+				{props.title}
 			</CardTitleStyled>
 			<CardDescriptionStyled image={props.image}>
 				{props.description}

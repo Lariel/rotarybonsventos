@@ -27,7 +27,7 @@ export default {
 	cloud: '#d6d1ca',
 
 	/* Cores não oficiais */
-	//siteBG: '#f8f9fa',
+	siteBG: '#f8f9fa',
 	contentBG: '#0067c829',
 	siteFontColor: '#39424a'
 }

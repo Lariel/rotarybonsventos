@@ -65,6 +65,8 @@ export const CardTitleStyled = styled.div`
 	text-transform: capitalize;
 	justify-content: center;
 	margin-bottom: 5px;
+	font-size: 1.1rem;
+	font-weight: 600;
 `;
 
 export const CardDescriptionStyled = styled.div.attrs<{ image: string}>(props => ({
@@ -76,4 +78,5 @@ export const CardDescriptionStyled = styled.div.attrs<{ image: string}>(props =>
 	flex-wrap: wrap;
 	align-items: flex-start;
 	font-size: 1rem;
+	font-weight: 400;
 `;

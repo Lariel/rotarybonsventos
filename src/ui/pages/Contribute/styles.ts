@@ -28,10 +28,6 @@ export const ContributeStyled = styled.div`
 			line-height: 2em;
 		}
 	}
-
-	@media screen and (max-width: ${breakpointDesktop}) {
-		margin: 0 25px 0 25px;
-	}
 `;
 
 export const HowDonateGridStyled = styled.div`

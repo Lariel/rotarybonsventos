@@ -59,8 +59,15 @@ export const GlobalStyles = createGlobalStyle`
 				}
 			}
 
+			.page-links {
+				width: 100%;
+				max-width: ${maxWidthContentResponsive};
+				animation: ${fadeInOpacity} 0.3s forwards;
+			}
+
 			.content-responsive {
 				width: 100%;
+				padding: 0 20px 0 20px;
 				max-width: ${maxWidthContentResponsive};
 				display: flex;
 				flex-wrap: wrap;

@@ -10,7 +10,7 @@ import { social } from '@app/constants/constants';
 export default function Links() {
 	return (
 		<ContainerStyled className='container'>
-			<ContentStyled className='content-responsive'>
+			<ContentStyled className='page-links'>
 				<VerticalLinksStyled>
 					<Link className='vertical-link' to={routes.contribute}>Contribua</Link>
 					<Link className='vertical-link' to={routes.projects}>Projetos</Link>
