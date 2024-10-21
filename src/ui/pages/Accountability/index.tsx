@@ -28,16 +28,12 @@ export default function Accountability() {
 				<PageIntro intro='Aqui você encontra a prestação de contas do clube'/>
 				<Paragraph text='Acreditamos que a transparência é fundamental para fortalecer a confiança e o compromisso entre nossos membros, apoiadores e a comunidade.'/>
 				<Paragraph text='Nesta página, disponibilizamos as informações financeiras do clube de maneira clara e acessível.'/>
-				<Paragraph text='iframe'/>
-				<iframe src={relatorio}
-								width="950"
-								height="800">
-				</iframe>
-				<Paragraph text='object'/>
 				<object data={relatorio}
-								type="application/pdf"
-								width="950"
-								height="800">
+								type='application/pdf'
+								width='950'
+								height='800'>
+								<p> Falha ao carregar o preview do documeto, clique <a href={relatorio}>aqui</a> para baixar o relatório.</p>
+
 				</object>
 			</ContentStyled>
 		</ContainerStyled>
