@@ -30,8 +30,25 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Open Sans, sans-serif;
+		font-size: 15px;
 		color: ${colors.siteFontColor};
   }
+
+	p {
+		width: 100%;
+		font-size: 1.2em;
+		line-height: 2em;
+		text-indent: 5%;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.17em;
+	}
+
 
 	body {
 		.container {

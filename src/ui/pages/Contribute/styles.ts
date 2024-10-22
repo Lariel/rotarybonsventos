@@ -5,14 +5,6 @@ import colors from '@ui/styles/colors';
 export const ContributeStyled = styled.div`
 	animation: ${fadeInOpacity} 0.3s forwards;
 
-	p {
-		/* &:first-of-type {
-			font-size: 1.4rem;
-		} */
-		font-size: 1.2rem;
-		line-height: 2em;
-	}
-
 	a {
 		&:hover, &:focus {
 			color: ${colors.rotaryGold};
@@ -22,9 +14,12 @@ export const ContributeStyled = styled.div`
 	}
 
 	ul {
-		margin-left: 25px;
+		margin-left: 70px;
+		@media screen and (max-width: ${breakpointDesktop}) {
+			margin-left: 30px;
+		}
 		li {
-			font-size: 1.0em;
+			font-size: 1.1em;
 			line-height: 2em;
 		}
 	}
@@ -32,7 +27,7 @@ export const ContributeStyled = styled.div`
 
 export const HowDonateGridStyled = styled.div`
 	display: grid;
-	margin: 0 180px 40px 260px;
+	margin: 0 180px 40px 300px;
 	align-items: start;
 	justify-items: center;
 	grid-template-columns: repeat(2, 1fr);
