@@ -16,7 +16,7 @@ export default function Card(props: any) {
 	const navigate = useNavigate();
 
 	function handleClick() {
-		navigate(routes.projects+'/'+props.id);
+		navigate(routes.projects.path+'/'+props.id);
 	}
 
 	return (

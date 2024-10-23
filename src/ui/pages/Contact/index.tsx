@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import PageIntro from '@app/components/PageIntro';
+import { Pages } from '@app/model/Pages';
 
 export default function Contact() {
 
@@ -9,7 +10,7 @@ export default function Contact() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: 'Nossos contatos'
+				text: Pages.contact.path
 			}
 		});
 

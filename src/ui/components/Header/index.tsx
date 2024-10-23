@@ -6,7 +6,7 @@ import logo_white from '@assets/logo_white.png';
 export function Header(props: any) {
 
 	function handleClick() {
-		window.location.assign(routes.home);
+		window.location.assign(routes.home.path);
 	}
 
 	return (

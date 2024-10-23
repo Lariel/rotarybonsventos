@@ -12,9 +12,9 @@ export default function Links() {
 		<ContainerStyled className='container'>
 			<ContentStyled className='page-links'>
 				<VerticalLinksStyled>
-					<Link className='vertical-link' to={routes.contribute}>Contribua</Link>
-					<Link className='vertical-link' to={routes.projects}>Projetos</Link>
-					<Link className='vertical-link' to={routes.accountability}>Transparência</Link>
+					<Link className='vertical-link' to={routes.contribute.path}>{routes.contribute.label}</Link>
+					<Link className='vertical-link' to={routes.projects.path}>{routes.projects.label}</Link>
+					<Link className='vertical-link' to={routes.accountability.path}>{routes.accountability.label}</Link>
 					<div className='social-links structure-mobile'>
 						<a href={social.instagram} target='_blank'>
 							<img

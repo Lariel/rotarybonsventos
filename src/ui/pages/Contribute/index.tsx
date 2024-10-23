@@ -5,6 +5,7 @@ import { routes } from '@app/Router/routes';
 import { social } from '@app/constants/constants'
 import { ContributeStyled, HowDonateGridStyled } from './styles';
 import pix_rotary from '@assets/qrcode-pix.png';
+import { Pages } from '@app/model/Pages';
 
 export default function Contribute() {
 
@@ -13,7 +14,7 @@ export default function Contribute() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: 'Contribua'
+				text: Pages.contribute.description
 			}
 		});
 
@@ -39,8 +40,8 @@ export default function Contribute() {
 						<li>Outro texto aqui</li>
 						<li>Mais outro texto aqui</li>
 					</ul>
-					<p>Conheça nossos projetos acessando a página <a href={routes.projects} >Projetos</a>, e veja o resultado da sua contribuição.</p>
-					<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability}>Transparência</a>.</p>
+					<p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>
+					<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
 				</ContributeStyled>
 				<PageIntro intro='Como doar'/>
 				<ContributeStyled>

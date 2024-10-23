@@ -30,7 +30,7 @@ export default function Accountability() {
 				<object data={relatorio}
 								type='application/pdf'
 								width='950'
-								height='800'>
+								height='1190'>
 								<p> Falha ao carregar o preview do documeto, clique <a href={relatorio}>aqui</a> para baixar o relatório.</p>
 
 				</object>

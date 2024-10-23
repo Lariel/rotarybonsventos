@@ -8,6 +8,7 @@ import health from '@assets/health.jpg';
 import peace from '@assets/peace.jpg';
 import nature from '@assets/nature.jpg';
 import PageIntro from '@app/components/PageIntro';
+import { Pages } from '@app/model/Pages';
 
 export default function Projects() {
 
@@ -88,7 +89,7 @@ export default function Projects() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: 'Nossos projetos'
+				text: Pages.projects.description
 			}
 		});
 
