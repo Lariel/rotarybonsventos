@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
-import PageIntro from '@app/components/PageIntro';
 import { Pages } from '@app/model/Pages';
+import { ContactPageStyled } from './styles';
+import PageIntro from '@app/components/PageIntro';
 
 export default function Contact() {
 
@@ -23,11 +24,24 @@ export default function Contact() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				<PageIntro
-					intro='Nesta página colocar informações de contado do clube'
-				 	info='Colocar aqui mais informações sobre o conteúdo desta página.
-								Aqui a ideia é ter um texto maior, explicando de uma forma mais geral o conteúdo que ficará disponível na página.
-								Talvez também possamos colocar aqui alguma explicação sobre como navegar na página ou algo nesse sentido.'/>
+			<PageIntro intro='Aqui você encontra nossas redes sociais, canais de contato e endereço físico'/>
+			<ContactPageStyled>
+				<div className='contacts-grid'>
+					<div className='vertical-rigth'></div>
+					<div className='first-square-left'>
+						<div className='contact-channel'>Instagram</div>
+					</div>
+					<div className='second-square-left'>
+						<div className='contact-channel'>LinkedIn</div>
+					</div>
+					<div className='third-square-left'>
+						<div className='contact-channel'>Email</div>
+					</div>
+					<div className='fourth-square-left'>
+						<div className='contact-channel'>Sede</div>
+					</div>
+				</div>
+			</ContactPageStyled>
 			</ContentStyled>
 		</ContainerStyled>
 	)

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import bg_links from '@assets/bg_links.jpg';
 import colors from '@ui/styles/colors';
+import { breakpointDesktop } from '@ui/styles/GlobalStyles';
 
 export const VerticalLinksStyled = styled.div`
 	width: 100%;
@@ -44,7 +45,7 @@ export const VerticalLinksStyled = styled.div`
 		}
 	}
 
-	@media screen and (min-width: 769px) {
+	@media screen and (min-width: ${breakpointDesktop}) {
 		background-image: none;
 	}
 `;

@@ -27,7 +27,7 @@ export const Pages  = {
 	contact: {
 		path: '/contato',
 		label: 'Contato',
-		description: 'Nossos contatos'
+		description: 'Fale conosco'
 	},
 	about: {
 		path: '/sobre',
