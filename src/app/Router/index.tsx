@@ -18,14 +18,14 @@ export function Router() {
 	return (
 		<Suspense fallback={<Loader />}>
 			<Routes>
-				<Route path={routes.home} element={<Home />} />
-				<Route path={routes.projects} element={<Projects />} />
-				<Route path={routes.projectDetails} element={<ProjectDetails />} />
-				<Route path={routes.accountability} element={<Accountability />} />
-				<Route path={routes.contribute} element={<Contribute />} />
-				<Route path={routes.contact} element={<Contact />} />
-				<Route path={routes.about} element={<About />} />
-				<Route path={routes.links} element={<Links />} />
+				<Route path={routes.home.path} element={<Home />} />
+				<Route path={routes.projects.path} element={<Projects />} />
+				<Route path={routes.projectDetails.path} element={<ProjectDetails />} />
+				<Route path={routes.accountability.path} element={<Accountability />} />
+				<Route path={routes.contribute.path} element={<Contribute />} />
+				<Route path={routes.contact.path} element={<Contact />} />
+				<Route path={routes.about.path} element={<About />} />
+				<Route path={routes.links.path} element={<Links />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</Suspense>
