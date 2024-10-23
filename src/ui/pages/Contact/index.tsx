@@ -10,7 +10,7 @@ export default function Contact() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: Pages.contact.path
+				pageSelected: Pages.contact
 			}
 		});
 

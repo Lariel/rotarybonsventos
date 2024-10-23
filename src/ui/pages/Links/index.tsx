@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { VerticalLinksStyled } from './styles';
 import { routes } from '@app/Router/routes';
@@ -6,8 +7,26 @@ import icon_instagram from '@assets/icon_instagram.svg';
 import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
 import { social } from '@app/constants/constants';
+import { Pages } from '@app/model/Pages';
 
 export default function Links() {
+
+	useEffect(() => {
+		console.log('Start Links');
+
+		const event = new CustomEvent('changePage',{
+			detail: {
+				pageSelected: Pages.links
+			}
+		});
+
+		document.dispatchEvent(event);
+
+		return () => {
+			console.log('Exit Links');
+		}
+	}, []);
+
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='page-links'>

@@ -26,7 +26,7 @@ export function Router() {
 				<Route path={routes.contact.path} element={<Contact />} />
 				<Route path={routes.about.path} element={<About />} />
 				<Route path={routes.links.path} element={<Links />} />
-				<Route path='*' element={<NotFound />} />
+				<Route path={routes.notFound.path} element={<NotFound />} />
 			</Routes>
 		</Suspense>
 	);

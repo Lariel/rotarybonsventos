@@ -89,7 +89,7 @@ export default function Projects() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: Pages.projects.description
+				pageSelected: Pages.projects
 			}
 		});
 

@@ -14,7 +14,7 @@ export default function Contribute() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: Pages.contribute.description
+				pageSelected: Pages.contribute
 			}
 		});
 

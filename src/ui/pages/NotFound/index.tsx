@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
+import { Pages } from '@app/model/Pages';
 
 export default function NotFound() {
 
@@ -8,7 +9,7 @@ export default function NotFound() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: 'Página não encontrada'
+				pageSelected: Pages.notFound
 			}
 		});
 

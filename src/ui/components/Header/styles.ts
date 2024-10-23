@@ -26,10 +26,10 @@ export const HeaderContentStyled = styled.div`
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
-		max-width: 800px;
+		max-width: 910px;
 		color: ${colors.azure};
 		@media screen and (max-width: 1100px) {
-			font-size: 60px;
+			font-size: 50px;
 		}
 	}
 `;

@@ -5,7 +5,7 @@ import { GlobalStyles } from '@ui/styles/GlobalStyles'
 import { Menu } from '@ui/components/Menu'
 
 export function App() {
-	const [ pageDescription, setPageDescription ] = useState<String>('Início');
+	const [ pageSelected, setPageSelected ] = useState<any>();
 	const [ isFooterVisible, setFooterVisible ] = useState<boolean>(true);
 
 	useEffect(() => {
@@ -13,7 +13,8 @@ export function App() {
 		updateFooterVisibility(!window.location.href.includes('links'));
 
 		function handleChangePage(event: any) {
-			updatePageDescription(event.detail.text);
+			console.log('handleChangePage', event);
+			updatePageSelected(event.detail.pageSelected);
 			updateFooterVisibility(!window.location.href.includes('links'));
 		}
 
@@ -25,8 +26,8 @@ export function App() {
 		}
 	}, []);
 
-	function updatePageDescription(description: String) {
-		setPageDescription(description);
+	function updatePageSelected(page: any) {
+		setPageSelected(page);
 	}
 
 	function updateFooterVisibility(isVisible: boolean) {
@@ -36,7 +37,7 @@ export function App() {
   return (
 		<>
 			<GlobalStyles />
-			<Header pageDescription={pageDescription} />
+			<Header pageSelected={pageSelected} />
 			<Menu />
 			{ isFooterVisible && <Footer/>}
 		</>

@@ -32,5 +32,9 @@ export const routes = {
 	links: {
 		path: Pages.links.path,
 		label: Pages.links.label
+	},
+	notFound: {
+		path: Pages.notFound.path,
+		label: Pages.notFound.label
 	}
 }

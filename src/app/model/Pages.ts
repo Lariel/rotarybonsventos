@@ -12,7 +12,7 @@ export const Pages  = {
 	projectDetails: {
 		path: '/projetos/:id',
 		label: '',
-		description: ''
+		description: 'Sobre o projeto'
 	},
 	accountability: {
 		path: '/transparência',
@@ -38,5 +38,10 @@ export const Pages  = {
 		path: '/links',
 		label: '',
 		description: ''
+	},
+	notFound: {
+		path: '*',
+		label: '',
+		description: 'Ops, página não encontrada'
 	}
 };

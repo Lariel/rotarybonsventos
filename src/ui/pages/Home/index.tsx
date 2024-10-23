@@ -10,7 +10,7 @@ export default function Home() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: Pages.home.description
+				pageSelected: Pages.home
 			}
 		});
 

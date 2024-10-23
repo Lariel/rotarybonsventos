@@ -2,6 +2,7 @@ import { BrowserRouter, Link } from 'react-router-dom'
 import { routes } from '@app/Router/routes'
 import { Router } from '@app/Router'
 import { MenuContainerStyled, MenuStyled } from './styles';
+import { useEffect } from 'react';
 
 let isHomeActive = true;
 let isProjectsActive = false;
@@ -10,6 +11,21 @@ let isContributeActive = false;
 let isContactActive = false;
 
 export function Menu() {
+
+	useEffect(() => {
+		console.log('Start Menu');
+
+		function handleChangePage(event: any) {
+			changeActiveOption(event.detail.pageSelected.label);
+		}
+
+		document.addEventListener('changePage', handleChangePage);
+
+		return () => {
+			document.removeEventListener('changePage', handleChangePage);
+			console.log('Exit Menu');
+		}
+	}, []);
 
 	function changeActiveOption(optionSelected: string) {
 		switch (optionSelected) {
@@ -49,7 +65,7 @@ export function Menu() {
 				isContactActive = true;
 				break;
 			default:
-				isHomeActive = true;
+				isHomeActive = false;
 				isProjectsActive = false;
 				isAccountabilityActive = false;
 				isContributeActive = false;

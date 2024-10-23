@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import PageIntro from '@app/components/PageIntro';
 import relatorio from '@assets/finance_report_10-2024.pdf';
+import { Pages } from '@app/model/Pages';
 
 export default function Accountability() {
 
@@ -10,7 +11,7 @@ export default function Accountability() {
 
 		const event = new CustomEvent('changePage',{
 			detail: {
-				text: 'Prestação de contas'
+				pageSelected: Pages.accountability
 			}
 		});
 

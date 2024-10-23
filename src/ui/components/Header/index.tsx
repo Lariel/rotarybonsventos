@@ -16,7 +16,7 @@ export function Header(props: any) {
 						<img src={logo_regular} alt='Logo Rotary Bons Ventos Header' onClick={ handleClick }/>
 					</div>
 					<div className='page-description'>
-						{props.pageDescription}
+						{ props?.pageSelected?.description }
 					</div>
 				</HeaderContentStyled>
 				<HeaderContentMobileStyled className='structure-mobile'>
