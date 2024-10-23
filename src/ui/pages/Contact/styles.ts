@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
 import talk from '@assets/talk.jpg';
-import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import { breakpointDesktop } from '@ui/styles/GlobalStyles';
 
 export const ContactPageStyled = styled.div`
 	display: flex;
