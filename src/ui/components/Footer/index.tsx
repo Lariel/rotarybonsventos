@@ -30,7 +30,7 @@ export function Footer() {
 							<img className='footer-linkedin-icon' src={icon_linkedin} alt='Acesse nosso LinkedIn' />
 						</a>
 
-						<a href={'mailto'+social.email}>
+						<a href={'mailto:'+social.email}>
 							<img className='footer-email-icon' src={icon_mail} alt='Envie um e-mail' />
 						</a>
 
@@ -61,7 +61,7 @@ export function Footer() {
 							<img className='footer-linkedin-icon' src={icon_linkedin} alt='Acesse nosso LinkedIn' />
 						</a>
 
-						<a href={'mailto'+social.email}>
+						<a href={'mailto:'+social.email}>
 							<img className='footer-email-icon' src={icon_mail} alt='Envie um e-mail' />
 						</a>
 

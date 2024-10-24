@@ -49,7 +49,7 @@ export default function Links() {
 								alt='Acesse nosso LinkedIn' />
 						</a>
 
-						<a href={'mailto'+social.email}>
+						<a href={'mailto:'+social.email}>
 							<img
 								className='email-icon'
 								src={icon_mail} alt='Envie um e-mail' />
