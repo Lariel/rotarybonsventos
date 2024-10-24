@@ -93,6 +93,9 @@ export const GlobalStyles = createGlobalStyle`
 				animation: ${fadeInOpacity} 0.3s forwards;
 				background-color: ${colors.contentBG};
 				box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
+				@media screen and (max-width: 1366px) {
+					padding: 0;
+				}
 			}
 		}
 	}
