@@ -3,6 +3,10 @@ import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
 import { ContactPageStyled } from './styles';
 import PageIntro from '@app/components/PageIntro';
+import { social } from '@app/constants/constants';
+import icon_instagram from '@assets/icon_instagram.svg';
+import icon_linkedin from '@assets/icon_linkedin.svg';
+import icon_mail from '@assets/icon_mail.svg';
 
 export default function Contact() {
 
@@ -29,16 +33,40 @@ export default function Contact() {
 				<div className='contacts-grid'>
 					<div className='vertical-rigth'></div>
 					<div className='first-square-left'>
-						<div className='contact-channel'>Instagram</div>
+						<div className='contact-channel'>
+							<a href={social.instagram} target='_blank'>
+								<img
+									className='contact-icon'
+									src={icon_instagram}
+									alt='Acesse nosso Instagram' />
+									@rotarybonsventos
+							</a>
+						</div>
 					</div>
 					<div className='second-square-left'>
-						<div className='contact-channel'>LinkedIn</div>
+						<div className='contact-channel'>
+							<a href={social.linkedin} target='_blank'>
+								<img
+									className='contact-icon'
+									src={icon_linkedin}
+									alt='Acesse nosso LinkedIn' />
+									rotary-club-de-osorio-bons-ventos
+							</a>
+						</div>
 					</div>
 					<div className='third-square-left'>
-						<div className='contact-channel'>Email</div>
+						<div className='contact-channel'>
+							<a href={'mailto:'+social.email}>
+								<img
+									className='contact-icon'
+									src={icon_mail}
+									alt='Envie um e-mail' />
+									rotarybonsventos@gmail.com
+							</a>
+						</div>
 					</div>
 					<div className='fourth-square-left'>
-						<div className='contact-channel'>Sede</div>
+						<div className='contact-channel'>Avenida Jorge Dariva, nº xx</div>
 					</div>
 				</div>
 			</ContactPageStyled>
