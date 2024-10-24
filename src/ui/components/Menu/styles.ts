@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
 import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import theme from '@ui/styles/theme';
 
 export const MenuContainerStyled = styled.div`
 	width: 100%;
@@ -27,7 +28,7 @@ export const MenuStyled = styled.div`
 		text-decoration: none;
 		color: ${colors.white};
 		&:hover, &:focus {
-			color: ${colors.rotaryGold};
+			color: ${theme.defaultHover};
 			font-weight: bolder;
 			transition: all .3s ease;
 		}

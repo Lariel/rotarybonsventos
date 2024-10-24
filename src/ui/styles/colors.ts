@@ -1,4 +1,5 @@
 export default {
+	/* Cores oficiais */
 	rotaryRoyalBlue: '#17458f',
 	rotaryGold: '#f7a81b',
 	azure: '#0067c8',

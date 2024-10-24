@@ -49,7 +49,6 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 1.17em;
 	}
 
-
 	body {
 		.container {
 			display: flex;

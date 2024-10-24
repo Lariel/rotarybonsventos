@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { breakpointDesktop, fadeInOpacity } from '@ui/styles/GlobalStyles';
-import colors from '@ui/styles/colors';
+import theme from '@ui/styles/theme';
 
 export const ContributeStyled = styled.div`
 	animation: ${fadeInOpacity} 0.3s forwards;
 
 	a {
 		&:hover, &:focus {
-			color: ${colors.rotaryGold};
+			color: ${theme.defaultHover};
 			font-weight: bold;
 			transition: all .3s ease;
 		}
