@@ -55,6 +55,12 @@ export const CardImageStyled = styled.div`
 	img {
 		width: 100%;
 	}
+	&:hover {
+		img {
+		  transform: scale(1.02);
+			transition: all .3s ease;
+		}
+	}
 `;
 
 export const CardTitleStyled = styled.div`
