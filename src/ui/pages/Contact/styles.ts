@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import colors from '@ui/styles/colors';
 import talk from '@assets/talk.jpg';
 import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import theme from '@ui/styles/theme';
 
 export const ContactPageStyled = styled.div`
 	display: flex;
@@ -12,7 +13,6 @@ export const ContactPageStyled = styled.div`
 		height: 100%;
 		align-items: center;
 		justify-items: center;
-		//background-color: ${colors.white};
 		display: grid;
 		@media screen and (max-width: ${breakpointDesktop}) {
 			display: flex;
@@ -39,6 +39,10 @@ export const ContactPageStyled = styled.div`
 			}
 			@media screen and (max-width: ${breakpointDesktop}) {
 				display: none;
+			}
+			&:hover {
+				background-position-x: 43%;
+				transition: all .3s ease;
 			}
 		}
 
@@ -78,11 +82,10 @@ export const ContactPageStyled = styled.div`
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			//background-color: ${colors.white};
 			width: 100%;
 			height: 100%;
 			align-items: center;
-			font-size: 40px;
+			font-size: 30px;
 			font-weight: bolder;
 			padding: 50px;
 			@media screen and (max-width: ${breakpointDesktop}) {
@@ -92,15 +95,15 @@ export const ContactPageStyled = styled.div`
 			a {
 				display: flex;
 				align-items: center;
-				font-size: 40px;
+				font-size: 30px;
 				font-weight: bolder;
 				color: ${colors.azure};
 				text-decoration: none;
 				@media screen and (max-width: ${breakpointDesktop}) {
 					font-size: 17px;
 				}
-				&:hover, &:focus {
-					color: ${colors.rotaryGold};
+				&:hover {
+					color: ${theme.defaultHover};
 					font-weight: bolder;
 					transition: all .3s ease;
 				}
@@ -108,6 +111,7 @@ export const ContactPageStyled = styled.div`
 			.contact-icon {
 				margin: 0 20px 0 0;
 				height: 50px;
+				//filter: invert(45%) sepia(100%) saturate(1000%) hue-rotate(22deg);
 				@media screen and (max-width: ${breakpointDesktop}) {
 					margin: 0 5px 0 0;
 					height: 30px;

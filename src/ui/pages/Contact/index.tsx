@@ -2,9 +2,8 @@ import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
 import { ContactPageStyled } from './styles';
-import PageIntro from '@app/components/PageIntro';
 import { social } from '@app/constants/constants';
-import icon_instagram from '@assets/icon_instagram.svg';
+import icon_instagram from '@assets/icon_instagram-new.svg';
 import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
 
@@ -28,7 +27,6 @@ export default function Contact() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-			<PageIntro intro='Aqui você encontra nossas redes sociais, canais de contato e endereço físico'/>
 			<ContactPageStyled>
 				<div className='contacts-grid'>
 					<div className='vertical-rigth'></div>
@@ -66,7 +64,7 @@ export default function Contact() {
 						</div>
 					</div>
 					<div className='fourth-square-left'>
-						<div className='contact-channel'>Avenida Jorge Dariva, nº xx</div>
+						<div className='contact-channel'>Avenida Jorge Dariva, nº xx. Osório - RS</div>
 					</div>
 				</div>
 			</ContactPageStyled>
