@@ -3,7 +3,7 @@ import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
 import { ContactPageStyled } from './styles';
 import { social } from '@app/constants/constants';
-import icon_instagram from '@assets/icon_instagram-new.svg';
+import icon_instagram from '@assets/icon_instagram.svg';
 import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
 
