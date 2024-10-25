@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import bg_links from '@assets/bg_links.jpg';
 import colors from '@ui/styles/colors';
-import { breakpointDesktop } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
+import theme from '@ui/styles/theme';
 
 export const VerticalLinksStyled = styled.div`
 	width: 100%;
@@ -16,7 +17,7 @@ export const VerticalLinksStyled = styled.div`
 
 	.vertical-link {
 		padding: 20px 40px;
-		background-color: ${colors.azure};
+		background-color: ${theme.mainColor};
 		border-radius: 50px;
 		color: ${colors.white};
 		text-decoration: none;
@@ -45,7 +46,7 @@ export const VerticalLinksStyled = styled.div`
 		}
 	}
 
-	@media screen and (min-width: ${breakpointDesktop}) {
+	@media screen and (min-width: ${maxWidthBreakpointMobile}) {
 		background-image: none;
 	}
 `;

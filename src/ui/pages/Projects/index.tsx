@@ -104,7 +104,7 @@ export default function Projects() {
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
 				<PageIntro
-					intro='Conheça nossos projetos texto continuação da introdução da página'
+					intro='Conheça nossos projetos e ações'
 				 	info='Colocar aqui mais informações sobre o conteúdo desta página.
 								Aqui a ideia é ter um texto maior, explicando de uma forma mais geral o conteúdo que ficará disponível na página.
 								Talvez também possamos colocar aqui alguma explicação sobre como navegar na página ou algo nesse sentido.'/>

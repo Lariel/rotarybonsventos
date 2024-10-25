@@ -1,4 +1,4 @@
-import { breakpointDesktop } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
 import styled from 'styled-components';
 
 export const IntroStyled = styled.div`
@@ -10,7 +10,7 @@ export const IntroStyled = styled.div`
 	margin-top: 2em;
 	margin-bottom: 2em;
 
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		padding: 0;
 	}
 
@@ -29,7 +29,7 @@ export const IntroStyled = styled.div`
     display: flex;
     justify-content: center;
 		margin-top: 1em;
-		@media screen and (max-width: ${breakpointDesktop}) {
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: none;
 		}
 	}

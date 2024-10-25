@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
-import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
 export const MenuContainerStyled = styled.div`
 	width: 100%;
 	height: 59px;
-	background-color: ${colors.azure};
+	background-color: ${theme.mainColor};
 	display: flex;
 
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		height: 0px;
 	}
 `;

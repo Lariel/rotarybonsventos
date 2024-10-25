@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import colors from '@ui/styles/colors';
+import theme from '@ui/styles/theme';
 
 const load = keyframes`
   0% {
@@ -36,7 +37,7 @@ const round = keyframes`
 `;
 
 export const CustomLoader = styled.div`
-	color: ${colors.azure};
+	color: ${theme.mainColor};
 	font-size: 90px;
 	text-indent: -9999em;
 	overflow: hidden;

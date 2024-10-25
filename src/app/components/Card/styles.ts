@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
-import { breakpointDesktop, fadeInScale } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile, fadeInScale } from '@ui/styles/GlobalStyles';
 
 const cardWidth = '300px';
 const cardWidthMobile = '400px';
@@ -26,7 +26,7 @@ export const CardStyled = styled.div`
 		font-weight: 600;
 		cursor: pointer;
 		margin: 0 5px 0 0;
-		@media screen and (max-width: ${breakpointDesktop}) {
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			text-decoration: underline dotted;
 		}
 		&:hover, &:focus {
@@ -40,7 +40,7 @@ export const CardStyled = styled.div`
 		//transform: translateY(-4px);
 		transform: scale(1.02);
 	}
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		width: ${cardWidthMobile};
 		box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 	}

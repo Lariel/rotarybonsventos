@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpointDesktop, fadeInOpacity } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile, fadeInOpacity } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
 export const ContributeStyled = styled.div`
@@ -15,7 +15,7 @@ export const ContributeStyled = styled.div`
 
 	ul {
 		margin-left: 70px;
-		@media screen and (max-width: ${breakpointDesktop}) {
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			margin-left: 30px;
 		}
 		li {
@@ -38,7 +38,7 @@ export const HowDonateGridStyled = styled.div`
 		width: 50%;
 	}
 
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		display: flex;
 		margin: 0 0 40px 0;
 		flex-direction: column;

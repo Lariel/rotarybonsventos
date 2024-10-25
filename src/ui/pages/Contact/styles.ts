@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '@ui/styles/colors';
 import talk from '@assets/talk.jpg';
-import { breakpointDesktop, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
 export const ContactPageStyled = styled.div`
@@ -14,7 +14,7 @@ export const ContactPageStyled = styled.div`
 		align-items: center;
 		justify-items: center;
 		display: grid;
-		@media screen and (max-width: ${breakpointDesktop}) {
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: flex;
 			flex-direction: column;
 		}
@@ -37,7 +37,7 @@ export const ContactPageStyled = styled.div`
 				background-position-y: 10%;
 				background-size: cover;
 			}
-			@media screen and (max-width: ${breakpointDesktop}) {
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				display: none;
 			}
 			&:hover {
@@ -88,7 +88,7 @@ export const ContactPageStyled = styled.div`
 			font-size: 30px;
 			font-weight: bolder;
 			padding: 50px;
-			@media screen and (max-width: ${breakpointDesktop}) {
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				padding: 10px;
 				font-size: 20px;
 			}
@@ -97,9 +97,9 @@ export const ContactPageStyled = styled.div`
 				align-items: center;
 				font-size: 30px;
 				font-weight: bolder;
-				color: ${colors.azure};
+				color: ${theme.mainColor};
 				text-decoration: none;
-				@media screen and (max-width: ${breakpointDesktop}) {
+				@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 					font-size: 17px;
 				}
 				&:hover {
@@ -112,7 +112,7 @@ export const ContactPageStyled = styled.div`
 				margin: 0 20px 0 0;
 				height: 50px;
 				//filter: invert(45%) sepia(100%) saturate(1000%) hue-rotate(22deg);
-				@media screen and (max-width: ${breakpointDesktop}) {
+				@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 					margin: 0 5px 0 0;
 					height: 30px;
 				}

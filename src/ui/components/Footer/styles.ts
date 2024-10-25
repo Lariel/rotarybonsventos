@@ -1,11 +1,12 @@
 import colors from '@ui/styles/colors';
-import { breakpointDesktop } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
+import theme from '@ui/styles/theme';
 import styled from 'styled-components';
 
 export const FooterContainerStyled = styled.div`
-	background-color: ${colors.azure};
+	background-color: ${theme.mainColor};
 	height: 183px;
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		height: 150px;
 	}
 `;
@@ -18,7 +19,7 @@ export const FooterContentStyled = styled.div`
 		display: flex;
 		width: 100%;
 		height: 50%;
-		@media screen and (max-width: ${breakpointDesktop}) {
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			height: 30%;
 		}
 		align-items: center;
@@ -50,7 +51,7 @@ export const FooterContentStyled = styled.div`
 			font-size: 20px;
 			font-weight: bolder;
 			color: ${colors.white};
-			@media screen and (max-width: ${breakpointDesktop}) {
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				padding: 0 0 0 90px;
 			}
 		}
@@ -58,7 +59,7 @@ export const FooterContentStyled = styled.div`
 		.footer-contact-icons {
 			grid-area: footer-contact-icons;
 			padding: 0 0 0 140px;
-			@media screen and (max-width: ${breakpointDesktop}) {
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				padding: 0 0 0 100px;
 			}
 
@@ -83,7 +84,7 @@ export const FooterContentStyled = styled.div`
 			img {
 					height: 60px;
 			}
-			@media screen and (max-width: ${breakpointDesktop}) {
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				img {
 					height: 40px;
 				}
