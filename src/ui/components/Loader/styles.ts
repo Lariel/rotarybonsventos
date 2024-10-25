@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import colors from '@ui/styles/colors';
 import theme from '@ui/styles/theme';
 
 const load = keyframes`
