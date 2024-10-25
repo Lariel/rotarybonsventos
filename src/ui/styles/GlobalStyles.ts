@@ -1,10 +1,16 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import colors from './colors';
+import theme from './theme';
 
 export const maxWidthStructureDesktopLarge = '1360px';
 export const maxWidthStructureDesktopMedium = '1200px';
 export const maxWidthContentResponsive = '1440px';
-export const breakpointDesktop = '768px';
+
+export const maxWidthBreakpointDesktopFHD = '1920px';
+export const maxWidthBreakpointDesktopWXGA = '1366px';
+export const maxWidthBreakpointDesktopHD = '1280px';
+export const maxWidthBreakpointDesktopXGA = '1024px';
+export const maxWidthBreakpointMobile = '768px';
 
 export const fadeInOpacity = keyframes`
 	from {
@@ -61,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
 				@media screen and (max-width: 1366px) {
 					max-width: ${maxWidthStructureDesktopMedium};
 				}
-				@media screen and (max-width: ${breakpointDesktop}) {
+				@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 					display: none;
 				}
 			}
@@ -70,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
 				width: 100%;
 				padding: 0 10px 0 10px;
 				display: flex;
-				@media screen and (min-width: ${breakpointDesktop}) {
+				@media screen and (min-width: ${maxWidthBreakpointMobile}) {
 					display: none;
 				}
 			}
@@ -83,7 +89,6 @@ export const GlobalStyles = createGlobalStyle`
 
 			.content-responsive {
 				width: 100%;
-				padding: 0 20px 0 20px;
 				max-width: ${maxWidthContentResponsive};
 				display: flex;
 				flex-wrap: wrap;
@@ -91,11 +96,8 @@ export const GlobalStyles = createGlobalStyle`
 				justify-content: center;
 				align-content: flex-start;
 				animation: ${fadeInOpacity} 0.3s forwards;
-				background-color: ${colors.contentBG};
+				background-color: ${theme.defaultContentBG};
 				box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
-				@media screen and (max-width: 1366px) {
-					padding: 0;
-				}
 			}
 		}
 	}
@@ -103,7 +105,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const ContentStyled = styled.div`
 	min-height: calc(100vh - 362px);
-	@media screen and (max-width: ${breakpointDesktop}) {
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		min-height: calc(100vh - 400px);
 	}
 `;
