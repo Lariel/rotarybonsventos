@@ -1,7 +1,7 @@
 import { BrowserRouter, Link } from 'react-router-dom'
 import { routes } from '@app/Router/routes'
 import { Router } from '@app/Router'
-import { MenuContainerStyled, MenuStyled } from './styles';
+import { PageStyled, MenuStyled } from './styles';
 import { useEffect } from 'react';
 
 let isHomeActive = true;
@@ -82,7 +82,7 @@ export function Menu() {
 	return (
 		<>
 			<BrowserRouter>
-				<MenuContainerStyled className='container'>
+				<PageStyled className='container'>
 					<MenuStyled className='structure-desktop'>
 						<Link
 							className={isHomeActive ? 'active': 'default'}
@@ -115,7 +115,7 @@ export function Menu() {
 								{routes.contact.label}
 						</Link>
 					</MenuStyled>
-				</MenuContainerStyled>
+				</PageStyled>
 				<Router />
 			</BrowserRouter>
 		</>

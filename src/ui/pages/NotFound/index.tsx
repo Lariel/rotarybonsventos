@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
+import { PageStyled } from './styles';
 
 export default function NotFound() {
 
@@ -23,7 +24,9 @@ export default function NotFound() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				Página não encontrada!!
+				<PageStyled>
+					Página não encontrada!!
+				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>
 	)

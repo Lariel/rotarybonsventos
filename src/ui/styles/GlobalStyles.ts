@@ -64,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
 				width: 100%;
 				max-width: ${maxWidthStructureDesktopLarge};
 				display: flex;
-				@media screen and (max-width: 1366px) {
+				@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 					max-width: ${maxWidthStructureDesktopMedium};
 				}
 				@media screen and (max-width: ${maxWidthBreakpointMobile}) {

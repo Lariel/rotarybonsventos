@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { maxWidthBreakpointMobile, fadeInOpacity } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
-export const ContributeStyled = styled.div`
+export const PageStyled = styled.div`
 	animation: ${fadeInOpacity} 0.3s forwards;
 
 	a {
@@ -22,6 +22,10 @@ export const ContributeStyled = styled.div`
 			font-size: 1.1em;
 			line-height: 2em;
 		}
+	}
+
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+		padding: 0 20px 0 20px;
 	}
 `;
 

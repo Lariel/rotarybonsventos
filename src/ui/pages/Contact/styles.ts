@@ -4,7 +4,7 @@ import talk from '@assets/talk.jpg';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
-export const ContactPageStyled = styled.div`
+export const PageStyled = styled.div`
 	display: flex;
 	width: 100%;
 	height: 800px;

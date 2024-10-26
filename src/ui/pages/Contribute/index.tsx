@@ -3,7 +3,7 @@ import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles'
 import PageIntro from '@app/components/PageIntro';
 import { routes } from '@app/Router/routes';
 import { social } from '@app/constants/constants'
-import { ContributeStyled, HowDonateGridStyled } from './styles';
+import { PageStyled, HowDonateGridStyled } from './styles';
 import pix_rotary from '@assets/qrcode-pix.png';
 import { Pages } from '@app/model/Pages';
 
@@ -31,7 +31,7 @@ export default function Contribute() {
 				<PageIntro
 					intro='Sua contribuição faz a diferença!'
 					info=''/>
-				<ContributeStyled>
+				<PageStyled>
 					<p>Ao doar, você nos ajuda a continuar promovendo projetos e ações, impactando positivamente a comunidade.</p>
 					<p>Cada doação, independentemente do valor, nos permite:</p>
 					<ul>
@@ -42,14 +42,14 @@ export default function Contribute() {
 					</ul>
 					<p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>
 					<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
-				</ContributeStyled>
+				</PageStyled>
 				<PageIntro intro='Como doar'/>
-				<ContributeStyled>
+				<PageStyled>
 					<HowDonateGridStyled>
 						<p className='grid-how-donate'>Sua doação pode ser feita via pix, utilizando nosso qr-code, ou com a chave <b>{social.email}</b>.</p>
 						<img className='grid-qr-donate' src={pix_rotary}></img>
 					</HowDonateGridStyled>
-				</ContributeStyled>
+				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>
 	)

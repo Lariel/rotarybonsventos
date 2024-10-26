@@ -3,7 +3,7 @@ import colors from '@ui/styles/colors';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
-export const MenuContainerStyled = styled.div`
+export const PageStyled = styled.div`
 	width: 100%;
 	height: 59px;
 	background-color: ${theme.mainColor};
