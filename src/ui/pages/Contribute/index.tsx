@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles'
-import PageIntro from '@app/components/PageIntro';
 import { routes } from '@app/Router/routes';
 import { social } from '@app/constants/constants'
 import { PageStyled, HowDonateGridStyled } from './styles';
@@ -28,27 +27,30 @@ export default function Contribute() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				<PageIntro
-					intro='Sua contribuição faz a diferença!'
-					info=''/>
 				<PageStyled>
-					<p>Ao doar, você nos ajuda a continuar promovendo projetos e ações, impactando positivamente a comunidade.</p>
-					<p>Cada doação, independentemente do valor, nos permite:</p>
-					<ul>
-						<li>Financiar projetos sociais de forma sustentável e de longo prazo</li>
-						<li>Manter a infra estrutura do clube pronta para apoiar as demandas</li>
-						<li>Outro texto aqui</li>
-						<li>Mais outro texto aqui</li>
-					</ul>
-					<p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>
-					<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
-				</PageStyled>
-				<PageIntro intro='Como doar'/>
-				<PageStyled>
-					<HowDonateGridStyled>
-						<p className='grid-how-donate'>Sua doação pode ser feita via pix, utilizando nosso qr-code, ou com a chave <b>{social.email}</b>.</p>
-						<img className='grid-qr-donate' src={pix_rotary}></img>
-					</HowDonateGridStyled>
+				<div className='page-grid'>
+					<div className='col-rigth'>
+					</div>
+					<div className='first-square-left'>
+						<h1>Sua contribuição faz a diferença!</h1>
+						<p>Ao doar, você nos ajuda a continuar promovendo projetos e ações, impactando positivamente a comunidade.</p>
+						<p>Cada doação, independentemente do valor, nos permite:</p>
+						<ul>
+							<li>Financiar projetos sociais de forma sustentável e de longo prazo</li>
+							<li>Manter a infra estrutura do clube pronta para apoiar as demandas</li>
+							<li>Outro texto aqui</li>
+							<li>Mais outro texto aqui</li>
+						</ul>
+						<p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>
+						<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
+					</div>
+					<div className='second-square-left'>
+						<HowDonateGridStyled>
+							<p className='grid-how-donate'>Sua doação pode ser feita via pix, utilizando nosso qr-code, ou com a chave <b>{social.email}</b>.</p>
+							<img className='grid-qr-donate' src={pix_rotary}></img>
+						</HowDonateGridStyled>
+					</div>
+				</div>
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>

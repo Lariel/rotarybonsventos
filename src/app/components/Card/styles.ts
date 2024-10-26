@@ -3,7 +3,7 @@ import colors from '@ui/styles/colors';
 import { maxWidthBreakpointMobile, fadeInScale } from '@ui/styles/GlobalStyles';
 
 const cardWidth = '300px';
-const cardWidthMobile = '400px';
+const cardWidthMobile = '85%';
 const cardHeight = '350px';
 const cardPadding = '5px';
 const cardMargin = '10px';
