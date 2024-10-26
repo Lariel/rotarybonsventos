@@ -14,7 +14,7 @@ export const PageStyled = styled.div`
 	}
 
 	ul {
-		margin-left: 70px;
+		margin: 0 0 20px 70px;
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			margin-left: 30px;
 		}
@@ -24,13 +24,13 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-		//padding: 0 20px 0 20px;
-	}
 
 	display: flex;
 	width: 100%;
-	height: 800px;
+	height: 750px;
+	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+		height: auto;
+	}
 	.page-grid {
 		width: 100%;
 		height: 100%;
@@ -41,8 +41,8 @@ export const PageStyled = styled.div`
 			display: flex;
 			flex-direction: column;
 		}
-		grid-template: "col-rigth first-square-left" 50%
-		"col-rigth second-square-left" 50%
+		grid-template: "col-rigth first-square-left" 55%
+		"col-rigth second-square-left" 45%
 		/ 25% 75%;
 
 		.col-rigth {
@@ -73,6 +73,12 @@ export const PageStyled = styled.div`
 			height: 100%;
 			background-color: ${colors.moss};
 			padding: 20px;
+			h1 {
+				padding: 20px;
+				@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+					padding: 10px;
+				}
+			}
 		}
 
 		.second-square-left {
