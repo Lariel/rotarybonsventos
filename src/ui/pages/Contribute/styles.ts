@@ -7,7 +7,7 @@ import colors from '@ui/styles/colors';
 export const PageStyled = styled.div`
 	a {
 		&:hover, &:focus {
-			color: ${theme.defaultHover};
+			color: ${theme.hoverDefault};
 			font-weight: bold;
 			transition: all .3s ease;
 		}

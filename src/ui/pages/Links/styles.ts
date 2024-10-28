@@ -17,7 +17,7 @@ export const VerticalLinksStyled = styled.div`
 
 	.vertical-link {
 		padding: 20px 40px;
-		background-color: ${theme.mainColor};
+		background-color: ${theme.colorDefault};
 		border-radius: 50px;
 		color: ${colors.white};
 		text-decoration: none;

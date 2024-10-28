@@ -19,7 +19,7 @@ export const HeaderContentStyled = styled.div`
 
 	.logo-header-desktop {
 		padding-right: 20px;
-		border-right: 3px solid ${theme.mainColor};
+		border-right: 3px solid ${theme.colorDefault};
 		margin-left: 73px;
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			margin-left: 10px;
@@ -36,7 +36,7 @@ export const HeaderContentStyled = styled.div`
 		white-space: nowrap;
 		overflow: hidden;
 		max-width: 910px;
-		color: ${theme.mainColor};
+		color: ${theme.colorDefault};
 		@media screen and (max-width: 1100px) {
 			font-size: 50px;
 		}
@@ -46,7 +46,7 @@ export const HeaderContentStyled = styled.div`
 export const HeaderContentMobileStyled = styled.header`
 	display: flex;
 	height: 200px;
-	background-color: ${theme.mainColor};
+	background-color: ${theme.colorDefault};
 	align-items: center;
 	justify-content: center;
 	img {

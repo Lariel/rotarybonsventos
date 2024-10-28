@@ -28,7 +28,32 @@ export default function Home() {
 				<PageStyled>
 					<PageIntro
 							intro='Página inicial do site'
-							info='Colocar mais informações sobre o clube, etc'/>
+							info='Colocar mais informações sobre o clube, algum texto introdutório genérico, etc'/>
+					<section className='about'>
+						<div className='section-title'>
+							<h2>Sobre nós</h2>
+						</div>
+						<div className='section-content'>
+							etc etc
+						</div>
+					</section>
+					<section className='news'>
+						<div className='section-title'>
+							<h2>Novidades</h2>
+						</div>
+						<div className='section-content'>
+							etc etc
+						</div>
+					</section>
+					<section className='actions'>
+						<div className='section-title'>
+							<h2>Ações em destaque</h2>
+						</div>
+						<div className='section-content'>
+						etc etc
+						</div>
+					</section>
+
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>

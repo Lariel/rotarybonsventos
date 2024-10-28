@@ -37,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: Open Sans, sans-serif;
 		font-size: 15px;
-		color: ${colors.siteFontColor};
+		color: ${theme.fontColorDefault};
   }
 
 	p {
@@ -49,6 +49,10 @@ export const GlobalStyles = createGlobalStyle`
 
 	h1 {
 		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.47em;
 	}
 
 	h3 {
@@ -96,7 +100,7 @@ export const GlobalStyles = createGlobalStyle`
 				justify-content: center;
 				align-content: flex-start;
 				animation: ${fadeInOpacity} 0.3s forwards;
-				background-color: ${theme.defaultContentBG};
+				background-color: ${theme.contentBGDefault};
 				box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 			}
 		}

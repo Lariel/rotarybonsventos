@@ -25,10 +25,6 @@ export const routes = {
 		path: Pages.contact.path,
 		label: Pages.contact.label
 	},
-	about: {
-		path: Pages.about.path,
-		label: Pages.about.label
-	},
 	links: {
 		path: Pages.links.path,
 		label: Pages.links.label

@@ -97,13 +97,13 @@ export const PageStyled = styled.div`
 				align-items: center;
 				font-size: 30px;
 				font-weight: bolder;
-				color: ${theme.mainColor};
+				color: ${theme.colorDefault};
 				text-decoration: none;
 				@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 					font-size: 17px;
 				}
 				&:hover {
-					color: ${theme.defaultHover};
+					color: ${theme.hoverDefault};
 					font-weight: bolder;
 					transition: all .3s ease;
 				}

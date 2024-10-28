@@ -4,7 +4,7 @@ import theme from '@ui/styles/theme';
 import styled from 'styled-components';
 
 export const FooterContainerStyled = styled.div`
-	background-color: ${theme.mainColor};
+	background-color: ${theme.colorDefault};
 	height: 183px;
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		height: 150px;

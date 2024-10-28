@@ -6,7 +6,7 @@ import theme from '@ui/styles/theme';
 export const PageStyled = styled.div`
 	width: 100%;
 	height: 59px;
-	background-color: ${theme.mainColor};
+	background-color: ${theme.colorDefault};
 	display: flex;
 
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
@@ -28,7 +28,7 @@ export const MenuStyled = styled.div`
 		text-decoration: none;
 		color: ${colors.white};
 		&:hover, &:focus {
-			color: ${theme.defaultHover};
+			color: ${theme.hoverDefault};
 			font-weight: bolder;
 			transition: all .3s ease;
 		}
