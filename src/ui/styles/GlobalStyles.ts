@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import colors from './colors';
 import theme from './theme';
 
 export const maxWidthStructureDesktopLarge = '1360px';
