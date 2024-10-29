@@ -15,7 +15,7 @@ export const PageStyled = styled.div`
 		//background-color: ${colors.taupe};
 		//background-color: ${colors.white};
 		//background-color: ${theme.contentBGDefault};
-		height: 350px;
+		height: 750px;
 	}
 
 	.news {
@@ -47,7 +47,6 @@ export const PageStyled = styled.div`
 		display: flex;
 		width: 100%;
 		background-color: ${theme.contentBGDefault};
-		height: 100%;
 	}
 
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {

@@ -1,9 +1,10 @@
 import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
+import colors from '@ui/styles/colors';
 import styled from 'styled-components';
 
 export const PageStyled = styled.div`
-	background-color: ${theme.contentBGDefault};
+	background-color: ${colors.taupe+theme.transparencyDefault};
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;

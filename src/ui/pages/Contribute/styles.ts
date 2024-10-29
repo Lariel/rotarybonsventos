@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
-import contribute from '@assets/contribute.jpg';
 import colors from '@ui/styles/colors';
+import contribute from '@assets/contribute.jpg';
 
 export const PageStyled = styled.div`
 	a {
@@ -77,7 +77,7 @@ export const PageStyled = styled.div`
 			grid-area: first-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.moss};
+			background-color: ${colors.moss+theme.transparencyDefault};
 			padding: 20px;
 			h1 {
 				padding: 20px;
@@ -91,7 +91,7 @@ export const PageStyled = styled.div`
 			grid-area: second-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.lavender};
+			background-color: ${colors.lavender+theme.transparencyDefault};
 			padding: 20px;
 		}
 	}

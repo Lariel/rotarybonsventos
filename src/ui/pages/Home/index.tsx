@@ -25,27 +25,27 @@ export default function Home() {
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
-					<section className='about'>
+					<section className=''>
 						<div className='section-title'>
 							<h1>Sobre nós</h1>
 						</div>
-						<div className='section-content'>
+						<div className='section-content about'>
 							etc etc
 						</div>
 					</section>
-					<section className='news'>
+					<section className=''>
 						<div className='section-title'>
 							<h1>Novidades</h1>
 						</div>
-						<div className='section-content'>
+						<div className='section-content news'>
 							etc etc
 						</div>
 					</section>
-					<section className='actions'>
+					<section className=''>
 						<div className='section-title'>
 							<h1>Ações em destaque</h1>
 						</div>
-						<div className='section-content'>
+						<div className='section-content actions'>
 						etc etc
 						</div>
 					</section>

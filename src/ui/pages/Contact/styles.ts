@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import colors from '@ui/styles/colors';
-import talk from '@assets/talk.jpg';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
+import colors from '@ui/styles/colors';
 import theme from '@ui/styles/theme';
+import talk from '@assets/talk.jpg';
 
 export const PageStyled = styled.div`
 	display: flex;
@@ -60,7 +60,7 @@ export const PageStyled = styled.div`
 			grid-area: first-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.moss};
+			background-color: ${colors.moss+theme.transparencyDefault};
 			padding: 10px;
 		}
 
@@ -68,7 +68,7 @@ export const PageStyled = styled.div`
 			grid-area: second-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.lavender};
+			background-color: ${colors.lavender+theme.transparencyDefault};
 			padding: 10px;
 		}
 
@@ -76,7 +76,7 @@ export const PageStyled = styled.div`
 			grid-area: third-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.smoke};
+			background-color: ${colors.smoke+theme.transparencyDefault};
 			padding: 10px;
 		}
 
@@ -84,7 +84,7 @@ export const PageStyled = styled.div`
 			grid-area: fourth-square-left;
 			width: 100%;
 			height: 100%;
-			background-color: ${colors.ash};
+			background-color: ${colors.ash+theme.transparencyDefault};
 			padding: 10px;
 		}
 
