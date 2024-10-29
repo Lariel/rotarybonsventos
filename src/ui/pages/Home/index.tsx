@@ -27,7 +27,7 @@ export default function Home() {
 				<PageStyled>
 					<section className='about'>
 						<div className='section-title'>
-							<h2>Sobre nós</h2>
+							<h1>Sobre nós</h1>
 						</div>
 						<div className='section-content'>
 							etc etc
@@ -35,7 +35,7 @@ export default function Home() {
 					</section>
 					<section className='news'>
 						<div className='section-title'>
-							<h2>Novidades</h2>
+							<h1>Novidades</h1>
 						</div>
 						<div className='section-content'>
 							etc etc
@@ -43,7 +43,7 @@ export default function Home() {
 					</section>
 					<section className='actions'>
 						<div className='section-title'>
-							<h2>Ações em destaque</h2>
+							<h1>Ações em destaque</h1>
 						</div>
 						<div className='section-content'>
 						etc etc

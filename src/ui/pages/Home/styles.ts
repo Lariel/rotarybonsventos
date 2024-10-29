@@ -8,35 +8,46 @@ export const PageStyled = styled.div`
 
 	section {
 		padding: 20px;
+		overflow: hidden;
 	}
 
 	.about {
 		//background-color: ${colors.taupe};
 		//background-color: ${colors.white};
-		background-color: ${theme.contentBGDefault};
+		//background-color: ${theme.contentBGDefault};
+		height: 350px;
 	}
 
 	.news {
 		//background-color: ${colors.platinum};
 		//background-color: ${colors.white};
-		background-color: ${theme.contentBGDefault};
+		//background-color: ${theme.contentBGDefault};
+		height: 750px;
 	}
 
 	.actions {
 		//background-color: ${colors.lavender};
 		//background-color: ${colors.white};
-		background-color: ${theme.contentBGDefault};
+		//background-color: ${theme.contentBGDefault};
+		height: 550px;
 	}
 
 	.section-title {
-		display: flex;
-		width: 100%;
 		padding: 20px 0 20px 0;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		h1 {
+			font-weight: 300;
+		}
 	}
 
 	.section-content {
-		background-color: ${colors.white};
-		height: 450px;
+		padding: 20px;
+		display: flex;
+		width: 100%;
+		background-color: ${theme.contentBGDefault};
+		height: 100%;
 	}
 
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
