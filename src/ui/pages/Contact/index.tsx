@@ -29,7 +29,9 @@ export default function Contact() {
 			<ContentStyled className='content-responsive'>
 			<PageStyled>
 				<div className='contacts-grid'>
-					<div className='vertical-rigth'></div>
+					<div className='vertical-rigth'>
+						<div className='banner-rigth'></div>
+					</div>
 					<div className='first-square-left'>
 						<div className='contact-channel'>
 							<a href={social.instagram} target='_blank'>

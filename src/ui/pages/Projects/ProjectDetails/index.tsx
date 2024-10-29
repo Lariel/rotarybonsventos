@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom';
 import PageIntro from '@app/components/PageIntro';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
+import { PageStyled } from './styles';
 
-export default function ProjectDetails(props: any) {
+export default function ProjectDetails() {
 
 	useEffect(() => {
-		console.log('Start ProjectDetails: ', props);
+		console.log('Start Projects details');
 
 		const event = new CustomEvent('changePage',{
 			detail: {
@@ -15,10 +16,13 @@ export default function ProjectDetails(props: any) {
 			}
 		});
 
-		document.dispatchEvent(event);
+		setTimeout(() => {
+			// TODO: Remover essa gambiarra após buscar os detalhes do projeto
+			document.dispatchEvent(event);
+		}, 100)
 
 		return () => {
-			console.log('Exit ProjectDetails');
+			console.log('Exit Project details');
 		}
 	}, []);
 
@@ -29,10 +33,12 @@ export default function ProjectDetails(props: any) {
 	return(
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				<PageIntro
-					intro={'Detalhes do projeto ' + params.id}
-					info={'WIP'}
-				/>
+				<PageStyled>
+					<PageIntro
+						intro={'Detalhes do projeto ' + params.id}
+						info={'WIP'}
+					/>
+				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>
 

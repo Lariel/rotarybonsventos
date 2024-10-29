@@ -6,10 +6,10 @@ import { routes } from '@app/Router/routes';
 
 export default function Card(props: any) {
 	useEffect(() => {
-		console.log('Start Card: ', props);
+		//console.log('Start Card: ', props);
 
 		return () => {
-			console.log('Exit Card');
+			//console.log('Exit Card');
 		}
 	}, []);
 

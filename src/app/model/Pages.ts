@@ -11,7 +11,7 @@ export const Pages  = {
 	},
 	projectDetails: {
 		path: '/projetos/:id',
-		label: '',
+		label: 'Projetos',
 		description: 'Sobre o projeto'
 	},
 	accountability: {

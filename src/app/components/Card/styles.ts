@@ -52,6 +52,7 @@ export const CardImageStyled = styled.div`
 	height: 150px;
 	margin-bottom: 15px;
 	overflow: hidden;
+	transition: all 2s ease;
 	img {
 		width: 100%;
 	}

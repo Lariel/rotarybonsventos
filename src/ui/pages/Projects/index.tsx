@@ -9,6 +9,7 @@ import peace from '@assets/peace.jpg';
 import nature from '@assets/nature.jpg';
 import PageIntro from '@app/components/PageIntro';
 import { Pages } from '@app/model/Pages';
+import { PageStyled } from './styles';
 
 export default function Projects() {
 
@@ -103,22 +104,24 @@ export default function Projects() {
 	return (
 		<ContainerStyled className='container'>
 			<ContentStyled className='content-responsive'>
-				<PageIntro
-					intro='Conheça nossos projetos e ações'
-				 	info='Colocar aqui mais informações sobre o conteúdo desta página.
-								Aqui a ideia é ter um texto maior, explicando de uma forma mais geral o conteúdo que ficará disponível na página.
-								Talvez também possamos colocar aqui alguma explicação sobre como navegar na página ou algo nesse sentido.'/>
-				{projects.map(project => (
-					<Card
-						key={project.id}
-						id={project.id}
-						image={project.image}
-						title={project.title}
-						description={project.description}
-						tags={project.tags}
-						knowMore={true} >
-					</Card>
-				))}
+				<PageStyled>
+					<PageIntro
+						intro='Conheça nossos projetos e ações'
+						info='Colocar aqui mais informações sobre o conteúdo desta página.
+									Aqui a ideia é ter um texto maior, explicando de uma forma mais geral o conteúdo que ficará disponível na página.
+									Talvez também possamos colocar aqui alguma explicação sobre como navegar na página ou algo nesse sentido.'/>
+					{projects.map(project => (
+						<Card
+							key={project.id}
+							id={project.id}
+							image={project.image}
+							title={project.title}
+							description={project.description}
+							tags={project.tags}
+							knowMore={true} >
+						</Card>
+					))}
+				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>
 	)

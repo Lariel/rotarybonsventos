@@ -49,21 +49,27 @@ export const PageStyled = styled.div`
 			grid-area: col-rigth;
 			width: 100%;
 			height: 100%;
-			background-image: url(${contribute});
-			background-position-x: 45%;
-			background-position-y: 10%;
-			background-size: cover;
-			@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
-				background-position-x: 50%;
-				background-position-y: 10%;
-				background-size: cover;
-			}
+			overflow: hidden;
 			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 				display: none;
 			}
-			&:hover {
-				background-position-x: 43%;
-				transition: all .3s ease;
+			.banner-rigth {
+				width: 100%;
+				height: 100%;
+				background-image: url(${contribute});
+				background-position-x: 45%;
+				background-position-y: 10%;
+				background-size: cover;
+				transition: all 1s ease;
+				&:hover {
+					transform: scale(1.05);
+					transition: all 1s ease;
+				}
+				@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
+					background-position-x: 50%;
+					background-position-y: 10%;
+					background-size: cover;
+				}
 			}
 		}
 

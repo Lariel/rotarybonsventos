@@ -99,7 +99,7 @@ export const GlobalStyles = createGlobalStyle`
 				justify-content: center;
 				align-content: flex-start;
 				animation: ${fadeInOpacity} 0.3s forwards;
-				background-color: ${theme.contentBGDefault};
+				//background-color: ${theme.contentBGDefault};
 				box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 			}
 		}

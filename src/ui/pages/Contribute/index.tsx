@@ -30,6 +30,7 @@ export default function Contribute() {
 				<PageStyled>
 				<div className='page-grid'>
 					<div className='col-rigth'>
+						<div className='banner-rigth'></div>
 					</div>
 					<div className='first-square-left'>
 						<h1>Sua contribuição faz a diferença!</h1>

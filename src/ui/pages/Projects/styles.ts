@@ -6,7 +6,6 @@ export const PageStyled = styled.div`
 	background-color: ${theme.contentBGDefault};
 	display: flex;
 	width: 100%;
-	height: 800px;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;

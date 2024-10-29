@@ -1,4 +1,5 @@
 import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
+import theme from '@ui/styles/theme';
 import styled from 'styled-components';
 
 export const PageStyled = styled.div`
@@ -7,6 +8,7 @@ export const PageStyled = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-content: flex-start;
+	background-color: ${theme.contentBGDefault};
 
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		width: 100%;
