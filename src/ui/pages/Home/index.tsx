@@ -30,7 +30,59 @@ export default function Home() {
 							<h1>Sobre nós</h1>
 						</div>
 						<div className='section-content about'>
-							etc etc
+							<div className='row'>
+								<div className='col-w40 padding-20 center'>
+									<div className='round-topic first-topic'></div>
+								</div>
+								<div className='col-w60 padding-20'>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+									<p>Texto primeira linha</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w60'>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+									<p>Texto segunda linha</p>
+								</div>
+								<div className='col-w40 padding-20 center'>
+									<div className='round-topic second-topic'></div>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w40 padding-20 center'>
+									<div className='round-topic third-topic'></div>
+								</div>
+								<div className='col-w60'>
+									<p>Texto terceira linha</p>
+									<p>Texto terceira linha</p>
+									<p>Texto terceira linha</p>
+									<p>Texto terceira linha</p>
+									<p>Texto terceira linha</p>
+									<p>Texto terceira linha</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w100 center'>
+									<p>Aqu pode ter um texto finalizando a apresentação do clube</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w100 center'>
+									<div className='square-topic fourth-topic'></div>
+								</div>
+							</div>
 						</div>
 					</section>
 					<section className=''>
@@ -46,7 +98,14 @@ export default function Home() {
 							<h1>Ações em destaque</h1>
 						</div>
 						<div className='section-content actions'>
-						etc etc
+							<div className='row'>
+								<div className='col-w20'>
+									primeira linha
+								</div>
+								<div className='col-w80'>
+									primeira linha
+								</div>
+							</div>
 						</div>
 					</section>
 

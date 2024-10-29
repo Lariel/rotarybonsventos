@@ -65,6 +65,70 @@ export const GlobalStyles = createGlobalStyle`
 			background: #f8f9fa url(${bg}) 50% 0;
 		}
 
+		.row {
+			display: flex;
+			width: 100%;
+		}
+
+		.col-w10 {
+			width: 10%;
+			overflow: hidden;
+		}
+
+		.col-w20 {
+			width: 20%;
+			overflow: hidden;
+		}
+
+		.col-w30 {
+			width: 30%;
+			overflow: hidden;
+		}
+
+		.col-w40 {
+			width: 40%;
+			overflow: hidden;
+		}
+
+		.col-w50 {
+			width: 50%;
+			overflow: hidden;
+		}
+
+		.col-w60 {
+			width: 60%;
+			overflow: hidden;
+		}
+
+		.col-w70 {
+			width: 70%;
+			overflow: hidden;
+		}
+
+		.col-w80 {
+			width: 80%;
+			overflow: hidden;
+		}
+
+		.col-w90 {
+			width: 90%;
+			overflow: hidden;
+		}
+
+		.col-w100 {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+		}
+
+		.padding-20 {
+			padding: 20px;
+		}
+
 		.container {
 			display: flex;
 			justify-content: center;
