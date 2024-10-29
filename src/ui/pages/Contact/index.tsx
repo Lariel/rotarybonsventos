@@ -25,7 +25,7 @@ export default function Contact() {
 		}
 	}, []);
 	return (
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 			<PageStyled>
 				<div className='contacts-grid'>

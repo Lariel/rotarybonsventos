@@ -102,7 +102,7 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					<PageIntro

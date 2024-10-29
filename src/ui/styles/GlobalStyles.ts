@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import theme from './theme';
+import bg from '@assets/concrete_seamless.jpg';
 
 export const maxWidthStructureDesktopLarge = '1360px';
 export const maxWidthStructureDesktopMedium = '1200px';
@@ -59,6 +60,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
+		.container-bg {
+			//background-color: ${theme.contentBGDefault};
+			background: #f8f9fa url(${bg}) 50% 0;
+		}
+
 		.container {
 			display: flex;
 			justify-content: center;

@@ -31,7 +31,7 @@ export default function ProjectDetails() {
 	console.log('paras:', params);
 
 	return(
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					<PageIntro

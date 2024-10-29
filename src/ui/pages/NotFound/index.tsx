@@ -22,7 +22,7 @@ export default function NotFound() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					Página não encontrada!!

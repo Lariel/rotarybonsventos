@@ -24,7 +24,7 @@ export default function Accountability() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					<PageIntro intro='Aqui você encontra a prestação de contas do clube'/>

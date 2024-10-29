@@ -22,7 +22,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<ContainerStyled className='container'>
+		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					<section className='about'>
