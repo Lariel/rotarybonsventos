@@ -59,6 +59,10 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 1.17em;
 	}
 
+	.fs2 {
+		font-size: 2em;
+	}
+
 	body {
 		.container-bg {
 			//background-color: ${theme.contentBGDefault};
@@ -68,61 +72,103 @@ export const GlobalStyles = createGlobalStyle`
 		.row {
 			display: flex;
 			width: 100%;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				flex-direction: column;
+			}
 		}
 
 		.col-w10 {
 			width: 10%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w20 {
 			width: 20%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w30 {
 			width: 30%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w40 {
 			width: 40%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w50 {
 			width: 50%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w60 {
 			width: 60%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w70 {
 			width: 70%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w80 {
 			width: 80%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w90 {
 			width: 90%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.col-w100 {
 			width: 100%;
 			overflow: hidden;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				width: 100%;
+			}
 		}
 
 		.center {
 			display: flex;
 			justify-content: center;
+			text-align: center;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.bolder {
+			font-weight: bolder;
 		}
 
 		.padding-20 {
