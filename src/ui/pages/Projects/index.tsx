@@ -9,7 +9,7 @@ import { getProjects } from '@app/services/ProjectService';
 
 export default function Projects() {
 
-	const [ projects, setProjects ] = useState<Project[]>(getProjects());
+	const [ projects, setProjects ] = useState<Project[]>([]);
 
 	useEffect(() => {
 		console.log('Start Projects');
@@ -21,6 +21,8 @@ export default function Projects() {
 		});
 
 		document.dispatchEvent(event);
+
+		setProjects(getProjects());
 
 		return () => {
 			console.log('Exit Projects');

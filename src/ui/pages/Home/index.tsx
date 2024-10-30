@@ -7,7 +7,7 @@ import { getHighlightProjects } from '@app/services/ProjectService';
 
 export default function Home() {
 
-	const [ highlightProjects, setHighlightProjects ] = useState<Project[]>(getHighlightProjects());
+	const [ highlightProjects, setHighlightProjects ] = useState<Project[]>([]);
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -19,6 +19,8 @@ export default function Home() {
 		});
 
 		document.dispatchEvent(event);
+
+		setHighlightProjects(getHighlightProjects());
 
 		console.log('projetos em destaque:',highlightProjects);
 
