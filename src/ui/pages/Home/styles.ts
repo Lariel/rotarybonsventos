@@ -13,13 +13,15 @@ export const PageStyled = styled.div`
 	section {
 		padding: 20px;
 		overflow: hidden;
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			padding: 0;
+		}
 	}
 
 	.about {
 		//background-color: ${colors.taupe};
 		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
-		height: 1600px;
 	}
 
 	.news {
@@ -51,10 +53,10 @@ export const PageStyled = styled.div`
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		//background-color: ${theme.contentBGDefault};
+		overflow: hidden;
 	}
 
-	.round-topic {
+	.small-topic {
 		border-radius: 50%;
 		width: 350px;
 		height: 350px;
@@ -68,7 +70,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.square-topic {
+	.whide-topic {
 		width: 100%;
 		height: 350px;
 		background-position-y: 20%;

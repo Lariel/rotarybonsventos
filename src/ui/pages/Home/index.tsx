@@ -25,75 +25,7 @@ export default function Home() {
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
-					<section className=''>
-						<div className='section-title'>
-							<h1>Sobre nós</h1>
-						</div>
-						<div className='section-content about'>
-							<div className='row'>
-								<div className='col-w40 padding-20 center'>
-									<div className='round-topic first-topic'></div>
-								</div>
-								<div className='col-w60 padding-20'>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-									<p>Texto primeira linha</p>
-								</div>
-							</div>
-							<div className='row'>
-								<div className='col-w60'>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-									<p>Texto segunda linha</p>
-								</div>
-								<div className='col-w40 padding-20 center'>
-									<div className='round-topic second-topic'></div>
-								</div>
-							</div>
-							<div className='row'>
-								<div className='col-w40 padding-20 center'>
-									<div className='round-topic third-topic'></div>
-								</div>
-								<div className='col-w60'>
-									<p>Texto terceira linha</p>
-									<p>Texto terceira linha</p>
-									<p>Texto terceira linha</p>
-									<p>Texto terceira linha</p>
-									<p>Texto terceira linha</p>
-									<p>Texto terceira linha</p>
-								</div>
-							</div>
-							<div className='row'>
-								<div className='col-w100 center'>
-									<p>Aqu pode ter um texto finalizando a apresentação do clube</p>
-								</div>
-							</div>
-							<div className='row'>
-								<div className='col-w100 center'>
-									<div className='square-topic fourth-topic'></div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section className=''>
-						<div className='section-title'>
-							<h1>Novidades</h1>
-						</div>
-						<div className='section-content news'>
-							etc etc
-						</div>
-					</section>
-					<section className=''>
+					<section>
 						<div className='section-title'>
 							<h1>Ações em destaque</h1>
 						</div>
@@ -108,7 +40,61 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
-
+					<section>
+						<div className='section-title'>
+							<h1>Sobre nós</h1>
+						</div>
+						<div className='section-content about'>
+							<div className='row'>
+								<div className='col-w40 padding-20 center'>
+									<div className='small-topic first-topic'></div>
+								</div>
+								<div className='col-w60 padding-20'>
+									<p>Casamentiss faiz malandris se pirulitá. Quem manda na minha terra sou euzis! Interagi no mé, cursus quis, vehicula ac nisi. Delegadis gente finis, bibendum egestas augue arcu ut est.</p>
+									<p>Paisis, filhis, espiritis santis. In elementis mé pra quem é amistosis quis leo. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
+									<p>Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Quem manda na minha terra sou euzis!</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w60 padding-20'>
+									<p>Si num tem leite então bota uma pinga aí cumpadi! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Bota 1 metro de cachacis aí pra viagem!</p>
+									<p>Manduma pindureta quium dia nois paga. Copo furadis é disculpa de bebadis, arcu quam euismod magna. A ordem dos tratores não altera o pão duris. Interagi no mé, cursus quis, vehicula ac nisi.</p>
+									<p>Paisis, filhis, espiritis santis. In elementis mé pra quem é amistosis quis leo. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
+								</div>
+								<div className='col-w40 padding-20 center'>
+									<div className='small-topic second-topic'></div>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w40 padding-20 center'>
+									<div className='small-topic third-topic'></div>
+								</div>
+								<div className='col-w60 padding-20'>
+									<p>Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Morbi viverra placerat justo, vel pharetra turpis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.</p>
+									<p>Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Bota 1 metro de cachacis aí pra viagem!</p>
+									<p>Diuretics paradis num copo é motivis de denguis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Negão é teu passadis, eu sou faxa pretis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w100 center bold'>
+									<p>Aqui pode ter um texto finalizando a apresentação do clube</p>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-w100 center'>
+									<div className='whide-topic fourth-topic'></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div className='section-title'>
+							<h1>Novidades</h1>
+						</div>
+						<div className='section-content news'>
+							etc etc
+						</div>
+					</section>
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>
