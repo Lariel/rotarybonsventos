@@ -3,7 +3,7 @@ import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages'
 import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
-import { getHighlightProjects, getProjects } from '@app/services/ProjectService';
+import { getHighlightProjects } from '@app/services/ProjectService';
 
 export default function Home() {
 
