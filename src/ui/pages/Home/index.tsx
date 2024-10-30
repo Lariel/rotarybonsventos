@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages'
 import { PageStyled } from './styles';
+import { Project } from '@app/types/Project';
+import { getHighlightProjects, getProjects } from '@app/services/ProjectService';
 
 export default function Home() {
+
+	const [ highlightProjects, setHighlightProjects ] = useState<Project[]>(getHighlightProjects());
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -15,6 +19,8 @@ export default function Home() {
 		});
 
 		document.dispatchEvent(event);
+
+		console.log('projetos em destaque:',highlightProjects);
 
 		return () => {
 			console.log('Exit Home');

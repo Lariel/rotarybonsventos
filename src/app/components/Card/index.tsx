@@ -28,7 +28,7 @@ export default function Card(props: any) {
 				{props.title}
 			</CardTitleStyled>
 			<CardDescriptionStyled image={props.image}>
-				{props.description}
+				{props.summary}
 			</CardDescriptionStyled>
 			{props.tags && <Tags tags={props.tags}/>}
 			{props.knowMore && <a onClick={ handleClick }>Saiba mais</a>}

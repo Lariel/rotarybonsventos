@@ -67,6 +67,7 @@ export const PageStyled = styled.div`
 		&:hover {
 			transform: scale(1.05);
 			transition: all 1s ease;
+			border-radius: 0;
 		}
 	}
 
