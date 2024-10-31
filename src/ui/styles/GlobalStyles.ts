@@ -40,6 +40,10 @@ export const GlobalStyles = createGlobalStyle`
 		color: ${theme.fontColorDefault};
   }
 
+	button {
+		cursor: pointer;
+	}
+
 	p {
 		width: 100%;
 		font-size: 1.2em;
@@ -157,10 +161,14 @@ export const GlobalStyles = createGlobalStyle`
 			}
 		}
 
-		.center {
+		.flex-center {
 			display: flex;
 			justify-content: center;
 			text-align: center;
+			@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+				align-items: center;
+				flex-direction: column;
+			}
 		}
 
 		.bold {

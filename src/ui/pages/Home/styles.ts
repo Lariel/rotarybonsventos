@@ -6,6 +6,7 @@ import contribute from '@assets/contribute.jpg';
 import education from '@assets/education.jpg';
 import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
+import arrow from '@assets/arrow.svg';
 
 export const PageStyled = styled.div`
 	width: 100%;
@@ -16,6 +17,12 @@ export const PageStyled = styled.div`
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			padding: 0;
 		}
+	}
+
+	.actions {
+		//background-color: ${colors.lavender};
+		//background-color: ${colors.white};
+		background-color: ${theme.contentBGDefault};
 	}
 
 	.about {
@@ -29,13 +36,6 @@ export const PageStyled = styled.div`
 		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
 		height: 750px;
-	}
-
-	.actions {
-		//background-color: ${colors.lavender};
-		//background-color: ${colors.white};
-		background-color: ${theme.contentBGDefault};
-		height: 550px;
 	}
 
 	.section-title {
@@ -98,7 +98,63 @@ export const PageStyled = styled.div`
 	.fourth-topic {
 		background-image: url(${nature});
 	}
-	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-		//padding: 0 20px 0 20px;
+
+	.carousel {
+
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			//padding: 0 20px 0 20px;
+		}
 	}
+
+	.carousel-list {
+
+	}
+
+	.carousel-button-prev {
+		background: transparent url(${arrow}) no-repeat 50% 50%;
+		background-size: 72px 31px;
+		border: none;
+		transition: all .3s ease;
+		transform: rotate(-90deg);
+		width: 11.2rem;
+		height: 7.1rem;
+		display: block;
+		top: 42%;
+		left: 17%;
+		appearance: none;
+		position: absolute;
+		overflow: hidden;
+		&:hover {
+			background-color: rgba(0, 0, 0, .05);
+			background-position: 50% 40%;
+		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
+		}
+	}
+
+	.carousel-button-next {
+		background: transparent url(${arrow}) no-repeat 50% 50%;
+		background-size: 72px 31px;
+		border: none;
+		transition: all .3s ease;
+		transform: rotate(90deg);
+		width: 11.2rem;
+		height: 7.1rem;
+		display: block;
+		top: 42%;
+		right: 17%;
+		appearance: none;
+		position: absolute;
+
+		overflow: hidden;
+		&:hover {
+			background-color: rgba(0, 0, 0, .05);
+			background-position: 50% 40%;
+		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
+		}
+	}
+
 `;

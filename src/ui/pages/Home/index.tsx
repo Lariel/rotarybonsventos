@@ -4,6 +4,7 @@ import { Pages } from '@app/model/Pages'
 import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
+import Card from '@app/components/Card';
 
 export default function Home() {
 
@@ -37,14 +38,23 @@ export default function Home() {
 						<div className='section-title'>
 							<h1>Ações em destaque</h1>
 						</div>
-						<div className='section-content actions'>
-							<div className='row'>
-								<div className='col-w20'>
-									primeira linha
+						<div className='section-content actions flex-center'>
+							<div className='carousel flex-center'>
+								<button className='carousel-button-prev'></button>
+								<div className='carousel-list flex-center'>
+									{highlightProjects.map(project => (
+										<Card
+											key={project.id}
+											id={project.id}
+											image={project.image}
+											title={project.title}
+											summary={project.summary}
+											tags={project.tags}
+											knowMore={true} >
+										</Card>
+									))}
 								</div>
-								<div className='col-w80'>
-									primeira linha
-								</div>
+								<button className='carousel-button-next'></button>
 							</div>
 						</div>
 					</section>
@@ -54,7 +64,7 @@ export default function Home() {
 						</div>
 						<div className='section-content about'>
 							<div className='row'>
-								<div className='col-w40 padding-20 center'>
+								<div className='col-w40 padding-20 flex-center'>
 									<div className='small-topic first-topic'></div>
 								</div>
 								<div className='col-w60 padding-20'>
@@ -69,12 +79,12 @@ export default function Home() {
 									<p>Manduma pindureta quium dia nois paga. Copo furadis é disculpa de bebadis, arcu quam euismod magna. A ordem dos tratores não altera o pão duris. Interagi no mé, cursus quis, vehicula ac nisi.</p>
 									<p>Paisis, filhis, espiritis santis. In elementis mé pra quem é amistosis quis leo. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
 								</div>
-								<div className='col-w40 padding-20 center'>
+								<div className='col-w40 padding-20 flex-center'>
 									<div className='small-topic second-topic'></div>
 								</div>
 							</div>
 							<div className='row'>
-								<div className='col-w40 padding-20 center'>
+								<div className='col-w40 padding-20 flex-center'>
 									<div className='small-topic third-topic'></div>
 								</div>
 								<div className='col-w60 padding-20'>
@@ -84,12 +94,12 @@ export default function Home() {
 								</div>
 							</div>
 							<div className='row'>
-								<div className='col-w100 center bold'>
+								<div className='col-w100 flex-center bold'>
 									<p>Aqui pode ter um texto finalizando a apresentação do clube</p>
 								</div>
 							</div>
 							<div className='row'>
-								<div className='col-w100 center'>
+								<div className='col-w100 flex-center'>
 									<div className='whide-topic fourth-topic'></div>
 								</div>
 							</div>
