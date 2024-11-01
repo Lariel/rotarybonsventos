@@ -1,5 +1,5 @@
 import colors from '@ui/styles/colors';
-import { maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
+import { maxWidthBreakpointDesktopFHD, maxWidthBreakpointDesktopWXGA, maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
 import styled from 'styled-components';
 import theme from '@ui/styles/theme';
 import contribute from '@assets/contribute.jpg';
@@ -23,6 +23,11 @@ export const PageStyled = styled.div`
 		//background-color: ${colors.lavender};
 		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
+		height: 500px;
+
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			height: auto;
+		}
 	}
 
 	.about {
@@ -100,60 +105,80 @@ export const PageStyled = styled.div`
 	}
 
 	.carousel {
+		width: 100%;
 
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			//padding: 0 20px 0 20px;
+			flex-direction: column;
 		}
 	}
 
-	.carousel-list {
+	.carousel-itens {
 
 	}
 
-	.carousel-button-prev {
+	.carousel-item {
+		transition: all .3s ease;
+		opacity: 0.7;
+
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			opacity: 1;
+			display: flex;
+			justify-content: center;
+		}
+
+	}
+
+	.carousel-item-first {
+		transform: scale(1.2);
+		transition: all .3s ease;
+		z-index: 100;
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			transform: scale(1);
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	button.prev, button.next {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
 		transition: all .3s ease;
+		width: 23.3rem;
+		height: 7.1rem;
+		display: block;
+		top: 47.5%;
+		appearance: none;
+		position: absolute;
+		overflow: hidden;
+		&:hover {
+			background-color: rgba(0, 0, 0, .05);
+			background-position: 50% 40%;
+		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
+		}
+	}
+
+	button.prev {
 		transform: rotate(-90deg);
-		width: 11.2rem;
-		height: 7.1rem;
-		display: block;
-		top: 42%;
-		left: 17%;
-		appearance: none;
-		position: absolute;
-		overflow: hidden;
-		&:hover {
-			background-color: rgba(0, 0, 0, .05);
-			background-position: 50% 40%;
+		left: 22.5%;
+		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
+			left: 14%;
 		}
-		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			display: none;
+		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
+			left: 1%;
 		}
 	}
 
-	.carousel-button-next {
-		background: transparent url(${arrow}) no-repeat 50% 50%;
-		background-size: 72px 31px;
-		border: none;
-		transition: all .3s ease;
+	button.next {
 		transform: rotate(90deg);
-		width: 11.2rem;
-		height: 7.1rem;
-		display: block;
-		top: 42%;
-		right: 17%;
-		appearance: none;
-		position: absolute;
-
-		overflow: hidden;
-		&:hover {
-			background-color: rgba(0, 0, 0, .05);
-			background-position: 50% 40%;
+		right: 22.5%;
+		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
+			right: 13.5%;
 		}
-		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			display: none;
+		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
+			right: 1%;
 		}
 	}
 

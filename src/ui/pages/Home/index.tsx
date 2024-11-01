@@ -30,6 +30,16 @@ export default function Home() {
 		}
 	}, []);
 
+	function handlePrev(e: any) {
+		console.log('handlePrev', e);
+
+	}
+
+	function handleNext(e: any) {
+		console.log('handleNext', e);
+
+	}
+
 	return (
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
@@ -40,21 +50,31 @@ export default function Home() {
 						</div>
 						<div className='section-content actions flex-center'>
 							<div className='carousel flex-center'>
-								<button className='carousel-button-prev'></button>
-								<div className='carousel-list flex-center'>
+								<button
+									className='prev'
+									onClick={handlePrev}>
+									</button>
+								<div className='carousel-itens flex-center'>
 									{highlightProjects.map(project => (
-										<Card
+										<div
 											key={project.id}
-											id={project.id}
-											image={project.image}
-											title={project.title}
-											summary={project.summary}
-											tags={project.tags}
-											knowMore={true} >
-										</Card>
+											className={project.id === 2 ? 'carousel-item-first': 'carousel-item'}
+											data-item={project.id}>
+											<Card
+												id={project.id}
+												image={project.image}
+												title={project.title}
+												summary={project.summary}
+												tags={project.tags}
+												knowMore={true} >
+											</Card>
+										</div>
 									))}
 								</div>
-								<button className='carousel-button-next'></button>
+								<button
+									className='next'
+									onClick={handleNext}>
+								</button>
 							</div>
 						</div>
 					</section>
