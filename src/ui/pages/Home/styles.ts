@@ -113,30 +113,34 @@ export const PageStyled = styled.div`
 	}
 
 	.carousel-itens {
-
+		width: 70%;
+		height: 430px;
+		display: flex;
+		overflow: hidden;
+		align-items: center;
 	}
 
 	.carousel-item {
 		transition: all .3s ease;
-		opacity: 0.7;
 
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			opacity: 1;
 			display: flex;
 			justify-content: center;
 		}
-
 	}
 
-	.carousel-item-first {
+	.carousel-item.highlight {
 		transform: scale(1.2);
 		transition: all .3s ease;
 		z-index: 100;
-		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			transform: scale(1);
-			display: flex;
-			justify-content: center;
-		}
+	}
+
+
+	.carousel-item.suppressed {
+		transform: scale(1);
+		transition: all .3s ease;
+		opacity: 0.7;
 	}
 
 	button.prev, button.next {

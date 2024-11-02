@@ -9,6 +9,7 @@ import Card from '@app/components/Card';
 export default function Home() {
 
 	const [ highlightProjects, setHighlightProjects ] = useState<Project[]>([]);
+	const [ highlightId, setHighlightId ] = useState<number>(0);
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -25,19 +26,39 @@ export default function Home() {
 
 		console.log('projetos em destaque:',highlightProjects);
 
+		setInitialHiglightId(highlightProjects);
+
 		return () => {
 			console.log('Exit Home');
 		}
 	}, []);
 
+	function setInitialHiglightId(projects: Project[]) {
+		const posCenter = Math.round(projects.length/2);
+		for (let index = 0; index < projects.length; index++) {
+			if (index === posCenter) {
+				setHighlightId(index);
+				return;
+			}
+		}
+	}
+
 	function handlePrev(e: any) {
 		console.log('handlePrev', e);
-
+		if (highlightId === highlightProjects[0].id) {
+			setHighlightId(highlightProjects[highlightProjects.length-1].id);
+		} else {
+			setHighlightId(highlightId-1);
+		}
 	}
 
 	function handleNext(e: any) {
 		console.log('handleNext', e);
-
+		if (highlightId === highlightProjects[highlightProjects.length-1].id) {
+			setHighlightId(highlightProjects[0].id);
+		} else {
+			setHighlightId(highlightId+1);
+		}
 	}
 
 	return (
@@ -58,7 +79,7 @@ export default function Home() {
 									{highlightProjects.map(project => (
 										<div
 											key={project.id}
-											className={project.id === 2 ? 'carousel-item-first': 'carousel-item'}
+											className={project.id === highlightId ? 'carousel-item highlight': 'carousel-item suppressed'}
 											data-item={project.id}>
 											<Card
 												id={project.id}
