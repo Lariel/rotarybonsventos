@@ -47,7 +47,7 @@ export const projects: Project[] = [
 		title: 'título projeto4',
 		summary: 'Breve descrição do quarto projeto a ser mostrado na página',
 		info: '',
-		highlight: false,
+		highlight: true,
 		tags: [tag2, tag5]
 	},
 	{
@@ -56,7 +56,7 @@ export const projects: Project[] = [
 		title: 'título projeto5',
 		summary: 'Breve descrição do quinto projeto a ser mostrado na página',
 		info: '',
-		highlight: false,
+		highlight: true,
 		tags: [tag4, tag3, tag5, tag1]
 	},
 	{

@@ -45,7 +45,6 @@ export default function Home() {
 				highlights.push(buildHighlight(false, projects[index]));
 			}
 		}
-		console.log('Destaques:',highlights);
 		return highlights;
 	}
 

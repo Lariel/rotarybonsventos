@@ -1,12 +1,36 @@
 import colors from '@ui/styles/colors';
-import { maxWidthBreakpointDesktopFHD, maxWidthBreakpointDesktopWXGA, maxWidthBreakpointMobile } from '@ui/styles/GlobalStyles';
-import styled from 'styled-components';
+import {
+	maxWidthBreakpointDesktopFHD,
+	maxWidthBreakpointDesktopWXGA,
+	maxWidthBreakpointMobile
+} from '@ui/styles/GlobalStyles';
+import styled, { keyframes } from 'styled-components';
 import theme from '@ui/styles/theme';
 import contribute from '@assets/contribute.jpg';
 import education from '@assets/education.jpg';
 import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
 import arrow from '@assets/arrow.svg';
+
+const slideIn = keyframes`
+	from {
+		//transform: translateX(200px) scale(1);
+		transform: scale(1);
+	}
+	to {
+		//transform: translateX(0) scale(1.2);
+		transform: scale(1.2);
+	}
+`;
+
+const slideOut = keyframes`
+	from {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(1);
+	}
+`;
 
 export const PageStyled = styled.div`
 	width: 100%;
@@ -118,10 +142,13 @@ export const PageStyled = styled.div`
 		display: flex;
 		overflow: hidden;
 		align-items: center;
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	.carousel-item {
-		transition: all .3s ease;
 
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			opacity: 1;
@@ -131,15 +158,24 @@ export const PageStyled = styled.div`
 	}
 
 	.carousel-item.highlight {
+		//animation: ${slideIn} 0.5s forwards;
 		transform: scale(1.2);
-		transition: all .3s ease;
 		z-index: 100;
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 
 	.carousel-item.suppressed {
+		//animation: ${slideOut} 0.5s forwards;
 		transform: scale(1);
-		transition: all .3s ease;
 		opacity: 0.7;
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			opacity: 1;
+			transform: scale(1);
+			z-index: 100;
+		}
 	}
 
 	button.prev, button.next {
