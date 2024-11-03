@@ -1,10 +1,9 @@
-import colors from '@ui/styles/colors';
+import styled, { keyframes } from 'styled-components';
 import {
 	maxWidthBreakpointDesktopFHD,
 	maxWidthBreakpointDesktopWXGA,
 	maxWidthBreakpointMobile
 } from '@ui/styles/GlobalStyles';
-import styled, { keyframes } from 'styled-components';
 import theme from '@ui/styles/theme';
 import contribute from '@assets/contribute.jpg';
 import education from '@assets/education.jpg';
@@ -44,8 +43,6 @@ export const PageStyled = styled.div`
 	}
 
 	.actions {
-		//background-color: ${colors.lavender};
-		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
 		height: 500px;
 
@@ -55,14 +52,10 @@ export const PageStyled = styled.div`
 	}
 
 	.about {
-		//background-color: ${colors.taupe};
-		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
 	}
 
 	.news {
-		//background-color: ${colors.platinum};
-		//background-color: ${colors.white};
 		background-color: ${theme.contentBGDefault};
 		height: 750px;
 	}
@@ -158,7 +151,6 @@ export const PageStyled = styled.div`
 	}
 
 	.carousel-item.highlight {
-		//animation: ${slideIn} 0.5s forwards;
 		transform: scale(1.2);
 		z-index: 100;
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
@@ -168,7 +160,6 @@ export const PageStyled = styled.div`
 	}
 
 	.carousel-item.suppressed {
-		//animation: ${slideOut} 0.5s forwards;
 		transform: scale(1);
 		opacity: 0.7;
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
@@ -178,7 +169,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.btn-prev {
+	.slide-back {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
@@ -207,7 +198,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.btn-next {
+	.slide-next {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;

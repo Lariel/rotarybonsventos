@@ -114,9 +114,9 @@ export default function Home() {
 						<div className='section-content actions flex-center'>
 							<div className='carousel flex-center'>
 								<button
-									className='btn-prev'
+									className='slide-back'
 									onClick={handlePrev}>
-									</button>
+								</button>
 								<div className='carousel-itens flex-center'>
 									{highlights.map(highlight => (
 										<div
@@ -134,7 +134,7 @@ export default function Home() {
 									))}
 								</div>
 								<button
-									className='btn-next'
+									className='slide-next'
 									onClick={handleNext}>
 								</button>
 							</div>
