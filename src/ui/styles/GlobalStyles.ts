@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import theme from './theme';
 import bg from '@assets/concrete_seamless.jpg';
+import colors from './colors';
 
 export const maxWidthStructureDesktopLarge = '1360px';
 export const maxWidthStructureDesktopMedium = '1200px';
@@ -69,8 +70,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	body {
 		.container-bg {
-			//background-color: ${theme.contentBGDefault};
-			background: #f8f9fa url(${bg}) 50% 0;
+			background: ${colors.siteBG} url(${bg}) 50% 0;
 		}
 
 		.row {
@@ -222,7 +222,7 @@ export const GlobalStyles = createGlobalStyle`
     		flex-direction: row;
 				justify-content: center;
 				align-content: flex-start;
-				animation: ${fadeInOpacity} 0.3s forwards;
+				animation: ${fadeInOpacity} 0.4s forwards;
 				//background-color: ${theme.contentBGDefault};
 				//box-shadow: 0 4px 18px 1px rgba(0, 0, 0, .2);
 			}
