@@ -114,7 +114,7 @@ export default function Home() {
 						<div className='section-content actions flex-center'>
 							<div className='carousel flex-center'>
 								<button
-									className='slide-back'
+									className='btn-prev'
 									onClick={handlePrev}>
 								</button>
 								<div className='carousel-itens flex-center'>
@@ -134,7 +134,7 @@ export default function Home() {
 									))}
 								</div>
 								<button
-									className='slide-next'
+									className='btn-next'
 									onClick={handleNext}>
 								</button>
 							</div>

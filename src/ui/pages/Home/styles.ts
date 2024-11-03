@@ -149,7 +149,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.slide-back {
+	.btn-prev {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
@@ -178,7 +178,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.slide-next {
+	.btn-next {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
