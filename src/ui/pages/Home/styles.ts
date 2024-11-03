@@ -178,7 +178,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	button.prev, button.next {
+	.btn-prev, .btn-next {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
@@ -199,7 +199,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	button.prev {
+	.btn-prev {
 		transform: rotate(-90deg);
 		left: 22.5%;
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
@@ -210,7 +210,7 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	button.next {
+	.btn-next {
 		transform: rotate(90deg);
 		right: 22.5%;
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
