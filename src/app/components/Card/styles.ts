@@ -9,7 +9,7 @@ const cardPadding = '5px';
 const cardMargin = '10px';
 
 export const CardStyled = styled.div`
-	animation: ${fadeInScale} 0.3s forwards;
+	//animation: ${fadeInScale} 0.3s forwards;
 	margin: ${cardMargin};
 	padding: ${cardPadding};
 	width: ${cardWidth};
@@ -55,12 +55,6 @@ export const CardImageStyled = styled.div`
 	transition: all 2s ease;
 	img {
 		width: 100%;
-	}
-	&:hover {
-		img {
-		  transform: scale(1.02);
-			transition: all .3s ease;
-		}
 	}
 `;
 
