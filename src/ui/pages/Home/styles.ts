@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import {
 	maxWidthBreakpointDesktopFHD,
 	maxWidthBreakpointDesktopWXGA,
@@ -10,26 +10,6 @@ import education from '@assets/education.jpg';
 import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
 import arrow from '@assets/arrow.svg';
-
-const slideIn = keyframes`
-	from {
-		//transform: translateX(200px) scale(1);
-		transform: scale(1);
-	}
-	to {
-		//transform: translateX(0) scale(1.2);
-		transform: scale(1.2);
-	}
-`;
-
-const slideOut = keyframes`
-	from {
-		transform: scale(1.2);
-	}
-	to {
-		transform: scale(1);
-	}
-`;
 
 export const PageStyled = styled.div`
 	width: 100%;
