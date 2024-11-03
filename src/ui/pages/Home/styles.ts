@@ -183,8 +183,8 @@ export const PageStyled = styled.div`
 		background-size: 72px 31px;
 		border: none;
 		transition: all .3s ease;
-		width: 23.3rem;
-		height: 7.1rem;
+		width: 350px;
+		height: 105px;
 		display: block;
 		top: 47.5%;
 		appearance: none;
