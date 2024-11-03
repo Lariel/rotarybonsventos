@@ -178,46 +178,61 @@ export const PageStyled = styled.div`
 		}
 	}
 
-	.btn-prev, .btn-next {
+	.btn-prev {
 		background: transparent url(${arrow}) no-repeat 50% 50%;
 		background-size: 72px 31px;
 		border: none;
 		transition: all .3s ease;
-		width: 350px;
-		height: 105px;
+		width: 23.3rem;
+		height: 7.1rem;
 		display: block;
 		top: 47.5%;
 		appearance: none;
 		position: absolute;
 		overflow: hidden;
+		transform: rotate(-90deg);
+		left: 22.5%;
 		&:hover {
 			background-color: rgba(0, 0, 0, .05);
 			background-position: 50% 40%;
 		}
-		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			display: none;
-		}
-	}
-
-	.btn-prev {
-		transform: rotate(-90deg);
-		left: 22.5%;
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
 			left: 14%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			left: 1%;
 		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
+		}
 	}
 
 	.btn-next {
+		background: transparent url(${arrow}) no-repeat 50% 50%;
+		background-size: 72px 31px;
+		border: none;
+		transition: all .3s ease;
+		width: 23.3rem;
+		height: 7.1rem;
+		display: block;
+		top: 47.5%;
+		appearance: none;
+		position: absolute;
+		overflow: hidden;
 		transform: rotate(90deg);
 		right: 22.5%;
+		&:hover {
+			background-color: rgba(0, 0, 0, .05);
+			background-position: 50% 40%;
+		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
 			right: 13.5%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			right: 1%;
+		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
 		}
 	}
 
