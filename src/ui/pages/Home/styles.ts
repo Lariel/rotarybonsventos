@@ -136,7 +136,6 @@ export const PageStyled = styled.div`
 		z-index: 100;
 	}
 
-
 	.carousel-item.suppressed {
 		transform: scale(1);
 		transition: all .3s ease;

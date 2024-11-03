@@ -6,10 +6,14 @@ import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
 
+interface Highlight {
+	isCenter: boolean;
+	project: Project;
+}
+
 export default function Home() {
 
-	const [ highlightProjects, setHighlightProjects ] = useState<Project[]>([]);
-	const [ highlightId, setHighlightId ] = useState<number>(0);
+	const [ highlights, setHighlights ] = useState<Highlight[]>([]);
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -22,43 +26,82 @@ export default function Home() {
 
 		document.dispatchEvent(event);
 
-		setHighlightProjects(getHighlightProjects());
-
-		console.log('projetos em destaque:',highlightProjects);
-
-		setInitialHiglightId(highlightProjects);
+		setHighlights(buildHighlights(getHighlightProjects()));
 
 		return () => {
 			console.log('Exit Home');
 		}
 	}, []);
 
-	function setInitialHiglightId(projects: Project[]) {
-		const posCenter = Math.round(projects.length/2);
+	function buildHighlights(projects: Project[]): Highlight[] {
+		const highlights: Highlight[] = [];
+		const posCenter = Math.round(projects.length/2)-1;
+
 		for (let index = 0; index < projects.length; index++) {
-			if (index === posCenter) {
-				setHighlightId(index);
-				return;
+
+			if (posCenter === index) {
+				highlights.push(buildHighlight(true, projects[index]));
+			} else {
+				highlights.push(buildHighlight(false, projects[index]));
 			}
 		}
+		console.log('Destaques:',highlights);
+		return highlights;
 	}
 
-	function handlePrev(e: any) {
-		console.log('handlePrev', e);
-		if (highlightId === highlightProjects[0].id) {
-			setHighlightId(highlightProjects[highlightProjects.length-1].id);
-		} else {
-			setHighlightId(highlightId-1);
+	function buildHighlight(isCenter: boolean, project: Project): Highlight {
+		return {
+			isCenter,
+			project
 		}
 	}
 
-	function handleNext(e: any) {
-		console.log('handleNext', e);
-		if (highlightId === highlightProjects[highlightProjects.length-1].id) {
-			setHighlightId(highlightProjects[0].id);
-		} else {
-			setHighlightId(highlightId+1);
+	function handlePrev() {
+		const newStateAux = [...highlights];
+		const newState = [];
+
+		const getNextIndex = (index: number) => {
+			return index ===  0 ? newStateAux.length - 1 : index - 1;
 		}
+
+		for (let index = 0; index < newStateAux.length; index++) {
+			const nextIndex = getNextIndex(index);
+			newState.push(newStateAux[nextIndex]);
+		}
+
+		for (let index = 0; index < newState.length; index++) {
+			if (newState[index].isCenter) {
+				newState[index].isCenter = false;
+				const nextIndex = getNextIndex(index);
+				newState[nextIndex].isCenter = true;
+				break;
+			}
+		}
+		setHighlights(newState);
+	}
+
+	function handleNext() {
+		const newStateAux = [...highlights];
+		const newState = [];
+
+		const getNextIndex = (index: number) => {
+			return index + 1 === newStateAux.length ? 0 : index + 1;
+		}
+
+		for (let index = 0; index < newStateAux.length; index++) {
+			const nextIndex = getNextIndex(index);
+			newState.push(newStateAux[nextIndex]);
+		}
+
+		for (let index = 0; index < newState.length; index++) {
+			if (newState[index].isCenter) {
+				newState[index].isCenter = false;
+				const nextIndex = getNextIndex(index);
+				newState[nextIndex].isCenter = true;
+				break;
+			}
+		}
+		setHighlights(newState);
 	}
 
 	return (
@@ -76,17 +119,16 @@ export default function Home() {
 									onClick={handlePrev}>
 									</button>
 								<div className='carousel-itens flex-center'>
-									{highlightProjects.map(project => (
+									{highlights.map(highlight => (
 										<div
-											key={project.id}
-											className={project.id === highlightId ? 'carousel-item highlight': 'carousel-item suppressed'}
-											data-item={project.id}>
+											key={highlight.project.id}
+											className={highlight.isCenter ? 'carousel-item highlight': 'carousel-item suppressed'}>
 											<Card
-												id={project.id}
-												image={project.image}
-												title={project.title}
-												summary={project.summary}
-												tags={project.tags}
+												id={highlight.project.id}
+												image={highlight.project.image}
+												title={highlight.project.title}
+												summary={highlight.project.summary}
+												tags={highlight.project.tags}
 												knowMore={true} >
 											</Card>
 										</div>
