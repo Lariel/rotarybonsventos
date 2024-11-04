@@ -9,7 +9,6 @@ import contribute from '@assets/contribute.jpg';
 import education from '@assets/education.jpg';
 import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
-import arrow from '@assets/arrow.svg';
 
 export const PageStyled = styled.div`
 	width: 100%;
@@ -150,7 +149,7 @@ export const PageStyled = styled.div`
 	}
 
 	.btn-prev {
-		background: transparent url(${arrow}) no-repeat 50% 50%;
+		background: transparent;
 		background-size: 72px 31px;
 		border: none;
 		transition: all .3s ease;
@@ -179,7 +178,7 @@ export const PageStyled = styled.div`
 	}
 
 	.btn-next {
-		background: transparent url(${arrow}) no-repeat 50% 50%;
+		background: transparent;
 		background-size: 72px 31px;
 		border: none;
 		transition: all .3s ease;

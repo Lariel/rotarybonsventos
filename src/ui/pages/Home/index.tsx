@@ -5,6 +5,7 @@ import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
+import arrow from '@assets/arrow.svg';
 
 interface Highlight {
 	isCenter: boolean;
@@ -116,6 +117,7 @@ export default function Home() {
 								<button
 									className='btn-prev'
 									onClick={handlePrev}>
+										<img src={arrow}/>
 								</button>
 								<div className='carousel-itens flex-center'>
 									{highlights.map(highlight => (
@@ -136,6 +138,7 @@ export default function Home() {
 								<button
 									className='btn-next'
 									onClick={handleNext}>
+										<img src={arrow}/>
 								</button>
 							</div>
 						</div>
@@ -185,14 +188,6 @@ export default function Home() {
 									<div className='whide-topic fourth-topic'></div>
 								</div>
 							</div>
-						</div>
-					</section>
-					<section>
-						<div className='section-title'>
-							<h1>Novidades</h1>
-						</div>
-						<div className='section-content news'>
-							etc etc
 						</div>
 					</section>
 				</PageStyled>
