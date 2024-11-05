@@ -8,7 +8,7 @@ export const maxWidthStructureDesktopMedium = '1200px';
 export const maxWidthContentResponsive = '1440px';
 
 export const maxWidthBreakpointDesktopFHD = '1920px';
-export const maxWidthBreakpointDesktopWXGA = '1366px';
+export const maxWidthBreakpointDesktopWXGA = '1368px';
 export const maxWidthBreakpointDesktopHD = '1280px';
 export const maxWidthBreakpointDesktopXGA = '1024px';
 export const maxWidthBreakpointMobile = '768px';

@@ -156,7 +156,7 @@ export const PageStyled = styled.div`
 		width: 23.3rem;
 		height: 7.1rem;
 		display: block;
-		top: 47.5%;
+		top: 48.4%;
 		appearance: none;
 		position: absolute;
 		overflow: hidden;
@@ -167,10 +167,11 @@ export const PageStyled = styled.div`
 			background-position: 50% 40%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
-			left: 14%;
+			left: 13.4%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			left: 1%;
+			top: 72%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: none;
@@ -185,7 +186,7 @@ export const PageStyled = styled.div`
 		width: 23.3rem;
 		height: 7.1rem;
 		display: block;
-		top: 47.5%;
+		top: 48.4%;
 		appearance: none;
 		position: absolute;
 		overflow: hidden;
@@ -196,10 +197,11 @@ export const PageStyled = styled.div`
 			background-position: 50% 40%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
-			right: 13.5%;
+			right: 13.2%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
-			right: 1%;
+			right: 0.5%;
+			top: 72%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: none;
