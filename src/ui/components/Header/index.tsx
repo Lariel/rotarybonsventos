@@ -20,7 +20,7 @@ export function Header(props: any) {
 					</div>
 				</HeaderContentStyled>
 				<HeaderContentMobileStyled className='structure-mobile'>
-					<img src={logo_white} alt='Logo Rotary Bons Ventos Header' onClick={ handleClick }/>
+					<img src={logo_white} alt='Logo Rotary Bons Ventos Header'/>
 				</HeaderContentMobileStyled>
 			</HeaderContainerStyled>
 	);
