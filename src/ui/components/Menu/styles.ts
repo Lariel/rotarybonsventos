@@ -3,9 +3,8 @@ import colors from '@ui/styles/colors';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
-export const PageStyled = styled.div.attrs<{isMobile: boolean, isMenuOpen: boolean}>(props => ({
-	isMobile: props.isMobile,
-	isMenuOpen: props.isMenuOpen
+export const PageStyled = styled.div.attrs<{ismenuopen: boolean}>(props => ({
+	ismenuopen: props.ismenuopen
 }))`
 	width: 100%;
 	height: 59px;
@@ -13,21 +12,24 @@ export const PageStyled = styled.div.attrs<{isMobile: boolean, isMenuOpen: boole
 	display: flex;
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		padding: 0 0 0 10px;
-		width: ${({ isMenuOpen }) => isMenuOpen ? '100%' : '0'};
-		height: ${({ isMenuOpen }) => isMenuOpen ? 'calc(100dvh - 205px)' : '0'};
+		position: absolute;
+		top: 200px;
+		width: ${({ ismenuopen }) => ismenuopen ? '70%' : '0'};
+		height: calc(100dvh - 200px);
+		left: ${({ ismenuopen }) => ismenuopen ? '0' : '-500px'};
 		transition: all .3s ease-in-out;
+		z-index: 200;
 	}
 `;
 
-export const MenuStyled = styled.div.attrs<{isMobile: boolean, isMenuOpen: boolean}>(props => ({
-	isMobile: props.isMobile,
-	isMenuOpen: props.isMenuOpen
+export const MenuStyled = styled.div.attrs<{ismobile: boolean}>(props => ({
+	ismobile: props.ismobile
 }))`
 	width: 100%;
 	overflow: hidden;
 	display: flex;
-	flex-direction: ${({ isMobile }) => isMobile ? 'column' : 'row'};
-	align-items: ${({ isMobile }) => isMobile ? 'flex-start' : 'center'};
+	flex-direction: ${({ ismobile }) => ismobile ? 'column' : 'row'};
+	align-items: ${({ ismobile }) => ismobile ? 'flex-start' : 'center'};
 	justify-content: space-between;
 	@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
 		justify-content: space-around;
@@ -67,7 +69,7 @@ export const MenuToggleStyled = styled.div`
 	.menuToggle input {
 		display: block;
 		width: 40px;
-		height: 32px;
+		height: 40px;
 		position: absolute;
 		opacity: 0;
 		z-index: 2;
@@ -103,7 +105,7 @@ export const MenuToggleStyled = styled.div`
 
 	.menuToggle input:checked ~ span {
 		opacity: 1;
-		transform: rotate(45deg) translate(-2px, -19px);
+		transform: rotate(45deg) translate(0px, -19px);
 		background: ${theme.hoverDefault}
 	}
 
@@ -113,7 +115,7 @@ export const MenuToggleStyled = styled.div`
 	}
 
 	.menuToggle input:checked ~ span:nth-last-child(2) {
-		transform: rotate(-45deg) translate(0, 19px);
+		transform: rotate(-45deg) translate(0, 20px);
 	}
 
 

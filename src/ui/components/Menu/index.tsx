@@ -4,13 +4,12 @@ import { Router } from '@app/Router'
 import { PageStyled, MenuStyled, MenuToggleStyled } from './styles';
 import { useEffect, useState } from 'react';
 
-let isHomeActive = true;
-let isProjectsActive = false;
-let isAccountabilityActive = false;
-let isContributeActive = false;
-let isContactActive = false;
-
 export function Menu(props: any) {
+	const [ isHomeActive, setHomeActive ] = useState<boolean>(true);
+	const [ isProjectsActive, setProjectsActive ] = useState<boolean>(false);
+	const [ isAccountabilityActive, setAccountabilityActive ] = useState<boolean>(false);
+	const [ isContributeActive, setcontributeActive ] = useState<boolean>(false);
+	const [ isContactActive, setContactActive ] = useState<boolean>(false);
 	const [ isMenuMobileOpen, toggleMenuMobile ] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -31,46 +30,46 @@ export function Menu(props: any) {
 	function changeActiveOption(optionSelected: string) {
 		switch (optionSelected) {
 			case routes.home.label:
-				isHomeActive = true;
-				isProjectsActive = false;
-				isAccountabilityActive = false;
-				isContributeActive = false;
-				isContactActive = false;
+				setHomeActive(true);
+				setProjectsActive(false);
+				setAccountabilityActive(false);
+				setcontributeActive(false);
+				setContactActive(false);
 				break;
 			case routes.projects.label:
-				isHomeActive = false;
-				isProjectsActive = true;
-				isAccountabilityActive = false;
-				isContributeActive = false;
-				isContactActive = false;
+				setHomeActive(false);
+				setProjectsActive(true);
+				setAccountabilityActive(false);
+				setcontributeActive(false);
+				setContactActive(false);
 				break;
 			case routes.accountability.label:
-				isHomeActive = false;
-				isProjectsActive = false;
-				isAccountabilityActive = true;
-				isContributeActive = false;
-				isContactActive = false;
+				setHomeActive(false);
+				setProjectsActive(false);
+				setAccountabilityActive(true);
+				setcontributeActive(false);
+				setContactActive(false);
 				break;
 			case routes.contribute.label:
-				isHomeActive = false;
-				isProjectsActive = false;
-				isAccountabilityActive = false;
-				isContributeActive = true;
-				isContactActive = false;
+				setHomeActive(false);
+				setProjectsActive(false);
+				setAccountabilityActive(false);
+				setcontributeActive(true);
+				setContactActive(false);
 				break;
 			case routes.contact.label:
-				isHomeActive = false;
-				isProjectsActive = false;
-				isAccountabilityActive = false;
-				isContributeActive = false;
-				isContactActive = true;
+				setHomeActive(false);
+				setProjectsActive(false);
+				setAccountabilityActive(false);
+				setcontributeActive(false);
+				setContactActive(true);
 				break;
 			default:
-				isHomeActive = false;
-				isProjectsActive = false;
-				isAccountabilityActive = false;
-				isContributeActive = false;
-				isContactActive = false;
+				setHomeActive(false);
+				setProjectsActive(false);
+				setAccountabilityActive(false);
+				setcontributeActive(false);
+				setContactActive(false);
 				break;
 		}
 	}
@@ -89,8 +88,8 @@ export function Menu(props: any) {
 	return (
 		<>
 			<BrowserRouter>
-				{ props.isMobile && <MenuToggleStyled onClick={handleToggle}>
-					<div className='menuToggle'>
+				{ props.isMobile && <MenuToggleStyled>
+					<div className='menuToggle' onClick={handleToggle}>
 						<input type="checkbox" />
 						<span></span>
 						<span></span>
@@ -98,12 +97,9 @@ export function Menu(props: any) {
 					</div>
 				</MenuToggleStyled> }
 				<PageStyled className='container'
-					isMobile={props.isMobile}
-					isMenuOpen={isMenuMobileOpen}>
+					ismenuopen={isMenuMobileOpen}>
 					<MenuStyled className={props?.isMobile ? 'structure-mobile' : 'structure-desktop'}
-						isMobile={props.isMobile}
-						isMenuOpen={isMenuMobileOpen}
-						>
+						ismobile={props.isMobile}>
 						<Link
 							className={isHomeActive ? 'active': 'default'}
 							onClick={handleclick}
