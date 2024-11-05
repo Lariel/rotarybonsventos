@@ -7,6 +7,7 @@ import { Menu } from '@ui/components/Menu'
 export function App() {
 	const [ pageSelected, setPageSelected ] = useState<any>();
 	const [ isFooterVisible, setFooterVisible ] = useState<boolean>(true);
+	const [ isMobile, setIsMobile ] = useState<boolean>();
 
 	useEffect(() => {
 		console.log('Start App');
@@ -19,6 +20,9 @@ export function App() {
 		}
 
 		document.addEventListener('changePage', handleChangePage);
+
+		const device = navigator.userAgent;
+		setIsMobile(device.includes('Android') || device.includes('iPhone'));
 
 		return () => {
 			document.removeEventListener('changePage', handleChangePage);
@@ -38,7 +42,7 @@ export function App() {
 		<>
 			<GlobalStyles />
 			<Header pageSelected={pageSelected} />
-			<Menu />
+			<Menu isMobile={isMobile} />
 			{ isFooterVisible && <Footer/>}
 		</>
   )

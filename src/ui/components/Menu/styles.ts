@@ -3,21 +3,31 @@ import colors from '@ui/styles/colors';
 import { maxWidthBreakpointMobile, maxWidthStructureDesktopLarge } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
 
-export const PageStyled = styled.div`
+export const PageStyled = styled.div.attrs<{isMobile: boolean, isMenuOpen: boolean}>(props => ({
+	isMobile: props.isMobile,
+	isMenuOpen: props.isMenuOpen
+}))`
 	width: 100%;
 	height: 59px;
 	background-color: ${theme.colorDefault};
 	display: flex;
-
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-		height: 0px;
+		padding: 0 0 0 10px;
+		width: ${({ isMenuOpen }) => isMenuOpen ? '100%' : '0'};
+		height: ${({ isMenuOpen }) => isMenuOpen ? 'calc(100dvh - 205px)' : '0'};
+		transition: all .3s ease-in-out;
 	}
 `;
 
-export const MenuStyled = styled.div`
+export const MenuStyled = styled.div.attrs<{isMobile: boolean, isMenuOpen: boolean}>(props => ({
+	isMobile: props.isMobile,
+	isMenuOpen: props.isMenuOpen
+}))`
 	width: 100%;
+	overflow: hidden;
 	display: flex;
-	align-items: center;
+	flex-direction: ${({ isMobile }) => isMobile ? 'column' : 'row'};
+	align-items: ${({ isMobile }) => isMobile ? 'flex-start' : 'center'};
 	justify-content: space-between;
 	@media screen and (max-width: ${maxWidthStructureDesktopLarge}) {
 		justify-content: space-around;
@@ -41,4 +51,70 @@ export const MenuStyled = styled.div`
 		text-decoration: none;
 		transition: all .3s ease;
 	}
+`;
+
+export const MenuToggleStyled = styled.div`
+ .menuToggle {
+		display: flow;
+		position: absolute;
+		top: 22px;
+		left: 22px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	.menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	.menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+
+		background: ${colors.white};
+		border-radius: 3px;
+
+		z-index: 1;
+
+		transform-origin: 4px 0px;
+
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+								background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+								opacity 0.55s ease;
+	}
+
+	.menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	.menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+
+	.menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -19px);
+		background: ${theme.hoverDefault}
+	}
+
+	.menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	.menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(0, 19px);
+	}
+
+
 `;

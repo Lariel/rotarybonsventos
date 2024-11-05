@@ -1,8 +1,8 @@
 import { BrowserRouter, Link } from 'react-router-dom'
 import { routes } from '@app/Router/routes'
 import { Router } from '@app/Router'
-import { PageStyled, MenuStyled } from './styles';
-import { useEffect } from 'react';
+import { PageStyled, MenuStyled, MenuToggleStyled } from './styles';
+import { useEffect, useState } from 'react';
 
 let isHomeActive = true;
 let isProjectsActive = false;
@@ -10,7 +10,8 @@ let isAccountabilityActive = false;
 let isContributeActive = false;
 let isContactActive = false;
 
-export function Menu() {
+export function Menu(props: any) {
+	const [ isMenuMobileOpen, toggleMenuMobile ] = useState<boolean>(false);
 
 	useEffect(() => {
 		console.log('Start Menu');
@@ -76,14 +77,33 @@ export function Menu() {
 
 	function handleclick(node: any) {
 		const optionSelected = node.target.innerText
+		toggleMenuMobile(false);
 		changeActiveOption(optionSelected);
+	}
+
+	function handleToggle() {
+		console.log('handleToggle');
+		toggleMenuMobile(!isMenuMobileOpen);
 	}
 
 	return (
 		<>
 			<BrowserRouter>
-				<PageStyled className='container'>
-					<MenuStyled className='structure-desktop'>
+				{ props.isMobile && <MenuToggleStyled onClick={handleToggle}>
+					<div className='menuToggle'>
+						<input type="checkbox" />
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</MenuToggleStyled> }
+				<PageStyled className='container'
+					isMobile={props.isMobile}
+					isMenuOpen={isMenuMobileOpen}>
+					<MenuStyled className={props?.isMobile ? 'structure-mobile' : 'structure-desktop'}
+						isMobile={props.isMobile}
+						isMenuOpen={isMenuMobileOpen}
+						>
 						<Link
 							className={isHomeActive ? 'active': 'default'}
 							onClick={handleclick}
