@@ -105,17 +105,17 @@ export const MenuToggleStyled = styled.div`
 
 	.menuToggle input:checked ~ span {
 		opacity: 1;
-		transform: rotate(45deg) translate(0px, -19px);
+		transform: rotate(-45deg) translate(0px, -2px);
 		background: ${theme.hoverDefault}
 	}
 
-	.menuToggle input:checked ~ span:nth-last-child(3) {
+	.menuToggle input:checked ~ span:nth-last-child(2) {
 		opacity: 0;
 		transform: rotate(0deg) scale(0.2, 0.2);
 	}
 
-	.menuToggle input:checked ~ span:nth-last-child(2) {
-		transform: rotate(-45deg) translate(0, 20px);
+	.menuToggle input:checked ~ span:nth-last-child(3) {
+		transform: rotate(45deg) translateX(1px) translateY(-1px);
 	}
 
 
