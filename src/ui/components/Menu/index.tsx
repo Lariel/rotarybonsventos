@@ -76,7 +76,7 @@ export function Menu(props: any) {
 
 	function handleclick(node: any) {
 		const optionSelected = node.target.innerText
-		toggleMenuMobile(false);
+		handleToggle();
 		changeActiveOption(optionSelected);
 	}
 
@@ -90,7 +90,8 @@ export function Menu(props: any) {
 			<BrowserRouter>
 				{ props.isMobile && <MenuToggleStyled>
 					<div className='menuToggle' onClick={handleToggle}>
-						<input type="checkbox" />
+						<input type='checkbox'
+						checked={isMenuMobileOpen} />
 						<span></span>
 						<span></span>
 						<span></span>
