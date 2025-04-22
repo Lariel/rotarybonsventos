@@ -119,9 +119,9 @@ export default function Home() {
 									onClick={handlePrev}>
 										<img src={arrow}/>
 								</button>
-								<div className='carousel-itens flex-center'>
+								<ul className='carousel-itens flex-center'>
 									{highlights.map(highlight => (
-										<div
+										<li
 											key={highlight.project.id}
 											className={highlight.isCenter ? 'carousel-item highlight': 'carousel-item suppressed'}>
 											<Card
@@ -132,9 +132,9 @@ export default function Home() {
 												tags={highlight.project.tags}
 												knowMore={true} >
 											</Card>
-										</div>
+										</li>
 									))}
-								</div>
+								</ul>
 								<button
 									className='btn-next'
 									onClick={handleNext}>

@@ -13,6 +13,33 @@ export const maxWidthBreakpointDesktopHD = '1280px';
 export const maxWidthBreakpointDesktopXGA = '1024px';
 export const maxWidthBreakpointMobile = '768px';
 
+export const onFocus = keyframes`
+	from {
+		transform: translate(240px, 0px) scale(1);
+	}
+	to {
+		transform: translate(0px, 0px) scale(1.2);
+	}
+`;
+
+export const focusIn = keyframes`
+	from {
+		transform: translate(240px, 0px);
+	}
+	to {
+		transform: translate(0px, 0px);
+	}
+`;
+
+export const focusOut = keyframes`
+	from {
+		transform: translate(240px, 0px) scale(1.2);
+	}
+	to {
+		transform: translate(0px, 0px) scale(1);
+	}
+`;
+
 export const fadeInOpacity = keyframes`
 	from {
 		opacity: 0;

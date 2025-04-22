@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import {
+	onFocus,
+	focusIn,
+	focusOut,
 	maxWidthBreakpointDesktopFHD,
 	maxWidthBreakpointDesktopWXGA,
 	maxWidthBreakpointMobile
@@ -120,7 +123,16 @@ export const PageStyled = styled.div`
 		}
 	}
 
+	ul li:nth-child(2) {
+		animation: ${focusOut} 0.4s forwards;
+	}
+
+	ul li:nth-child(4) {
+		animation: ${focusIn} 0.6s forwards;
+	}
+
 	.carousel-item {
+		list-style: none;
 
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			opacity: 1;
@@ -132,9 +144,11 @@ export const PageStyled = styled.div`
 	.carousel-item.highlight {
 		transform: scale(1.2);
 		z-index: 100;
+		animation: ${onFocus} 0.5s forwards;
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			opacity: 1;
 			transform: scale(1);
+			animation: none;
 		}
 	}
 
@@ -156,7 +170,7 @@ export const PageStyled = styled.div`
 		width: 23.3rem;
 		height: 7.1rem;
 		display: block;
-		top: 48.4%;
+		top: 48.7%;
 		appearance: none;
 		position: absolute;
 		overflow: hidden;
@@ -168,10 +182,11 @@ export const PageStyled = styled.div`
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
 			left: 13.4%;
+			top: 47.4%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			left: 1%;
-			top: 72%;
+			top: 51.3%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: none;
@@ -186,7 +201,7 @@ export const PageStyled = styled.div`
 		width: 23.3rem;
 		height: 7.1rem;
 		display: block;
-		top: 48.4%;
+		top: 48.7%;
 		appearance: none;
 		position: absolute;
 		overflow: hidden;
@@ -198,10 +213,11 @@ export const PageStyled = styled.div`
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopFHD}) {
 			right: 13.2%;
+			top: 47.4%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointDesktopWXGA}) {
 			right: 0.5%;
-			top: 72%;
+			top: 51.3%;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			display: none;
