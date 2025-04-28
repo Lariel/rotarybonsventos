@@ -5,7 +5,6 @@ import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
-import arrow from '@assets/arrow.svg';
 
 interface Highlight {
 	isCenter: boolean;
@@ -14,7 +13,7 @@ interface Highlight {
 
 export default function Home() {
 
-	const [ highlights, setHighlights ] = useState<Highlight[]>([]);
+	const [ highlights, setHighlights ] = useState<Highlight[]>(buildHighlights(getHighlightProjects()));
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -27,12 +26,15 @@ export default function Home() {
 
 		document.dispatchEvent(event);
 
-		setHighlights(buildHighlights(getHighlightProjects()));
+		const interval = setInterval(() => {
+			handleNext();
+		}, 5000);
 
 		return () => {
+			clearInterval(interval);
 			console.log('Exit Home');
 		}
-	}, []);
+	}, [highlights]);
 
 	function buildHighlights(projects: Project[]): Highlight[] {
 		const highlights: Highlight[] = [];
@@ -54,30 +56,6 @@ export default function Home() {
 			isCenter,
 			project
 		}
-	}
-
-	function handlePrev() {
-		const newStateAux = [...highlights];
-		const newState = [];
-
-		const getNextIndex = (index: number) => {
-			return index ===  0 ? newStateAux.length - 1 : index - 1;
-		}
-
-		for (let index = 0; index < newStateAux.length; index++) {
-			const nextIndex = getNextIndex(index);
-			newState.push(newStateAux[nextIndex]);
-		}
-
-		for (let index = 0; index < newState.length; index++) {
-			if (newState[index].isCenter) {
-				newState[index].isCenter = false;
-				const nextIndex = getNextIndex(index);
-				newState[nextIndex].isCenter = true;
-				break;
-			}
-		}
-		setHighlights(newState);
 	}
 
 	function handleNext() {
@@ -114,11 +92,6 @@ export default function Home() {
 						</div>
 						<div className='section-content actions flex-center'>
 							<div className='carousel flex-center'>
-								<button
-									className='btn-prev'
-									onClick={handlePrev}>
-										<img src={arrow}/>
-								</button>
 								<ul className='carousel-itens flex-center'>
 									{highlights.map(highlight => (
 										<li
@@ -135,11 +108,6 @@ export default function Home() {
 										</li>
 									))}
 								</ul>
-								<button
-									className='btn-next'
-									onClick={handleNext}>
-										<img src={arrow}/>
-								</button>
 							</div>
 						</div>
 					</section>
