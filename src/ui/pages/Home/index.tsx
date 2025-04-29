@@ -14,6 +14,7 @@ interface Highlight {
 export default function Home() {
 
 	const [ highlights, setHighlights ] = useState<Highlight[]>(buildHighlights(getHighlightProjects()));
+	const [ isMobile, setIsMobile ] = useState<boolean>();
 
 	useEffect(() => {
 		console.log('Start Home');
@@ -26,9 +27,19 @@ export default function Home() {
 
 		document.dispatchEvent(event);
 
-		const interval = setInterval(() => {
-			handleNext();
-		}, 5000);
+		const device = navigator.userAgent;
+		setIsMobile(device.includes('Android') || device.includes('iPhone'));
+
+		let interval: NodeJS.Timeout;
+
+		if (!isMobile) {
+			setTimeout(() => {
+				interval = setInterval(() => {
+					handleNext();
+				}, 5000);
+			}, 5000);
+
+		}
 
 		return () => {
 			clearInterval(interval);
