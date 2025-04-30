@@ -132,16 +132,20 @@ export default function Home() {
 									<div className='small-topic first-topic'></div>
 								</div>
 								<div className='col-w60 padding-20'>
-									<p>Casamentiss faiz malandris se pirulitá. Quem manda na minha terra sou euzis! Interagi no mé, cursus quis, vehicula ac nisi. Delegadis gente finis, bibendum egestas augue arcu ut est.</p>
-									<p>Paisis, filhis, espiritis santis. In elementis mé pra quem é amistosis quis leo. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
-									<p>Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Quem manda na minha terra sou euzis!</p>
+									<p>Somos o Rotary Club de Osório Bons Ventos, um grupo de pessoas em ação que une talentos, amizade e propósito para transformar realidades. Acreditamos na força do companheirismo, no poder do servir e no impacto de projetos que fortalecem comunidades.</p>
+									<p>Com base nos princípios do Rotary Internacional, atuamos com ética, liderança e responsabilidade social, buscando soluções para desafios locais e globais. Nosso clube é uma engrenagem em movimento, onde cada associado contribui com o que tem de melhor — sempre guiados pelo lema: Dar de Si Antes de Pensar em Si.</p>
 								</div>
 							</div>
-							<div className='row'>
+						</div>
+						<div className='section-title' id='story'>
+							<h1>Nossa história</h1>
+						</div>
+						<div className='section-content about'>
+						<div className='row'>
 								<div className='col-w60 padding-20'>
-									<p>Si num tem leite então bota uma pinga aí cumpadi! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Bota 1 metro de cachacis aí pra viagem!</p>
-									<p>Manduma pindureta quium dia nois paga. Copo furadis é disculpa de bebadis, arcu quam euismod magna. A ordem dos tratores não altera o pão duris. Interagi no mé, cursus quis, vehicula ac nisi.</p>
-									<p>Paisis, filhis, espiritis santis. In elementis mé pra quem é amistosis quis leo. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
+									<p>Nossa trajetória começou em 2021, quando oito integrantes do Rotaract Club de Osório decidiram seguir contribuindo com a família rotária de forma ainda mais ativa. Foi assim que nasceu nosso clube como um satélite do Rotary Club de Osório — o formato ideal naquele momento para dar continuidade à nossa missão de servir.</p>
+									<p>Um clube satélite, assim como qualquer Rotary Club, realiza reuniões regulares, possui diretoria, regimento interno e desenvolve projetos humanitários com impacto real na comunidade. Seus membros são rotarianos comprometidos e atuantes, mesmo estando, oficialmente, vinculados ao clube padrinho — no nosso caso, o Rotary Club de Osório, que nos apoiou desde o início com parceria, confiança e inspiração.</p>
+									<p>Com dedicação e espírito de equipe, crescemos. Em apenas um ano, dobramos nosso quadro de associados. E finalmente em 2024, alcançamos um marco importante: nos tornamos oficialmente um Rotary Club tradicional, agora com 26 associados — pessoas que acreditam na força do companheirismo, da ética e do servir.</p>
 								</div>
 								<div className='col-w40 padding-20 flex-center'>
 									<div className='small-topic second-topic'></div>
@@ -152,14 +156,14 @@ export default function Home() {
 									<div className='small-topic third-topic'></div>
 								</div>
 								<div className='col-w60 padding-20'>
-									<p>Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Morbi viverra placerat justo, vel pharetra turpis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.</p>
-									<p>Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Bota 1 metro de cachacis aí pra viagem!</p>
-									<p>Diuretics paradis num copo é motivis de denguis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Negão é teu passadis, eu sou faxa pretis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
+									<p>Nosso clube é resultado da união entre responsabilidade e amizade, valores que conduzem cada passo da nossa jornada. Somos movidos pelo ideal de servir e inspirados pelo lema: Dar de Si Antes de Pensar em Si.</p>
+									<p>Somos o Rotary Club de Osório Bons Ventos — um grupo de pessoas em ação, que colocam seus talentos e aspirações a serviço da construção de um mundo melhor. Juntos, criamos oportunidades, fortalecemos comunidades e buscamos soluções para os desafios mais complexos da sociedade.</p>
+									<p>Seguimos como uma engrenagem em constante movimento, onde cada peça se encaixa com propósito, sempre na direção de um futuro mais justo, solidário e transformador.</p>
 								</div>
 							</div>
 							<div className='row'>
 								<div className='col-w100 flex-center bold'>
-									<p>Aqui pode ter um texto finalizando a apresentação do clube</p>
+									{/* <p>Aqui pode ter um texto finalizando a apresentação do clube</p> */}
 								</div>
 							</div>
 							<div className='row'>
