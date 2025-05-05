@@ -6,10 +6,10 @@ import {
 	maxWidthBreakpointMobile
 } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
-import contribute from '@assets/contribute.jpg';
-import education from '@assets/education.jpg';
 import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
+import about from '@assets/about-us.jpg';
+import story1 from '@assets/story-1.jpg';
 
 export const PageStyled = styled.div`
 	width: 100%;
@@ -86,11 +86,11 @@ export const PageStyled = styled.div`
 	}
 
 	.first-topic {
-		background-image: url(${contribute});
+		background-image: url(${about});
 	}
 
 	.second-topic {
-		background-image: url(${education});
+		background-image: url(${story1});
 	}
 
 	.third-topic {
