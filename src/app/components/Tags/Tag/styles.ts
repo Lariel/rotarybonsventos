@@ -4,7 +4,7 @@ import colors from '@ui/styles/colors';
 
 export const TagStyled = styled.div`
 	margin: 5px;
-	padding: 8px;
+	padding: 7px 8px 9px 8px;
 	height: 25px;
 	font-size: 0.75rem;
 	font-weight: 600;
