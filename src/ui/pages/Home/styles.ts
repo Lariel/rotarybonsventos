@@ -6,8 +6,6 @@ import {
 	maxWidthBreakpointMobile
 } from '@ui/styles/GlobalStyles';
 import theme from '@ui/styles/theme';
-import development from '@assets/development.jpg';
-import nature from '@assets/nature.jpg';
 import about from '@assets/about-us.jpg';
 import story1 from '@assets/story-1.jpg';
 import action from '@assets/action.jpg';
