@@ -10,6 +10,8 @@ import development from '@assets/development.jpg';
 import nature from '@assets/nature.jpg';
 import about from '@assets/about-us.jpg';
 import story1 from '@assets/story-1.jpg';
+import action from '@assets/action.jpg';
+import foundation from '@assets/foundation.jpg';
 
 export const PageStyled = styled.div`
 	width: 100%;
@@ -75,7 +77,7 @@ export const PageStyled = styled.div`
 
 	.whide-topic {
 		width: 100%;
-		height: 350px;
+		height: 400px;
 		background-position-y: 20%;
 		background-size: cover;
 		transition: all 1s ease;
@@ -94,11 +96,11 @@ export const PageStyled = styled.div`
 	}
 
 	.third-topic {
-		background-image: url(${development});
+		background-image: url(${action});
 	}
 
 	.fourth-topic {
-		background-image: url(${nature});
+		background-image: url(${foundation});
 	}
 
 	.carousel {
