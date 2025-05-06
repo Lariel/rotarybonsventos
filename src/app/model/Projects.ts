@@ -1,4 +1,4 @@
-import development from '@assets/development.jpg';
+import projVoltaAulas from '@assets/proj-volta-aulas.jpg';
 import education from '@assets/education.jpg';
 import health from '@assets/health.jpg';
 import peace from '@assets/peace.jpg';
@@ -16,7 +16,7 @@ const tag5: Tag = { id: 5, text: 'paz'};
 export const projects: Project[] = [
 	{
 		id: 1,
-		image: `${development}`,
+		image: `${projVoltaAulas}`,
 		title: 'Volta às Aulas com o Rotary Bons Ventos',
 		summary: 'Iniciativa anual que tem como objetivo promover um início de ano letivo mais digno e motivador para crianças em situação de vulnerabilidade social.',
 		info: `O Projeto Volta às Aulas é uma das iniciativas anuais do Rotary Club de Osório Bons Ventos, que tem como objetivo promover um início de ano letivo mais digno e motivador para crianças em situação de vulnerabilidade social.
@@ -67,7 +67,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: 6,
-		image: `${development}`,
+		image: `${projVoltaAulas}`,
 		title: 'SOS Chuvas – Apoio às Vítimas das Enchentes no RS',
 		summary: 'Breve descrição do sexto projeto a ser mostrado na página',
 		info: `Diante das fortes enchentes que atingiram o Rio Grande do Sul, o Rotary Club de Osório Bons Ventos se mobilizou intensamente em uma corrente de solidariedade. Arrecadamos, separamos e distribuímos doações vindas de diferentes partes do Brasil, incluindo São Paulo e Santa Catarina. Foram mais de 5 caminhões carregados com mantimentos, água potável, roupas, colchões e kits de higiene, enviados diretamente para as áreas afetadas. Um esforço coletivo movido pelo nosso compromisso de estar presente onde a ajuda é mais urgente.`,
