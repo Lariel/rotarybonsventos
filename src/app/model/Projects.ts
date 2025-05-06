@@ -73,7 +73,7 @@ export const projects: Project[] = [
 		summary: 'Diante das enchentes no RS, o Rotary Bons Ventos mobilizou doações de todo o Brasil, enviando mais de 5 caminhões com itens essenciais às áreas afetadas',
 		info: `Diante das fortes enchentes que atingiram o Rio Grande do Sul, o Rotary Club de Osório Bons Ventos se mobilizou intensamente em uma corrente de solidariedade. Arrecadamos, separamos e distribuímos doações vindas de diferentes partes do Brasil, incluindo São Paulo e Santa Catarina. Foram mais de 5 caminhões carregados com mantimentos, água potável, roupas, colchões e kits de higiene, enviados diretamente para as áreas afetadas. Um esforço coletivo movido pelo nosso compromisso de estar presente onde a ajuda é mais urgente.`,
 		highlight: false,
-		tags: [t_fighting_disease, t_growing_local_economies]
+		tags: [t_fighting_disease, t_growing_local_economies, t_providing_clean_water]
 	},
 	{
 		id: 7,
