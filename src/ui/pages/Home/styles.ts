@@ -83,6 +83,9 @@ export const PageStyled = styled.div`
 			transform: scale(1.05);
 			transition: all 1s ease;
 		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			height: 180px;
+		}
 	}
 
 	.first-topic {
