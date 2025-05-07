@@ -5,6 +5,7 @@ import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
+import { features } from '@app/model/Features';
 
 interface Highlight {
 	isCenter: boolean;
@@ -114,7 +115,7 @@ export default function Home() {
 												title={highlight.project.title}
 												summary={highlight.project.summary}
 												tags={highlight.project.tags}
-												knowMore={true} >
+												knowMore={features.projects.knowMore} >
 											</Card>
 										</li>
 									))}

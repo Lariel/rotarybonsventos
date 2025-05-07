@@ -6,6 +6,7 @@ import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getProjects } from '@app/services/ProjectService';
+import { features } from '@app/model/Features';
 
 export default function Projects() {
 
@@ -46,7 +47,7 @@ export default function Projects() {
 							title={project.title}
 							summary={project.summary}
 							tags={project.tags}
-							knowMore={true} >
+							knowMore={features.projects.knowMore} >
 						</Card>
 					))}
 				</PageStyled>

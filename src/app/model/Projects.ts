@@ -98,7 +98,7 @@ Na última edição vendemos mais de 350 ingressos que davam direito a 4 pedaço
 		summary: 'No Dia das Crianças, levamos brinquedos e lanches a um bairro carente, promovendo um dia de alegria e inclusão para as crianças',
 		info: `Em comemoração ao Dia das Crianças, promovemos uma ação especial em um bairro que raramente recebe iniciativas voltadas ao público infantil. Alugamos brinquedos infláveis e distribuímos cachorro-quente, refrigerante e pipoca, criando um momento de alegria, cuidado e diversão para as crianças da comunidade. Um gesto simples, mas cheio de significado, que reforça o nosso compromisso com o bem-estar e o desenvolvimento infantil.`,
 		highlight: true,
-		tags: []
+		tags: [t_promoting_peace]
 	},
 	{
 		id: 9,
