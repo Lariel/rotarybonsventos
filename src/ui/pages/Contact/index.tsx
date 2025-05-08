@@ -66,7 +66,7 @@ export default function Contact() {
 						</div>
 					</div>
 					<div className='fourth-square-left'>
-						<div className='contact-channel'>Avenida Jorge Dariva, nº xx. Osório - RS</div>
+						<div className='contact-channel'>Rua Marechal Deodoro, nº 166. Osório - RS</div>
 					</div>
 				</div>
 			</PageStyled>
