@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles'
 import { routes } from '@app/Router/routes';
-import { social } from '@app/constants/constants'
 import { PageStyled, HowDonateGridStyled } from './styles';
 import pix_rotary from '@assets/qrcode-pix.png';
 import { Pages } from '@app/model/Pages';
