@@ -104,7 +104,10 @@ export const HowDonateGridStyled = styled.div`
 	justify-items: center;
 	grid-template-columns: repeat(2, 1fr);
 	.grid-how-donate {
-		width: 110%;
+		width: 120%;
+		b {
+				font-size: 1.0em;
+		}
 	}
 	.grid-qr-donate {
 		width: 50%;
