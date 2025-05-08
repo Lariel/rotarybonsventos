@@ -8,10 +8,11 @@ export const features = {
 		knowMore: false
 	},
 	accountability: {
-		menu: true,
+		menu: false,
 	},
 	contribute: {
 		menu: true,
+		pix: true
 	},
 	contact: {
 		menu: true,
