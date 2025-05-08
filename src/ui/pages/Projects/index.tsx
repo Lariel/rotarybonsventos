@@ -7,6 +7,7 @@ import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getProjects } from '@app/services/ProjectService';
 import { features } from '@app/model/Features';
+import { validateFeature } from '@app/services/FeatureFlagService';
 
 export default function Projects() {
 
@@ -14,6 +15,8 @@ export default function Projects() {
 
 	useEffect(() => {
 		console.log('Start Projects');
+
+		validateFeature(features.projects.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {

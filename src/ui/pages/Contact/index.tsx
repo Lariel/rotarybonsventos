@@ -6,11 +6,15 @@ import { social } from '@app/constants/constants';
 import icon_instagram from '@assets/icon_instagram.svg';
 import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
+import { validateFeature } from '@app/services/FeatureFlagService';
+import { features } from '@app/model/Features';
 
 export default function Contact() {
 
 	useEffect(() => {
 		console.log('Start Contact');
+
+		validateFeature(features.contact.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {

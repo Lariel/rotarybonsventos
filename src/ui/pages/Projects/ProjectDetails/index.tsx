@@ -4,11 +4,15 @@ import PageIntro from '@app/components/PageIntro';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
+import { validateFeature } from '@app/services/FeatureFlagService';
+import { features } from '@app/model/Features';
 
 export default function ProjectDetails() {
 
 	useEffect(() => {
 		console.log('Start Projects details');
+
+		validateFeature(features.projects.knowMore);
 
 		const event = new CustomEvent('changePage',{
 			detail: {

@@ -4,11 +4,15 @@ import PageIntro from '@app/components/PageIntro';
 import relatorio from '@assets/finance_report_10-2024.pdf';
 import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
+import { features } from '@app/model/Features';
+import { validateFeature } from '@app/services/FeatureFlagService';
 
 export default function Accountability() {
 
 	useEffect(() => {
 		console.log('Start Accountability');
+
+		validateFeature(features.accountability.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {
