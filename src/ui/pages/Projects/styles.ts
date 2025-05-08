@@ -11,9 +11,6 @@ export const PageStyled = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-content: flex-start;
-	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-		//padding: 0 20px 0 20px;
-	}
 
 	.text-content {
 		padding: 0 10em 0 10em;
@@ -23,7 +20,10 @@ export const PageStyled = styled.div`
 			font-size: 1.0em;
 		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
-			display: none;
+			padding: 0 0.2em 0 0.7em;
+			p {
+				text-indent: 3%;
+			}
 		}
 	}
 `;

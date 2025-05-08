@@ -36,7 +36,7 @@ export default function Projects() {
 				<PageStyled>
 					<PageIntro intro='Conheça nossos projetos e ações'/>
 					<div className='text-content'>
-						<p>No Rotary Bons Ventos, temos o compromisso de server à comunidade, promovendo mudanças positivas e sustentáveis.</p>
+						<p>No Rotary Bons Ventos, temos o compromisso de servir à comunidade, promovendo mudanças positivas e sustentáveis.</p>
 						<p>Ao longo dos anos, realizamos uma série de projetos e ações alinhadas com as causas do Rotary Internacional: <strong>Promoção da paz</strong>, <strong>Combate a doenças</strong>, <strong>Água limpa e saneamento</strong>, <strong>Saúde de mães e filhos</strong>, <strong>Apoio à educação</strong>, <strong>Desenvolvimento econômico</strong> e <strong>Proteção do meio ambiente</strong>.</p>
 						<p>Cada projeto é uma oportunidade de fazer a diferença, e é um reflexo do trabalho colaborativo de nossos membros e parceiros, que compartilham uma visão comum de um mundo melhor.</p>
 						<p>Continuamos a buscar novas formas de servir à comunidade e fazer a diferença de maneira significativa.</p>
