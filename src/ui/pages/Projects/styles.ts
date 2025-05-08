@@ -14,4 +14,16 @@ export const PageStyled = styled.div`
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 		//padding: 0 20px 0 20px;
 	}
+
+	.text-content {
+		padding: 0 10em 0 10em;
+		text-align: left;
+		font-weight: 400;
+    strong {
+			font-size: 1.0em;
+		}
+		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
+			display: none;
+		}
+	}
 `;
