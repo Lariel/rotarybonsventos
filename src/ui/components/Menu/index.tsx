@@ -3,7 +3,7 @@ import { routes } from '@app/Router/routes'
 import { Router } from '@app/Router'
 import { PageStyled, MenuStyled, MenuToggleStyled } from './styles';
 import { useEffect, useState } from 'react';
-import { features } from '@app/model/Features';
+import { getFeatures } from '@app/services/FeatureFlagService';
 
 export function Menu(props: any) {
 	const [ isHomeActive, setHomeActive ] = useState<boolean>(true);
@@ -108,25 +108,25 @@ export function Menu(props: any) {
 							to={routes.home.path}>
 								{routes.home.label}
 						</Link>
-						{features.projects.menu && <Link
+						{getFeatures().projects.menu && <Link
 							className={isProjectsActive ? 'active': 'default'}
 							onClick={handleclick}
 							to={routes.projects.path}>
 								{routes.projects.label}
 						</Link>}
-						{features.accountability.menu && <Link
+						{getFeatures().accountability.menu && <Link
 							className={isAccountabilityActive ? 'active': 'default'}
 							onClick={handleclick}
 							to={routes.accountability.path}>
 								{routes.accountability.label}
 						</Link>}
-						{features.contribute.menu && <Link
+						{getFeatures().contribute.menu && <Link
 							className={isContributeActive ? 'active': 'default'}
 							onClick={handleclick}
 							to={routes.contribute.path}>
 								{routes.contribute.label}
 						</Link>}
-						{features.contact.menu && <Link
+						{getFeatures().contact.menu && <Link
 							className={isContactActive ? 'active': 'default'}
 							onClick={handleclick}
 							to={routes.contact.path}>
