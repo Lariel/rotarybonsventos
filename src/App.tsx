@@ -3,6 +3,7 @@ import { Header } from '@ui/components/Header'
 import { Footer } from '@ui/components/Footer'
 import { GlobalStyles } from '@ui/styles/GlobalStyles'
 import { Menu } from '@ui/components/Menu'
+import { fetchRemoteConfig } from '@app/services/FeatureFlagService';
 
 export function App() {
 	const [ pageSelected, setPageSelected ] = useState<any>();
@@ -12,6 +13,8 @@ export function App() {
 	useEffect(() => {
 		console.log('Start App');
 		updateFooterVisibility(!window.location.href.includes('links'));
+
+		fetchRemoteConfig();
 
 		function handleChangePage(event: any) {
 			console.log('handleChangePage', event);
