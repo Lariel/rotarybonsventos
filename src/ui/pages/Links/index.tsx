@@ -8,15 +8,14 @@ import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
 import { social } from '@app/constants/constants';
 import { Pages } from '@app/model/Pages';
-import { features } from '@app/model/Features';
-import { validateFeature } from '@app/services/FeatureFlagService';
+import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
 
 export default function Links() {
 
 	useEffect(() => {
 		console.log('Start Links');
 
-		validateFeature(features.links.menu);
+		validateFeature(getFeatures().links.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {
@@ -35,9 +34,9 @@ export default function Links() {
 		<ContainerStyled className='container'>
 			<ContentStyled className='page-links'>
 				<VerticalLinksStyled>
-					{features.contribute.menu && <Link className='vertical-link' to={routes.contribute.path}>{routes.contribute.label}</Link>}
-					{features.projects.menu && <Link className='vertical-link' to={routes.projects.path}>{routes.projects.label}</Link>}
-					{features.accountability.menu && <Link className='vertical-link' to={routes.accountability.path}>{routes.accountability.label}</Link>}
+					{getFeatures().contribute.menu && <Link className='vertical-link' to={routes.contribute.path}>{routes.contribute.label}</Link>}
+					{getFeatures().projects.menu && <Link className='vertical-link' to={routes.projects.path}>{routes.projects.label}</Link>}
+					{getFeatures().accountability.menu && <Link className='vertical-link' to={routes.accountability.path}>{routes.accountability.label}</Link>}
 					<div className='social-links structure-mobile'>
 						<a href={social.instagram} target='_blank'>
 							<img
