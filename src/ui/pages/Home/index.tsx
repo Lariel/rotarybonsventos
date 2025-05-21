@@ -5,7 +5,7 @@ import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
-import { features } from '@app/model/Features';
+import { getFeatures } from '@app/services/FeatureFlagService';
 
 interface Highlight {
 	isCenter: boolean;
@@ -98,7 +98,7 @@ export default function Home() {
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
-					<section>
+					{getFeatures().home.highlights && <section>
 						<div className='section-title'>
 							<h1>Ações em destaque</h1>
 						</div>
@@ -115,15 +115,15 @@ export default function Home() {
 												title={highlight.project.title}
 												summary={highlight.project.summary}
 												tags={highlight.project.tags}
-												knowMore={features.projects.knowMore} >
+												knowMore={getFeatures().projects.knowMore} >
 											</Card>
 										</li>
 									))}
 								</ul>
 							</div>
 						</div>
-					</section>
-					<section>
+					</section>}
+					{getFeatures().home.about && <section>
 						<div className='section-title'>
 							<h1>Sobre nós</h1>
 						</div>
@@ -173,7 +173,7 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-					</section>
+					</section>}
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>

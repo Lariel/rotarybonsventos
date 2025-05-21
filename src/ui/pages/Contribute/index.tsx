@@ -4,15 +4,14 @@ import { routes } from '@app/Router/routes';
 import { PageStyled, HowDonateGridStyled } from './styles';
 import pix_rotary from '@assets/qrcode-pix.png';
 import { Pages } from '@app/model/Pages';
-import { features } from '@app/model/Features';
-import { validateFeature } from '@app/services/FeatureFlagService';
+import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
 
 export default function Contribute() {
 
 	useEffect(() => {
 		console.log('Start Contribute');
 
-		validateFeature(features.contribute.menu);
+		validateFeature(getFeatures().contribute.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {
@@ -47,7 +46,7 @@ export default function Contribute() {
 						<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
 					</div>
 					<div className='second-square-left'>
-						{features.contribute.pix && <HowDonateGridStyled >
+						{getFeatures().contribute.pix && <HowDonateGridStyled >
 							<p className='grid-how-donate'>Sua doação pode ser feita via pix, utilizando nosso qr-code, ou com a chave CNPJ: <b>59780382000166</b>.</p>
 							<img className='grid-qr-donate' src={pix_rotary}></img>
 						</HowDonateGridStyled>}

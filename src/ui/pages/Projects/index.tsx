@@ -6,7 +6,7 @@ import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
 import { Project } from '@app/types/Project';
 import { getProjects } from '@app/services/ProjectService';
-import { features } from '@app/model/Features';
+import { getFeatures } from '@app/services/FeatureFlagService';
 import { validateFeature } from '@app/services/FeatureFlagService';
 
 export default function Projects() {
@@ -16,7 +16,7 @@ export default function Projects() {
 	useEffect(() => {
 		console.log('Start Projects');
 
-		validateFeature(features.projects.menu);
+		validateFeature(getFeatures().projects.menu);
 
 		const event = new CustomEvent('changePage',{
 			detail: {
@@ -53,7 +53,7 @@ export default function Projects() {
 							title={project.title}
 							summary={project.summary}
 							tags={project.tags}
-							knowMore={features.projects.knowMore} >
+							knowMore={getFeatures().projects.knowMore} >
 						</Card>
 					))}
 				</PageStyled>
