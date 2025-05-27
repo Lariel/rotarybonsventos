@@ -7,7 +7,6 @@ export function getProjects(): Project[] {
 }
 
 export function getProjectDetails(id: number): Project | undefined {
-	console.log('id para buscar: ', id);
 	return projMap.get(id);
 }
 

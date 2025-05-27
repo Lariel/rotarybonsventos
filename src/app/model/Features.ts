@@ -5,7 +5,7 @@ export const features = {
 	},
 	projects: {
 		menu: true,
-		knowMore: false
+		knowMore: true
 	},
 	accountability: {
 		menu: false,
