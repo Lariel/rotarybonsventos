@@ -2,7 +2,6 @@ import proj1_cover from '@assets/projects/proj-volta-aulas-cover-min.jpg';
 import proj2_cover from '@assets/projects/proj-dia-saude-cover-min.jpg';
 import proj3_cover from '@assets/projects/proj-arrecada-alimentos-cover-min.jpg';
 import proj4_cover from '@assets/projects/proj-campanha-agasalho-cover-min.jpg';
-import proj5_cover from '@assets/projects/proj-default-cover.jpg';
 import proj6_cover from '@assets/projects/proj-sos-chuvas-cover-min.jpg';
 import proj7_cover from '@assets/projects/proj-galeto-cover-min.jpg';
 import proj8_cover from '@assets/projects/proj-dia-crianca-cover-min.jpeg';
@@ -65,7 +64,6 @@ const projects: Project[] = [
 	},
 	{
 		id: 5,
-		image: `${proj5_cover}`,
 		title: 'Blitz da Pólio',
 		summary: 'Campanha e distribuição de panfletos para conscientizar sobre a importância da vacinação infantil na erradicação da pólio',
 		info: `Com o compromisso de contribuir para um mundo livre da pólio, realizamos uma blitz informativa com distribuição de panfletos, reforçando a importância da vacinação infantil. A ação teve como foco conscientizar pais e responsáveis sobre a necessidade da imunização e o papel vital que ela desempenha na erradicação da doença.`,
@@ -85,10 +83,10 @@ const projects: Project[] = [
 		id: 7,
 		image: `${proj7_cover}`,
 		title: 'Galeto do Bons Ventos',
-		summary: 'O Galeto do Bons Ventos é uma ação solidária que arrecada fundos para projetos sociais. Na última edição, foram vendidos mais de 350 ingressos, gerando mais de R$10 mil em recursos',
+		summary: 'O Galeto do Bons Ventos é uma ação solidária que arrecada fundos para projetos sociais. Na edição de 2024, foram vendidos mais de 350 ingressos, gerando mais de R$10 mil em recursos',
 		info: `O Galeto do Bons Ventos é uma ação financeira do nosso clube, que une sabor e solidariedade. Através da venda de galetos assados, arrecadamos fundos para manter e viabilizar nossos projetos sociais ao longo do ano rotário. Cada refeição vendida representa um gesto de apoio à nossa missão de servir e transformar realidades na comunidade.
-Na última edição vendemos mais de 350 ingressos que davam direito a 4 pedaços de frango, maionese, arroz e salada. Conseguimos arrecadar mais de 10 mil reais e assim manter nossas ações e projetos ativos.
-`,
+					Na edição de 2024 vendemos mais de 350 ingressos que davam direito a 4 pedaços de frango, maionese, arroz e salada. Conseguimos arrecadar mais de 10 mil reais e assim manter nossas ações e projetos ativos.
+				`,
 		highlight: false,
 		tags: [t_growing_local_economies]
 	},
