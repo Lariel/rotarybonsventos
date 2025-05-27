@@ -42,8 +42,8 @@ export default function Contribute() {
 							<li>Financiar projetos sociais de forma sustentável e de longo prazo;</li>
 							<li>Manter a infraestrutura do clube pronta para apoiar as demandas;</li>
 						</ul>
-						<p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>
-						<p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>
+						{getFeatures().projects.menu && <p>Conheça nossos projetos acessando a página <a href={routes.projects.path} >Projetos</a>, e veja o resultado da sua contribuição.</p>}
+						{getFeatures().accountability.menu && <p>Veja nosso relatório financeiro mensal acessando a página <a href={routes.accountability.path}>Transparência</a>.</p>}
 					</div>
 					<div className='second-square-left'>
 						{getFeatures().contribute.pix && <HowDonateGridStyled >
