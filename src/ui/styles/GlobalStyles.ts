@@ -77,6 +77,12 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 1.2em;
 		line-height: 2em;
 		text-indent: 5%;
+		b {
+			font-size: 1em;
+		}
+		strong {
+			font-size: 1em;
+		}
 	}
 
 	h1 {

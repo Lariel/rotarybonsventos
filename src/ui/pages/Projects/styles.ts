@@ -16,9 +16,6 @@ export const PageStyled = styled.div`
 		padding: 0 10em 0 10em;
 		text-align: left;
 		font-weight: 400;
-    strong {
-			font-size: 1.0em;
-		}
 		@media screen and (max-width: ${maxWidthBreakpointMobile}) {
 			padding: 0 0.2em 0 0.7em;
 			p {

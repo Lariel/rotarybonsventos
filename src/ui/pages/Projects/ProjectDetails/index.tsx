@@ -9,6 +9,7 @@ import { Project } from '@app/types/Project';
 import { getProjectDetails } from '@app/services/ProjectService';
 import { routes } from '@app/Router/routes';
 import proj_default_cover from '@assets/projects/proj-default-cover.jpg';
+import parse from 'html-react-parser';
 
 export default function ProjectDetails() {
 
@@ -49,7 +50,10 @@ export default function ProjectDetails() {
 					<PageIntro
 						intro={ projectSelected?.title }
 					/>
-					<p> { projectSelected?.info }</p>
+
+					{/* <p>{ projectSelected?.info }</p> */}
+					{ parse(projectSelected?.info ?? '') }
+
 					<div className='image-wrapper project-image-wrapper'>
 						<img src={ projectSelected?.image ?? proj_default_cover }></img>
 					</div>
