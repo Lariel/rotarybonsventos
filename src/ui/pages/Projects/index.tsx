@@ -8,6 +8,7 @@ import { Project } from '@app/types/Project';
 import { getProjects } from '@app/services/ProjectService';
 import { getFeatures } from '@app/services/FeatureFlagService';
 import { validateFeature } from '@app/services/FeatureFlagService';
+import proj_default_cover from '@assets/projects/proj-default-cover.jpg';
 
 export default function Projects() {
 
@@ -49,7 +50,7 @@ export default function Projects() {
 						<Card
 							key={project.id}
 							id={project.id}
-							image={project.image}
+							image={project.image ?? proj_default_cover }
 							title={project.title}
 							summary={project.summary}
 							tags={project.tags}

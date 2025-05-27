@@ -77,6 +77,12 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 1.2em;
 		line-height: 2em;
 		text-indent: 5%;
+		b {
+			font-size: 1em;
+		}
+		strong {
+			font-size: 1em;
+		}
 	}
 
 	h1 {
@@ -98,6 +104,17 @@ export const GlobalStyles = createGlobalStyle`
 	body {
 		.container-bg {
 			background: ${colors.siteBG} url(${bg}) 50% 0;
+		}
+
+		.image-wrapper {
+			overflow: hidden;
+			img {
+				transition: all 1s ease;
+				&:hover {
+					transform: scale(1.05);
+					transition: all 1s ease;
+				}
+			}
 		}
 
 		.row {
