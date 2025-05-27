@@ -7,5 +7,6 @@ export interface Project {
 	summary: string,
 	info: string,
 	highlight: boolean,
+	sponsors?: string,
 	tags: Tag[]
 }

@@ -1,15 +1,17 @@
-import { projects } from '@app/model/Projects';
+import { projMap } from '@app/model/Projects';
 import { Project } from '@app/types/Project';
 
 export function getProjects(): Project[] {
-	return projects.sort((a, b) => a.id - b.id);
+	const projectsList = Array.from(projMap, ([, value]) => ({...value}));
+	return projectsList.sort((a, b) => a.id - b.id);
 }
 
 export function getProjectDetails(id: number): Project | undefined {
-	return projects.find(p => p.id = id);
+	return projMap.get(id);
 }
 
 export function getHighlightProjects(): Project[] {
-	return projects.filter(project => project.highlight).sort((a, b) => a.id - b.id);
+	const projectsList = Array.from(projMap, ([, value]) => ({...value}));
+	return projectsList.filter(project => project.highlight).sort((a, b) => a.id - b.id);
 }
 

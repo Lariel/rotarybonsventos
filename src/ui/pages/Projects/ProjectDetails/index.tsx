@@ -1,12 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import PageIntro from '@app/components/PageIntro';
 import { ContainerStyled, ContentStyled } from '@ui/styles/GlobalStyles';
 import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
 import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
+import { Project } from '@app/types/Project';
+import { getProjectDetails } from '@app/services/ProjectService';
+import { routes } from '@app/Router/routes';
 
 export default function ProjectDetails() {
+
+	const [ projectSelected, setProject ] = useState<Project>();
+	const { id } = useParams();
 
 	useEffect(() => {
 		console.log('Start Projects details');
@@ -19,28 +25,31 @@ export default function ProjectDetails() {
 			}
 		});
 
-		setTimeout(() => {
-			// TODO: Remover essa gambiarra após buscar os detalhes do projeto
-			document.dispatchEvent(event);
-		}, 100)
+		document.dispatchEvent(event);
+
+		if (id) {
+			const projectDetails = getProjectDetails(Number.parseInt(id))
+			if (projectDetails) {
+				setProject(projectDetails);
+			} else {
+				window.location.assign(routes.notFound.path);
+			}
+		}
 
 		return () => {
 			console.log('Exit Project details');
 		}
 	}, []);
 
-	const params = useParams();
-
-	console.log('paras:', params);
-
 	return(
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
 					<PageIntro
-						intro={'Detalhes do projeto ' + params.id}
-						info={'WIP'}
+						intro={ projectSelected?.title }
 					/>
+					<p> { projectSelected?.info }</p>
+					<img src={projectSelected?.image}></img>
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>

@@ -19,7 +19,7 @@ const t_supporting_education: Tag = { id: 5, text: 'educação'};
 const t_growing_local_economies: Tag = { id: 6, text: 'desenvolvimento'};
 const t_protecting_environment: Tag = { id: 7, text: 'ambiental'};
 
-export const projects: Project[] = [
+const projects: Project[] = [
 	{
 		id: 1,
 		image: `${proj1_cover}`,
@@ -30,6 +30,7 @@ export const projects: Project[] = [
 					Na edição de 2025, o projeto arrecadou mais de 3 mil itens escolares, beneficiando diretamente mais de 250 crianças de mais de 13 escolas da rede municipal. Um gesto de solidariedade que reflete o compromisso do clube com a educação, a equidade e o desenvolvimento da nossa comunidade.
 				`,
 		highlight: true,
+		sponsors: '',
 		tags: [t_supporting_education, t_growing_local_economies]
 	},
 	{
@@ -110,3 +111,15 @@ Na última edição vendemos mais de 350 ingressos que davam direito a 4 pedaço
 		tags: [t_growing_local_economies, t_promoting_peace, t_protecting_environment]
 	}
 ]
+
+export const projMap: Map<number, Project> = new Map();
+
+projMap.set(projects[0].id, projects[0])
+projMap.set(projects[1].id, projects[1])
+projMap.set(projects[2].id, projects[2])
+projMap.set(projects[3].id, projects[3])
+projMap.set(projects[4].id, projects[4])
+projMap.set(projects[5].id, projects[5])
+projMap.set(projects[6].id, projects[6])
+projMap.set(projects[7].id, projects[7])
+projMap.set(projects[8].id, projects[8])
