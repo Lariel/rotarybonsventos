@@ -50,7 +50,7 @@ const projects: Project[] = [
 		title: 'Arrecadação de Alimentos',
 		summary: 'Arrecadação de alimentos na Semana Farroupilha para apoiar entidades assistenciais de Osório',
 		info: `<p>Durante dois anos consecutivos, o Rotary Club dos Bons Ventos promoveu uma ação solidária durante a Semana Farroupilha, arrecadando alimentos para apoiar entidades que prestam assistência à comunidade. As doações foram entregues à Pastoral da Criança, ao Centro Espírita e ao Lar dos Idosos de Osório, fortalecendo laços e levando acolhimento a quem mais precisa.</p>`,
-		highlight: true,
+		highlight: false,
 		tags: [t_fighting_disease, t_growing_local_economies, t_promoting_peace]
 	},
 	{
@@ -87,7 +87,7 @@ const projects: Project[] = [
 		info: `<p>O Galeto do Bons Ventos é uma ação financeira do nosso clube, que une sabor e solidariedade. Através da venda de galetos assados, arrecadamos fundos para manter e viabilizar nossos projetos sociais ao longo do ano rotário. Cada refeição vendida representa um gesto de apoio à nossa missão de servir e transformar realidades na comunidade.</p>
 					<p>Na edição de 2024 vendemos mais de 350 ingressos que davam direito a 4 pedaços de frango, maionese, arroz e salada. Conseguimos arrecadar mais de 10 mil reais e assim manter nossas ações e projetos ativos.</p>
 				`,
-		highlight: false,
+		highlight: true,
 		tags: [t_growing_local_economies]
 	},
 	{
