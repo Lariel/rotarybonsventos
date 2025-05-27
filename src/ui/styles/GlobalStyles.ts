@@ -100,6 +100,17 @@ export const GlobalStyles = createGlobalStyle`
 			background: ${colors.siteBG} url(${bg}) 50% 0;
 		}
 
+		.image-wrapper {
+			overflow: hidden;
+			img {
+				transition: all 1s ease;
+				&:hover {
+					transform: scale(1.05);
+					transition: all 1s ease;
+				}
+			}
+		}
+
 		.row {
 			display: flex;
 			width: 100%;
