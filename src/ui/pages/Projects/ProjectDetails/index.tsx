@@ -49,7 +49,9 @@ export default function ProjectDetails() {
 						intro={ projectSelected?.title }
 					/>
 					<p> { projectSelected?.info }</p>
-					<img src={projectSelected?.image}></img>
+					<div className='image-wrapper project-image-wrapper'>
+						<img src={projectSelected?.image}></img>
+					</div>
 				</PageStyled>
 			</ContentStyled>
 		</ContainerStyled>

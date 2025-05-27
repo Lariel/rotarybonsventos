@@ -12,13 +12,10 @@ export const PageStyled = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-content: flex-start;
-	img {
-		width: 100%;
+	.project-image-wrapper {
 		margin: 10px 0 20px 0;
-		transition: all 1s ease;
-		&:hover {
-			transform: scale(1.01);
-			transition: all 1s ease;
+		img {
+			width: 100%;
 		}
 	}
 	@media screen and (max-width: ${maxWidthBreakpointMobile}) {
