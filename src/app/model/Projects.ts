@@ -29,7 +29,6 @@ const projects: Project[] = [
 					<p>Na edição de <b>2025</b>, o projeto arrecadou mais de <b>3 mil itens escolares</b>, beneficiando diretamente mais de 250 crianças de mais de 13 escolas da rede municipal. Um gesto de solidariedade que reflete o compromisso do clube com a educação, a equidade e o desenvolvimento da nossa comunidade.</p>
 				`,
 		highlight: true,
-		sponsors: '',
 		tags: [t_supporting_education, t_growing_local_economies]
 	},
 	{
