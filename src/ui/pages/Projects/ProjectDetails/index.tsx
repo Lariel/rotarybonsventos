@@ -47,12 +47,11 @@ export default function ProjectDetails() {
 		<ContainerStyled className='container container-bg'>
 			<ContentStyled className='content-responsive'>
 				<PageStyled>
-					<PageIntro
-						intro={ projectSelected?.title }
-					/>
+					<PageIntro intro={ projectSelected?.title } />
 
-					{/* <p>{ projectSelected?.info }</p> */}
 					{ parse(projectSelected?.info ?? '') }
+
+					{ projectSelected?.sponsors && ( <p><b>Empresas parceiras deste projeto:</b> { projectSelected?.sponsors }</p> )}
 
 					<div className='image-wrapper project-image-wrapper'>
 						<img src={ projectSelected?.image ?? proj_default_cover }></img>
