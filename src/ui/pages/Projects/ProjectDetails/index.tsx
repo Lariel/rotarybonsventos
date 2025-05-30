@@ -8,8 +8,8 @@ import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
 import { Project } from '@app/types/Project';
 import { getProjectDetails } from '@app/services/ProjectService';
 import { routes } from '@app/Router/routes';
-import proj_default_cover from '@assets/projects/proj-default-cover.jpg';
 import parse from 'html-react-parser';
+import ImageWrapper from '@app/components/ImageWrapper';
 
 export default function ProjectDetails() {
 
@@ -53,8 +53,8 @@ export default function ProjectDetails() {
 
 					{ projectSelected?.sponsors && ( <p><b>Empresas parceiras deste projeto:</b> { projectSelected?.sponsors }</p> )}
 
-					<div className='image-wrapper project-image-wrapper'>
-						<img src={ projectSelected?.image ?? proj_default_cover }></img>
+					<div className='project-image-wrapper'>
+						<ImageWrapper imageSrc = { projectSelected?.image } />
 					</div>
 				</PageStyled>
 			</ContentStyled>
