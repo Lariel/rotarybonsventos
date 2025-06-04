@@ -5,6 +5,7 @@ import relatorio from '@assets/finance_report_10-2024.pdf';
 import { Pages } from '@app/model/Pages';
 import { PageStyled } from './styles';
 import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
+import { registerPageView } from '@app/services/AnalyticsService';
 
 export default function Accountability() {
 
@@ -20,6 +21,8 @@ export default function Accountability() {
 		});
 
 		document.dispatchEvent(event);
+
+		registerPageView(Pages.accountability.label,Pages.accountability.path);
 
 		return () => {
 			console.log('Exit Accountability');

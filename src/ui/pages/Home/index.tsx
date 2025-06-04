@@ -6,6 +6,7 @@ import { Project } from '@app/types/Project';
 import { getHighlightProjects } from '@app/services/ProjectService';
 import Card from '@app/components/Card';
 import { getFeatures } from '@app/services/FeatureFlagService';
+import { registerPageView } from '@app/services/AnalyticsService';
 
 interface Highlight {
 	isCenter: boolean;
@@ -41,6 +42,8 @@ export default function Home() {
 			}, 5000);
 
 		}
+
+		registerPageView(Pages.home.label,Pages.home.path);
 
 		return () => {
 			clearInterval(interval);

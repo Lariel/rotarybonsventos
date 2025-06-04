@@ -5,6 +5,7 @@ import { PageStyled, HowDonateGridStyled } from './styles';
 import pix_rotary from '@assets/qrcode-pix.png';
 import { Pages } from '@app/model/Pages';
 import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
+import { registerPageView } from '@app/services/AnalyticsService';
 
 export default function Contribute() {
 
@@ -20,6 +21,8 @@ export default function Contribute() {
 		});
 
 		document.dispatchEvent(event);
+
+		registerPageView(Pages.contribute.label,Pages.contribute.path);
 
 		return () => {
 			console.log('Exit Contribute');
