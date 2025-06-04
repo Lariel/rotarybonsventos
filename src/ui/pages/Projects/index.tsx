@@ -9,6 +9,7 @@ import { getProjects } from '@app/services/ProjectService';
 import { getFeatures } from '@app/services/FeatureFlagService';
 import { validateFeature } from '@app/services/FeatureFlagService';
 import proj_default_cover from '@assets/projects/proj-default-cover.jpg';
+import { registerPageView } from '@app/services/AnalyticsService';
 
 export default function Projects() {
 
@@ -26,6 +27,8 @@ export default function Projects() {
 		});
 
 		document.dispatchEvent(event);
+
+		registerPageView(Pages.projects.label,Pages.projects.path);
 
 		setProjects(getProjects());
 

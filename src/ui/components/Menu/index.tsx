@@ -4,6 +4,7 @@ import { Router } from '@app/Router'
 import { PageStyled, MenuStyled, MenuToggleStyled } from './styles';
 import { useEffect, useState } from 'react';
 import { getFeatures } from '@app/services/FeatureFlagService';
+import { registerEvent } from '@app/services/AnalyticsService';
 
 export function Menu(props: any) {
 	const [ isHomeActive, setHomeActive ] = useState<boolean>(true);
@@ -36,6 +37,7 @@ export function Menu(props: any) {
 				setAccountabilityActive(false);
 				setcontributeActive(false);
 				setContactActive(false);
+				registerEvent(optionSelected);
 				break;
 			case routes.projects.label:
 				setHomeActive(false);
@@ -43,6 +45,7 @@ export function Menu(props: any) {
 				setAccountabilityActive(false);
 				setcontributeActive(false);
 				setContactActive(false);
+				registerEvent(optionSelected);
 				break;
 			case routes.accountability.label:
 				setHomeActive(false);
@@ -50,6 +53,7 @@ export function Menu(props: any) {
 				setAccountabilityActive(true);
 				setcontributeActive(false);
 				setContactActive(false);
+				registerEvent(optionSelected);
 				break;
 			case routes.contribute.label:
 				setHomeActive(false);
@@ -57,6 +61,7 @@ export function Menu(props: any) {
 				setAccountabilityActive(false);
 				setcontributeActive(true);
 				setContactActive(false);
+				registerEvent(optionSelected);
 				break;
 			case routes.contact.label:
 				setHomeActive(false);
@@ -64,6 +69,7 @@ export function Menu(props: any) {
 				setAccountabilityActive(false);
 				setcontributeActive(false);
 				setContactActive(true);
+				registerEvent(optionSelected);
 				break;
 			default:
 				setHomeActive(false);

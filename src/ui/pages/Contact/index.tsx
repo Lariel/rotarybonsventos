@@ -7,6 +7,7 @@ import icon_instagram from '@assets/icon_instagram.svg';
 import icon_linkedin from '@assets/icon_linkedin.svg';
 import icon_mail from '@assets/icon_mail.svg';
 import { getFeatures, validateFeature } from '@app/services/FeatureFlagService';
+import { registerPageView } from '@app/services/AnalyticsService';
 
 export default function Contact() {
 
@@ -22,6 +23,8 @@ export default function Contact() {
 		});
 
 		document.dispatchEvent(event);
+
+		registerPageView(Pages.contact.label,Pages.contact.path);
 
 		return () => {
 			console.log('Exit Contact');
